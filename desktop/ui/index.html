@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'"><title>ReviewFlow · 评论洞察工作台</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="brand"><span class="mark">R</span><div><strong>ReviewFlow</strong><small>跨境评论洞察工作台</small></div></div><div class="header-note"><strong class="demo-notice">仅供演示使用</strong> <span>LOCAL WORKSPACE</span></div></header>
+<div class="address"><label for="url">商品地址</label><input id="url" placeholder="https://www.amazon.com/dp/… 或 https://www.amazon.de/dp/…"><button id="open">打开商品</button><button id="clear" class="quiet">清除会话</button></div>
+<main><section class="workspace"><div class="eyebrow">REVIEW INTELLIGENCE / 01</div><h1>从评论，到有依据的洞察。</h1><p class="intro">采集当前商品页可见评论，保留原文、来源与每一条结论的证据。</p>
+<div class="actions"><button id="collect" class="primary">开始采集与分析</button><button id="pause" class="quiet">暂停</button><button id="resume" class="quiet">继续</button><button id="toggle" class="quiet">展开工作台</button></div>
+<div class="pipeline"><span data-step="preparing">01 准备</span><span data-step="collecting">02 采集</span><span data-step="validating">03 校验</span><span data-step="analyzing">04 分析</span><span data-step="completed">05 输出</span></div>
+<div id="status" role="status"><i></i><span>正在启动本地服务…</span></div>
+<div class="tabs"><button class="active" data-tab="overview">洞察报告</button><button data-tab="reviews">原始评论</button><button data-tab="history">历史批次</button></div>
+<div id="overview" class="panel"><div id="empty" class="empty"><div class="empty-index">01 — 05</div><h2>你的下一份洞察，从真实评论开始</h2><p>打开商品并处理必要的登录或验证后，点击开始。采集完成将自动进入分析。</p><div class="sample-links"><button id="sample-us">填入美国站示例</button><button id="sample-de">填入德国站示例</button></div><small>示例为 VIOFO 竞品研究对象，未确认与五世科技存在归属关系。</small></div><div id="report"></div></div>
+<div id="reviews" class="panel hidden"><div id="review-list" class="empty">尚无采集数据</div></div>
+<div id="history" class="panel hidden"><button id="refresh" class="quiet">刷新批次</button><div id="history-list"></div></div>
+<footer>本次详情页可见评论样本 · 不代表全量评论或产品故障率</footer></section><aside id="browser-placeholder"><div class="browser-label"><span class="dot"></span> 商品浏览器 <small>人工登录 / 自动采集</small></div><div class="browser-empty">在上方输入亚马逊商品地址<br><small>支持美国站与德国站</small></div></aside></main>
+<script src="app.js"></script></body></html>

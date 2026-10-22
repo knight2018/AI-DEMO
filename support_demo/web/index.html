@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>说明书售后助手 · Support Desk</title>
+  <link rel="stylesheet" href="/static/style.css?v=spec009-1">
+  <script defer src="/static/app.js?v=spec009-1"></script>
+</head>
+<body>
+<header><div class="brand">Support Desk <span>说明书售后助手</span></div><span class="badge">仅供演示使用</span></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">PRODUCT SUPPORT / 02</p><h1>从产品型号，到有据可查的解答。</h1><p>确认设备，补齐必要信息，再依据官方说明书逐步排查。</p></div><button id="restart" class="secondary" type="button">新建会话</button></section>
+  <nav aria-label="处理进度"><span id="progress-model">01 确认型号</span><span id="progress-question">02 收集信息</span><span id="progress-advice">03 排查建议</span><span id="progress-result">04 处理摘要</span></nav>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <div id="intent-reply" class="card" hidden role="status"></div>
+  <div class="workspace">
+  <section class="card" id="main-card">
+    <div id="setup">
+      <p class="eyebrow">IDENTIFY YOUR DEVICE</p><h2>先确认你的设备</h2>
+      <p>当前知识库支持 <strong>VIOFO A119 MINI 2</strong>。可上传铭牌或包装型号照片，也可直接人工确认。</p>
+      <div class="upload"><label for="photo">图片识别（可选）</label><input type="file" id="photo" accept="image/png,image/jpeg,image/webp"><small>PNG / JPEG / WebP · 最大 5MB。只上传设备信息，避免包含个人资料。</small><button id="identify" type="button" class="secondary">识别图片中的型号</button><p id="identify-result"></p></div>
+      <form id="start-form">
+        <label for="model">产品型号</label><select id="model" required><option value="">请选择或先识别图片</option><option>A119 MINI 2</option></select>
+        <label class="check"><input type="checkbox" id="confirmed" required>我已核对设备上的完整型号，确认与所选型号一致</label>
+        <label for="description">描述当前现象</label><textarea id="description" rows="3" maxlength="2000" required placeholder="例如：手机能看到相机的 Wi-Fi，但 App 一直没有画面。"></textarea>
+        <p class="muted">自动识别 Wi-Fi、录像或供电问题；无关话题由程序提示返回产品排查。</p>
+        <p class="privacy">相关图片或文字会发送至 AGICTO：deepseek-flash 用于理解与生成，text-embedding-3-small 用于向量检索。会话和索引保存在本机。</p>
+        <button type="submit">识别意图并开始检索</button>
+      </form>
+    </div>
+    <div id="conversation" hidden>
+      <p class="eyebrow" id="stage-label"></p><h2 id="stage-title"></h2>
+      <div id="retrieval" hidden></div>
+      <div id="history"></div>
+      <section id="memory-panel" hidden aria-label="本次会话记忆"></section>
+      <form id="answer-form" hidden><label id="question-text" for="answer"></label><p id="question-reason" class="muted"></p><div id="options"></div><textarea id="answer" rows="2" maxlength="1000" required placeholder="填写答案或选择上方选项；不了解时可填“不确定”。"></textarea><button type="submit">保存并继续</button></form>
+      <div id="ready" hidden><p>必要信息已收集完成。现在结合官方说明书生成排查建议，并校验每条引用。</p><button id="advise" type="button">依据说明书生成建议</button><p class="muted">通常需要数十秒，请保持页面打开。</p></div>
+      <div id="advice"></div>
+      <form id="memory-form" hidden>
+        <h3>补充信息、纠正或反馈检查结果</h3>
+        <label for="action-target">反馈对象</label><select id="action-target"><option value="">补充或纠正本次信息</option></select>
+        <label for="memory-message">新的信息或实际结果</label><textarea id="memory-message" rows="3" maxlength="2000" required placeholder="例如：刚才看错了，那段视频是昨天的。或选择上面的操作后填写：做了，还是没有画面。"></textarea>
+        <button type="submit">更新本次记忆</button>
+        <p class="muted">记录实际观察，不会仅凭“做过了”认定问题已经解决。</p>
+      </form>
+      <div id="outcomes" hidden><p>完成以上检查后，记录本次处理结果：</p><button id="resolved" type="button">已解决</button><button id="handoff" type="button" class="secondary">仍未解决，转人工</button></div>
+      <div id="closed" hidden></div><a id="export" class="text-link" hidden>下载会话摘要 .txt</a>
+    </div>
+  </section>
+  <aside>
+    <section class="card source"><p class="eyebrow">VERIFIABLE KNOWLEDGE</p><h3>每条建议，都能回到原文</h3><div class="book">VIOFO<br><strong>A119 MINI 2</strong><span>USER MANUAL</span></div><p>官方英文说明书<br>版本 V25.12.18 · 17 个 PDF 页面</p><a href="/manual.pdf" target="_blank" rel="noopener">打开本地说明书</a><br><a href="https://www.viofo.com/pages/manual" target="_blank" rel="noopener">查看官方来源</a><p class="muted">引用按 PDF 页码定位，与书内印刷页码可能不同。</p></section>
+    <section class="card"><p class="eyebrow">BM25 + FAISS</p><h3>检索过程可以展开查看</h3><p>原始问题与扩写查询共同检索，按 RRF 融合两路排名。生成的问题增强召回，答案仍以 PDF 原文为依据。</p><button id="load-knowledge" class="secondary" type="button">查看切片与预生成问题</button><div id="knowledge" hidden></div></section>
+    <section class="card"><h3>先收集信息，再给建议</h3><p>追问从命中切片的候选问题中选择，已回答内容会保留。未确认的原因不会当作故障结论。</p><p>涉及数据删除、刷机、拆机或电路安装时交给人工处理；转人工会生成摘要，不会自动发送消息。</p></section>
+  </aside>
+  </div>
+</main><footer>本地工作流 · 型号确认 / 说明书检索 / 结构化建议 / 人工交接</footer>
+</body></html>

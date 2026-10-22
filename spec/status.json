@@ -1,0 +1,692 @@
+{
+  "updated_at": "2026-10-23",
+  "specs": [
+    {
+      "id": "SPEC-001",
+      "title": "亚马逊商品详情页评论采集与分析",
+      "status": "in_development",
+      "status_label": "开发",
+      "approval_status": "approved",
+      "spec_file": "developing/SPEC-001-amazon评论采集与分析.md",
+      "test_cases_file": "developing/SPEC-001-test-cases.md",
+      "test_case_ids": [
+        "TC01",
+        "TC02",
+        "TC03",
+        "TC04",
+        "TC05",
+        "TC06",
+        "TC07",
+        "TC08",
+        "TC09",
+        "TC10",
+        "TC11",
+        "TC12",
+        "TC13",
+        "TC14",
+        "TC15",
+        "TC16",
+        "TC17",
+        "TC18",
+        "TC19",
+        "TC20",
+        "TC21",
+        "TC22",
+        "TC23",
+        "TC24",
+        "TC25",
+        "TC26",
+        "TC27",
+        "TC28",
+        "TC29",
+        "TC30"
+      ],
+      "test_case_approval_status": "approved",
+      "test_execution_status": "automated_passed_live_validation_incomplete",
+      "implementation_started": true,
+      "full_regression": {
+        "status": "automated_passed_live_incomplete",
+        "command": "npm run test:all",
+        "result": {
+          "javascript_passed": 12,
+          "python_passed": 23,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "execution_records": [
+        {
+          "date": "2026-10-22",
+          "stage": "model_proxy_comparison",
+          "batch_id": "7c18fcdd307e4b99962d5c665239a925",
+          "result": "确认httpx默认读取Windows系统代理127.0.0.1:7897。相同13条评论、相同模型和提示分别使用默认代理与trust_env=False显式直连：两者均OpenAITimeoutError，耗时92.16秒与91.33秒。模型目录GET两路均200，耗时1.36秒与0.42秒。最小聊天请求两路也ReadTimeout；直连追踪确认TCP连接、TLS握手和请求发送已完成，未收到聊天响应头。证据不能支持代理是唯一原因，服务端处理或后续网络链路原因仍待确认；未修改系统代理或业务代码。",
+          "artifact_files": [
+            "../data/qa/route-default.json",
+            "../data/qa/route-direct.json",
+            "../data/qa/route-minimal.json"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "visible_desktop_de_recheck",
+          "test_case_ids": [
+            "TC28",
+            "TC29",
+            "TC30",
+            "TC22"
+          ],
+          "batch_id": "7c18fcdd307e4b99962d5c665239a925",
+          "result": "用户反馈已点击后，检查可见工作台确认德国站无Cookie弹窗。重启加载最新代码且保留浏览器会话后，实际桌面采集13条有效评论，重复0、排除0，自动进入分析。抽核3条的正文（忽略布局空白）、评分、日期、变体及购买认证与页面一致，包含比利时评论。通过桌面按钮导出CSV，重新读取13条并核对正文、地区、ASIN与批次全部一致，UTF-8无替换字符。模型调用最终OpenAITimeoutError，未生成报告，TC30尚未通过。本次未现场触发等待与继续，TC29不宣称已覆盖。此前Cookie等待来自独立验收窗口，不能作为用户可见工作台仍受阻的依据。",
+          "artifact_files": [
+            "../data/qa/desktop-de-spotcheck.json",
+            "../data/qa/desktop-de-7c18fcdd.csv"
+          ],
+          "regression": "npm run test:all：12项JavaScript、22项Python全部通过，无跳过。本轮未修改业务代码。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "tdd_red",
+          "result": "TC08与TC10因尚未去重及尚未排除缺失ID而出现2项有效断言失败。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "automated_regression",
+          "command": "npm run test:all",
+          "result": "12项JavaScript测试、22项Python测试通过，无跳过。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "live_collection",
+          "result": "Electron宽视口曾成功读取美国站8条、德国站13条；后续德国站出现Cookie等待，桌面窄视口懒加载需继续验证。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "live_model",
+          "result": "AGICTO模型目录200且包含指定模型；短请求成功，真实评论分析与独立对抗样本超时，模型效果验收未通过。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "narrow_viewport",
+          "result": "实际730像素窗口复测美国站8条采集成功；德国站Cookie提示正确阻断，等待人工。",
+          "artifact_directory": "../data/qa/"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "final_automated_regression",
+          "command": "npm run test:all",
+          "result": "12项JavaScript、22项Python测试全绿，无跳过；真实模型验收未通过，不代表spec完成。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "model_replaced_by_spec003",
+          "result": "SPEC-003替代旧Gemini模型选择；deepseek-flash的美国站8条、德国站13条和对抗样本通过本次验收。历史Gemini超时记录保留，不再列为当前阻塞。最终全量自动回归35项通过。"
+        }
+      ],
+      "blockers": [
+        "已由SPEC-003切换DeepSeek并通过本次真实模型样本验收；仍需最终桌面TC30从输入地址到生成报告及通过界面导出HTML的完整连续验收，主spec保持开发状态。"
+      ],
+      "pending_review": [],
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "planned",
+          "note": "按用户要求仅整理规格和测试用例，等待确认后开发；未编写业务代码或执行测试。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "planned",
+          "note": "按用户要求划分 planned、developing、completed、discarded 目录。规格与测试用例原样移入 planned，SHA256校验一致；待确认状态不变。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "用户确认并指示开始执行，规格及用例原样迁入developing。"
+        }
+      ]
+    },
+    {
+      "id": "SPEC-002",
+      "title": "演示提示与界面精简",
+      "status": "completed",
+      "status_label": "完成",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-002-演示提示与界面精简.md",
+      "test_cases_file": "completed/SPEC-002-演示提示与界面精简.md",
+      "test_case_ids": [
+        "SPEC002-TC01",
+        "SPEC002-TC02"
+      ],
+      "test_case_approval_status": "approved",
+      "implementation_started": true,
+      "test_execution_status": "passed",
+      "full_regression": {
+        "status": "passed",
+        "command": "npm run test:all",
+        "result": "12项JavaScript、22项Python测试通过；桌面观察确认无演示说明，顶部仅供演示使用可见。"
+      },
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "按用户明确要求删除演示说明并增加仅供演示使用提示。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "界面实测通过；最终程序全量回归12项JS、22项Python全绿。本项仅包含界面精简，主规格的真实模型验收仍未通过。"
+        }
+      ]
+    },
+    {
+      "id": "SPEC-003",
+      "title": "评论分析切换DeepSeek",
+      "status": "completed",
+      "status_label": "完成",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-003-评论分析切换DeepSeek.md",
+      "test_case_ids": [
+        "SPEC003-TC01",
+        "SPEC003-TC02",
+        "SPEC003-TC03",
+        "SPEC003-TC04"
+      ],
+      "implementation_started": true,
+      "test_execution_status": "passed",
+      "supersedes_scope": "SPEC-001的模型选择；其余要求保留",
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "用户要求将评论分析切换至DeepSeek；已查证官方别名及AGICTO目录。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "新模型配置及重复单词引用回归覆盖完成，最终全量12项JS+23项Python通过，三组真实调用验收通过。已重启桌面进程加载新配置。"
+        }
+      ],
+      "execution_records": [
+        {
+          "date": "2026-10-22",
+          "stage": "tdd_red",
+          "result": "新模型配置断言失败：旧值gemini-3.8-flash不等于deepseek-flash。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "model_smoke",
+          "result": "deepseek-flash最小请求HTTP200，1.52秒返回OK；响应model字段为deepseek-flash，不足以独立证明上游权重版本。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "live_first_pass",
+          "result": "美国站8条与对抗夹具通过结构及引用检查；德国站返回但evidence_mismatch，复核发现quote重复zu；保留严格校验，补回归并加强逐字复制提示。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "final_live_validation",
+          "model": "deepseek-flash",
+          "result": "最终提示下，德国站固定13条评论62.28秒完成分析并保存报告；美国站8条及独立对抗夹具通过结构和逐字引用校验。人工复核美国站保留自动防眩后视镜/具体车型兼容条件、HDR夜间条件及熄屏但仍录像的限定；德国站保留未测夜间、噪声下语音限制、低温安装条件，正负连接体验合并，假设与事实分开；对抗指令未被执行。检查针对本次样本，不代表整体准确率或可用性承诺。",
+          "artifacts": [
+            "../data/qa/deepseek-de-result.json",
+            "../data/qa/deepseek-de-report.html",
+            "../data/www.amazon.com-snapshot-report.json",
+            "../data/adversarial-report.json"
+          ]
+        }
+      ],
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 12,
+          "python_passed": 23,
+          "failed": 0,
+          "skipped": 0
+        }
+      }
+    },
+    {
+      "id": "SPEC-004",
+      "title": "整体结论与行动优先级",
+      "status": "completed",
+      "status_label": "完成",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-004-整体结论与行动优先级.md",
+      "test_case_ids": [
+        "SPEC004-TC01",
+        "SPEC004-TC02",
+        "SPEC004-TC03",
+        "SPEC004-TC04"
+      ],
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "用户要求综合评论给出总结、优先建议及后续行动。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "全量38项自动测试通过，真实报告已生成并复核。"
+        }
+      ],
+      "test_execution_status": "passed",
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 13,
+          "python_passed": 25,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "execution_records": [
+        {
+          "date": "2026-10-22",
+          "stage": "live_review",
+          "result": "德国站13条真实评论84.12秒生成7个主题和3项优先行动，引用验证通过。复核结论保留优势、条件及样本局限；排序为安装供电安全核实、Wi-Fi复现、语音误触发验证；下一步、建议角色、阶段及验收标准完整。优先级仅为建议，不是已验证成本度量。",
+          "batch_id": "3009f2175c4d47738d6dd21836835a22",
+          "artifact": "../data/qa/deepseek-de-action-report.html"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "ui_validation",
+          "result": "JSDOM验证字段、顺序、文本安全和历史报告；Python验证HTML顺序和转义。浏览器工具拒绝file协议访问，未完成浏览器截图验收。现有桌面进程需重启加载修改。"
+        }
+      ]
+    },
+    {
+      "id": "SPEC-005",
+      "title": "说明书售后助手",
+      "status": "completed",
+      "status_label": "完成",
+      "spec_file": "completed/SPEC-005-说明书售后助手.md",
+      "test_cases_file": "completed/SPEC-005-说明书售后助手.md",
+      "approval_status": "approved",
+      "implementation_started": true,
+      "test_case_ids": [
+        "SPEC005-TC01",
+        "SPEC005-TC02",
+        "SPEC005-TC03",
+        "SPEC005-TC04",
+        "SPEC005-TC05",
+        "SPEC005-TC06",
+        "SPEC005-TC07",
+        "SPEC005-TC08",
+        "SPEC005-TC09",
+        "SPEC005-TC10"
+      ],
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "planned",
+          "note": "按用户授权规划独立售后助手。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "规格和测试用例已建立，开始实现。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "最终代码全量65项测试通过；真实模型与网页流程验收通过，规格原文哈希一致迁入completed。"
+        }
+      ],
+      "test_execution_status": "passed",
+      "blockers": [],
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 15,
+          "python_passed": 50,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "execution_records": [
+        {
+          "stage": "implementation_validation",
+          "result": "初版自由生成步骤出现未提取按键图标、取卡前提不完整以及原文引用失败；改为模型按已核对目录选择和排序步骤，固定操作与证据并严格校验。录像检索排除不相关的停车/运动检测段，避免混淆。没有自动模型切换或模拟答案。"
+        },
+        {
+          "stage": "final_live_model",
+          "result": "最终Wi-Fi、录像、供电三个真实请求分别通过结构和引用校验，逐条复核判断与来源。录像最后收敛至屏保和现有文件检查；关机与拔电源前提完整。真实调用结果只代表本次样本，不是准确率评估。",
+          "artifacts": [
+            "../support_demo/data/qa/wifi.json",
+            "../support_demo/data/qa/recording.json",
+            "../support_demo/data/qa/power.json"
+          ]
+        },
+        {
+          "stage": "browser_acceptance",
+          "result": "网页实际上传官方封面得到候选型号且确认框仍未勾选；人工确认型号后逐项回答、刷新及后端重启恢复、真实模型出建议、标记待人工及下载摘要通过。下载文件和SQLite会话描述、判断、步骤及引用一致。窄窗口304px最终内容宽304px，无横向溢出，按钮不再竖排。",
+          "session_id": "5080b8c306eb403c926a6135107be61b",
+          "artifacts": [
+            "../support_demo/data/qa/browser-session.json",
+            "../support_demo/data/qa/browser-export.txt",
+            "../support_demo/data/qa/support-home.jpg"
+          ]
+        },
+        {
+          "stage": "encoding",
+          "result": "Python/网页/启动脚本/状态索引按UTF-8读取通过，无替换字符；PowerShell启动脚本使用UTF-8 BOM兼容Windows PowerShell。"
+        }
+      ]
+    },
+    {
+      "id": "SPEC-006",
+      "title": "售后图片模型切换",
+      "status": "completed",
+      "status_label": "完成",
+      "spec_file": "completed/SPEC-006-售后图片模型切换.md",
+      "test_cases_file": "completed/SPEC-006-售后图片模型切换.md",
+      "approval_status": "approved",
+      "implementation_started": true,
+      "test_case_ids": [
+        "SPEC006-TC01",
+        "SPEC006-TC02",
+        "SPEC006-TC03"
+      ],
+      "supersedes_scope": "SPEC-005图片模型选择，其他要求不变",
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "用户明确授权图片模型改用deepseek-flash，真实封面识别通过后接入。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "最终代码全量65项测试通过；真实模型与网页流程验收通过，规格原文哈希一致迁入completed。"
+        }
+      ],
+      "test_execution_status": "passed",
+      "blockers": [],
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 15,
+          "python_passed": 50,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "execution_records": [
+        {
+          "stage": "model_choice",
+          "result": "Gemini图片调用45秒超时，用户明确同意改用deepseek-flash。官方封面正例与空白负例真实调用通过，网页上传识别通过。仅验证可见型号文字，不宣称外观识别准确率；仍需用户确认。",
+          "artifacts": [
+            "../support_demo/data/qa/manual-cover.json",
+            "../support_demo/data/qa/blank.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC-007",
+      "title": "混合检索与知识驱动问答",
+      "status": "completed",
+      "status_label": "完成",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-007-混合检索与知识驱动问答.md",
+      "test_cases_file": "completed/SPEC-007-混合检索与知识驱动问答.md",
+      "test_case_ids": [
+        "SPEC007-TC01",
+        "SPEC007-TC02",
+        "SPEC007-TC03",
+        "SPEC007-TC04",
+        "SPEC007-TC05",
+        "SPEC007-TC06",
+        "SPEC007-TC07",
+        "SPEC007-TC08",
+        "SPEC007-TC09",
+        "SPEC007-TC10"
+      ],
+      "implementation_started": true,
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "planned",
+          "note": "用户要求BM25+FAISS并展示过程，追加切片问题预生成、问答扩写及意图识别。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "已读取既有规格和实现；AGICTO向量接口真实返回1536维，开始实现。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "最终代码全量16项JS+72项Python全部通过；6组真实服务验收、网页追问/刷新恢复/再次检索/生成建议/下载摘要通过。规格原文SHA256一致迁入completed。"
+        }
+      ],
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 16,
+          "python_passed": 72,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "test_execution_status": "passed",
+      "execution_records": [
+        {
+          "date": "2026-10-22",
+          "stage": "structured_chunking_regression",
+          "result": "章节与段落切分、表格保留、来源偏移、同页主题隔离、原流程兼容及两路召回用例通过。全量16项JS+70项Python全绿。真实新索引建库和问答验收仍进行中。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "final_live_validation",
+          "result": "sections_v3 索引 spec008-d15b240caa6d：91切片、193检索问法、137追问、284索引单元。最终Wi-Fi/录像/供电及无关/不明/范围外6例全部通过。录像初次及补充未知答案后均召回Screen Saver。人工复核最终追问与建议保留未知状态、来源及安全前提。样本通过不代表总体准确率。",
+          "artifacts": [
+            "../support_demo/data/qa/spec007/wifi.json",
+            "../support_demo/data/qa/spec007/recording.json",
+            "../support_demo/data/qa/spec007/power.json",
+            "../support_demo/data/qa/spec008-chapter-view.jpg"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "retrieval_corrections",
+          "result": "保留中途失败：长批次向量超时、一次生成原文引用不符均未发布；屏保首次/后续召回曾失败。按章节切分后，修正表格标题误切与同名标题定位，纯未知回答不新增检索条件，型号已限定索引后不重复参与查询；聚焦现象同义扩写。跨意图屏保追问按当前场景选择，排除行驶问题中的停车监控追问。没有放宽真实验收断言。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "browser_acceptance",
+          "session_id": "2d7d869e61a44386b7095d1718ef4912",
+          "result": "网页实际输入黑屏问题；首个追问来自Screen Saver，两个未知回答保存后刷新恢复；再次检索及建议成功，两次均命中屏保。实际点击下载摘要，逐项核对建议、引用、章节与切片ID匹配。304px视口内容宽304px，无横向溢出。",
+          "artifacts": [
+            "../support_demo/data/qa/spec008-browser-session.json",
+            "../support_demo/data/qa/spec008-browser-export.txt",
+            "../support_demo/data/qa/spec008-chapter-view.jpg"
+          ]
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "id": "SPEC-008",
+      "title": "章节与段落切分",
+      "status": "completed",
+      "status_label": "完成",
+      "spec_file": "completed/SPEC-008-章节段落切分.md",
+      "test_cases_file": "completed/SPEC-008-章节段落切分.md",
+      "implementation_started": true,
+      "test_case_ids": [
+        "SPEC008-TC01",
+        "SPEC008-TC02",
+        "SPEC008-TC03",
+        "SPEC008-TC04",
+        "SPEC008-TC05",
+        "SPEC008-TC06"
+      ],
+      "supersedes_scope": "SPEC-007切片粒度，原34分栏保留为来源坐标",
+      "history": [
+        {
+          "date": "2026-10-22",
+          "status": "in_development",
+          "note": "按用户章节或段落切块要求实现并验证。"
+        },
+        {
+          "date": "2026-10-22",
+          "status": "completed",
+          "note": "最终代码全量16项JS+72项Python全部通过；6组真实服务验收、网页追问/刷新恢复/再次检索/生成建议/下载摘要通过。规格原文SHA256一致迁入completed。"
+        }
+      ],
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 16,
+          "python_passed": 72,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "test_execution_status": "passed",
+      "execution_records": [
+        {
+          "date": "2026-10-22",
+          "stage": "structured_chunking_regression",
+          "result": "章节与段落切分、表格保留、来源偏移、同页主题隔离、原流程兼容及两路召回用例通过。全量16项JS+70项Python全绿。真实新索引建库和问答验收仍进行中。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "final_live_validation",
+          "result": "sections_v3 索引 spec008-d15b240caa6d：91切片、193检索问法、137追问、284索引单元。最终Wi-Fi/录像/供电及无关/不明/范围外6例全部通过。录像初次及补充未知答案后均召回Screen Saver。人工复核最终追问与建议保留未知状态、来源及安全前提。样本通过不代表总体准确率。",
+          "artifacts": [
+            "../support_demo/data/qa/spec007/wifi.json",
+            "../support_demo/data/qa/spec007/recording.json",
+            "../support_demo/data/qa/spec007/power.json",
+            "../support_demo/data/qa/spec008-chapter-view.jpg"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "retrieval_corrections",
+          "result": "保留中途失败：长批次向量超时、一次生成原文引用不符均未发布；屏保首次/后续召回曾失败。按章节切分后，修正表格标题误切与同名标题定位，纯未知回答不新增检索条件，型号已限定索引后不重复参与查询；聚焦现象同义扩写。跨意图屏保追问按当前场景选择，排除行驶问题中的停车监控追问。没有放宽真实验收断言。"
+        },
+        {
+          "date": "2026-10-22",
+          "stage": "browser_acceptance",
+          "session_id": "2d7d869e61a44386b7095d1718ef4912",
+          "result": "网页实际输入黑屏问题；首个追问来自Screen Saver，两个未知回答保存后刷新恢复；再次检索及建议成功，两次均命中屏保。实际点击下载摘要，逐项核对建议、引用、章节与切片ID匹配。304px视口内容宽304px，无横向溢出。",
+          "artifacts": [
+            "../support_demo/data/qa/spec008-browser-session.json",
+            "../support_demo/data/qa/spec008-browser-export.txt",
+            "../support_demo/data/qa/spec008-chapter-view.jpg"
+          ]
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "id": "SPEC-009",
+      "title": "单次会话记忆",
+      "status": "completed",
+      "status_label": "完成",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-009-单次会话记忆.md",
+      "test_cases_file": "completed/SPEC-009-test-cases.md",
+      "test_case_ids": [
+        "SPEC009-TC01",
+        "SPEC009-TC02",
+        "SPEC009-TC03",
+        "SPEC009-TC04",
+        "SPEC009-TC05",
+        "SPEC009-TC06",
+        "SPEC009-TC07",
+        "SPEC009-TC08",
+        "SPEC009-TC09",
+        "SPEC009-TC10",
+        "SPEC009-TC11",
+        "SPEC009-TC12"
+      ],
+      "implementation_started": true,
+      "history": [
+        {
+          "date": "2026-10-23",
+          "status": "planned",
+          "note": "按用户明确要求补充规格和四类场景测试用例。"
+        },
+        {
+          "date": "2026-10-23",
+          "status": "in_development",
+          "note": "规格及用例原样移入developing，开始实现单次会话记忆。"
+        },
+        {
+          "date": "2026-10-23",
+          "status": "completed",
+          "note": "最终代码17项JS+93项Python全绿；四组真实模型及完整网页多轮、刷新、导出验收通过。规格原文SHA256一致迁入completed。",
+          "archive_sha256": {
+            "SPEC-009-单次会话记忆.md": "fca9813de3c94ec9e074ed8c53f9439f10742c5d32348f062ddcf68d1e9e52f4",
+            "SPEC-009-test-cases.md": "2e113667ec2a166bd53f91563383bccb38aa1a6c648f88d336aef32b689c9cd0"
+          }
+        }
+      ],
+      "full_regression": {
+        "command": "npm run test:all",
+        "status": "passed",
+        "result": {
+          "javascript_passed": 17,
+          "python_passed": 93,
+          "failed": 0,
+          "skipped": 0
+        }
+      },
+      "test_execution_status": "passed",
+      "execution_records": [
+        {
+          "date": "2026-10-23",
+          "stage": "final_regression",
+          "result": "最终代码全量17项JS+93项Python通过。新增用例覆盖四场景、事实依赖撤回、语义字段区分、失效建议、并发与原子保存、旧版本兼容、安全展示及导出。"
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "live_model_validation",
+          "result": "deepseek-flash真实模型四组duplicate/short_answers/correction/action_results全部通过；撤回操作只影响显式依赖结论，不撤回原先存在的主诉和症状。样本通过不代表总体准确率。",
+          "artifacts": [
+            "../support_demo/data/qa/spec009/duplicate.json",
+            "../support_demo/data/qa/spec009/short_answers.json",
+            "../support_demo/data/qa/spec009/correction.json",
+            "../support_demo/data/qa/spec009/action_results.json"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "acceptance_corrections",
+          "result": "网页发现App连接步骤与App画面共用旧字段造成漏问，已在v3区分app_setup_completed与app_state并补回归；旧版本流程保持。检索展示按记忆版本标示历史记录。浏览器最终验收继续中。"
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "browser_acceptance",
+          "session_id": "11b25a87a287450b8baa9f1c9b910576",
+          "result": "真实网页从初始提取开始，分别输入没有/不知道；孤立没用先澄清，选定App操作反馈无改善后记录completed但不解决；再次生成只给LED检查，未重复App步骤。撤回操作保留原有症状，纠正手机连接状态后主诉同步更新，检索上下文不含已作废的连接结论。刷新记忆版本7一致，实际下载摘要逐项匹配当前事实、原话和两份失效建议。304px视口无横向溢出，控制台无错误；UTF-8检查通过。",
+          "artifacts": [
+            "../support_demo/data/qa/spec009/browser-session.json",
+            "../support_demo/data/qa/spec009/browser-export.txt",
+            "../support_demo/data/qa/spec009/browser-completed-action.json",
+            "../support_demo/data/qa/spec009/browser-memory-view.jpg",
+            "../support_demo/data/qa/spec009/browser-memory-detail.jpg"
+          ]
+        }
+      ],
+      "blockers": []
+    }
+  ],
+  "directory_by_status": {
+    "planned": "planned",
+    "in_development": "developing",
+    "completed": "completed",
+    "discarded": "discarded"
+  },
+  "path_base": "spec/",
+  "historical_reference_note": "历史规格中的 status.json 指本索引；目录调整不改写历史规格原文。"
+}

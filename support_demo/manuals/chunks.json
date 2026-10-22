@@ -1,0 +1,172 @@
+[
+  {
+    "id": "p1-1",
+    "page": 1,
+    "text": "The user manual is available on https://viofo.com/en/content/42-help-and-support/ V25.12.18"
+  },
+  {
+    "id": "p1-2",
+    "page": 1,
+    "text": "USER MANUAL Copyright C 2025 VIOFO Ltd. All Rights Reserved."
+  },
+  {
+    "id": "p2-1",
+    "page": 2,
+    "text": "Table of Contents 1. Product Overview 1 Standard Items Optional Accessories (Sold Separately) Product Diagram LED Indicators Buttons and Icons Display Overview 2. Installation 7 Insert / Remove the Memory Card Install the Dashcam Install the Static Sticker Remove the Dashcam 3. Dash Cam Recording Operation 13 Power On / Off Loop Recording Emergency Recording Disable / Enable Audio Recording Parking Mode 4. Video Playback and Management 15 Video Playback on Dashcam Video Playback on VIOFO APP Video Playback on PC Video File Storage Location 5. Review and Control on Smartphone 17 Connect to Smartphone APP Layout Overview 6. Install Optional Accessories 20 Install CPL Install Remote Control 7. System Settings 22 8. Firmware Upgrade 28 9. Notice 28 10. Customer Service 30"
+  },
+  {
+    "id": "p2-2",
+    "page": 2,
+    "text": "Product Overview Standard Items Dashcam Car Charger Type-C + GPS Mount Adapter Data Cable Trim Removal Spare Mount Windshield Static Tool Sticky Pad Sticker x2 * Note: The USB data cable is only for connecting the camera with computer to transfer video files or upgrade firmware, not for charging the camera. Optional Accessories (Sold Separately) CameraDashCarforKitHardwireVIOFOINPU:TREDMax5V2AOutput:24V;/12Input:—POWREBLACK—GNDYELLOW—ACC CPL Bluetooth Hardwire Kit HK4 MicroSD Card Remote Control 1"
+  },
+  {
+    "id": "p3-1",
+    "page": 3,
+    "text": "Product Diagram 1. Menu / Power On|Off 2. Menu Up / Recording Start / 6 Stop 3. Menu Confirm / Video Protect 7 / Playback 1 4. Menu Down / Microphone 2 Enable / Disable 3 5. Wi-Fi On|Off 6. Power in / MicroSD Card 4 Reader Mode 5 7. Memory Card Slot 8 8. Reset Button 9 10 11 12 9. Power Status Indicator 10. Recording Status Indicator 11. Microphone Status Indicator 12. Wi-Fi Status Indicator 2"
+  },
+  {
+    "id": "p3-2",
+    "page": 3,
+    "text": "13 14 13. USB Power Port 15 14. Mount (GPS Module) 15. Lens LED Indicators LED LED Status Behavior Flashing Red Updating Firmware PWR Solid Red Power On Off Power Off Flashing Red Not Recording REC Solid Red Recording Solid Blue Microphone Enabled MIC Off Microphone Disabled Flashing Blue Wi-Fi Enabled and waiting connecting Wi-Fi Solid Blue Wi-Fi Connected Off Wi-Fi Disabled 3"
+  },
+  {
+    "id": "p4-1",
+    "page": 4,
+    "text": "Buttons and Icons Mode Buttons Behavior Long press to power off Click once to take a photo Click once to stop recording Recording Click once to lock the file being Mode recorded Click once to enable / disable audio recording Long press to enable / disable the Wi-Fi Mode Buttons Behavior Click once to enter menu Click once to start recording Long press to format the memory card Standby Mode (Not Recording) Click once to enter playlist Click once to enable / disable audio recording Long press to enable / disable the Wi-Fi 4"
+  },
+  {
+    "id": "p4-2",
+    "page": 4,
+    "text": "Mode Buttons Behavior Return to previous menu / Exit playlist Menu up / Change playback speed / Delete the video Playlist Select the current video / Play / Mode Pause Menu down / Change playback speed / Lock current / Unlock current video N/A Mode Buttons Behavior Exit setting menu / Return to previous menu Menu up Setting Menu Enter / Confirm setting options Mode Menu down N / A 5"
+  },
+  {
+    "id": "p5-1",
+    "page": 5,
+    "text": "Display Overview 1440P30 04-06-2023 10:05:00 Recording Mode Recording Status Emergency Lock Microphone Wi-Fi Status 00:00:00 Recording Time 1440P30 Video Resolution GPS Status SD Card 6"
+  },
+  {
+    "id": "p5-2",
+    "page": 5,
+    "text": "Installation Insert / Remove the Memory Card Insert the memory card Ensure the camera is turned off. Hold the memory card in the orientation shown, slide it into the card slot until you hear a click. Remove the memory card Ensure that the camera is turned off, and then push the edge of the memory card with your fingernail. The card will spring out far enough to be removed. Note: • The microSD card is sold separately. The microSD card must have a Class-10 or UHS-I rating and the capacity is up to 512GB. • We recommend that you buy VIOFO industrial grade microSD card for extended endurance, excellent performance and reliability. • Memory card must be formatted before first use. Please format the card on a computer or in the camera to the FAT32 file system. • Please unplug the power cable before inserting or removing the microSD card. • Inserting or removing the microSD card while recording may destroy the files. 7"
+  },
+  {
+    "id": "p6-1",
+    "page": 6,
+    "text": "Format the memory card Memory card must be formatted before first use. Format the memory card in the camera To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button. Format the memory card using a computer To format the memory card on your computer, follow your computer’s user manual. For deep formatting of the memory card, you can also download the GUIFormat tool from our official website: https://viofo.com/download/guiformat.exe Note: We suggest formatting the card periodically to ensure the best performance of the camera. Formatting the card will erase all data permanently, please back up important data beforehand. Install the Dashcam 1. Select a location on the windshield behind the rear-view mirror where the camera will not obstruct the driver’s view while driving. Best mounting location Connect to car cigarette lighter socket 8"
+  },
+  {
+    "id": "p6-2",
+    "page": 6,
+    "text": "2. Wipe clean the installation surface of the windscreen with a dry cloth, it must be grease free for the sticky pad to stick firmly. 3. Mount the dashcam directly to the windshield with the sticky pad, or attach the static sticker to the selected location before installation (Refer to guide on pages 11-12). 4. Peel the protection film off the sticky pad and camera lens. 5. Fix the camera on the selected location. 6. Adjust the Lens Angle - Look at the live view on the LCD. - Adjust the angle of the lens up / down if necessary. 9"
+  },
+  {
+    "id": "p7-1",
+    "page": 7,
+    "text": "7. Connect to Power Insert the car charger USB cable’s male port into the camera mount's USB Type-C port. Plug the USB power adapter into your vehicle’s 12V / 24V female power socket. 2 1 Tips: 1. Do not install / mount the camera in a location that interferes with the driver’s visibility and safety. 2. Install / mount the camera close to the rearview mirror so that both sides of the scene being recorded are equally covered by the camera’s FOV (field of view). 3. To ensure a clear view on rainy days, the lens should be positionwithin the windshield wiper’s sweeping range. 4. Do not install / mount the camera on or near airbag panels. 5. Installation / mounting location should not be affected by sun control film (window tint). There should not be any other electronic equipment close to the camera for optimal performance. 10"
+  },
+  {
+    "id": "p7-2",
+    "page": 7,
+    "text": "Note: Do not install / mount the camera or cables near an airbag panel or within the airbag’s working range. The manufacturer is not liable for any injury or death caused by deployment of the airbag. Install the Static Sticker (Optional) 1. Wipe clean the surface of the windscreen before installation. 2. Peel the red sign protective film off the static sticker, then attach the sticker to the windscreen. Press it for a few seconds, making sure no bubbles are left. 3. Peel the green sign protective film off the static sticker. 4. Peel the protection film off the sticky pad on the mount, and attach it to the sticker. Press the camera hard for a few seconds, making sure it is attached firmly. 11"
+  },
+  {
+    "id": "p8-1",
+    "page": 8,
+    "text": "Remove the Dashcam Remove the Dashcam To remove the camera from its bracket, slide the camera to the right and pull the camera out of the mounting bracket. Note: When you want to plug in and unplug the camera, please turn it off first. 12"
+  },
+  {
+    "id": "p8-2",
+    "page": 8,
+    "text": "Dash Cam Recording Operation Power On / Off 1. When you start the engine, the camera will turn on and begin recording automatically. 2. When you turn off the engine or unplug the charging cable from the power adapter, the camera will stop recording and turn off. 3. Long press [ ] button to power on or off the camera. Loop Recording 1. Insert a microSD card into the camera’s card slot and automatic loop recording will begin once the camera detects power. 2. Time frame for each video file is 1 / 2 / 3 / 5 / 10 minutes. 3. When there is insufficient space on the microSD car, loop recording.will automatically overwrite the oldest files (one by one). 4. Loop recording files are saved to SD card: \\DCIM\\Movie. Emergency Recording 1. Automatic emergency recording When the G-sensor is activated by a collision, the current footage will be locked automatically to avoid being overwritten by loop recording. 2. Manual emergency recording Pressing the [ ] button during a recording will lock the current file being recorded. Once locked, the file will not be overwritten by the loop recording feature. 13"
+  },
+  {
+    "id": "p9-1",
+    "page": 9,
+    "text": "Note: Collision detection sensitivity can be adjusted in settings under the “G-sensor” option. Locked files are saved to SD card: DCIM \\ Movie \\ RO Disable / Enable Audio Recording Pressing the [ ] button once to turn off / on audio recording, [ ] LED light will be off / solid Blue. Parking Mode There are three options for parking mode. 1. Auto Event Detection The camera will automatically record a video sequence while a moving object is being detected during parking mode. It will stop recording when no new movement is detected. 2. Time Lapse Recording Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded. Note: Audio cannot be recorded in time-lapse mode. 3. Low Bitrate Recording This mode uses low bitrate to record video and audio, and uses small file sizes for continuous recording. Note: Parking mode provides surveillance of your parked vehicle only when the engine is off and the USB Type-C Hardwire Kit is used to provide continuous power. The Hardwire Kit also protects your car battery from being drained. We recommend buying the VIOFO HK4 ACC hardwire kit cable for parking mode recording. 14"
+  },
+  {
+    "id": "p9-2",
+    "page": 9,
+    "text": "Video Playback and Management Video Playback on Dashcam 1. Under standby mode (not recording), click once [ ] button to enter the playlist. 2. Use the arrow buttons [ ] to select the desired video and press the button [ ] to play. 3. Press the [ ] button to exit. Note: The default video resolution of the dashcam is 2560 x 1440P 30fps. Video Playback on VIOFO APP Long press the Wi-Fi button to enable Wi-Fi. Connect Wi-Fi on your phone first. Open VIOFO app and choose \"Connect your camera\" to use your phone to control the dashcam. You can play and manage files through the APP. You can check the app introduction refer to [Review and Control on Smartphone]. Video Playback on PC 1. Remove memory card from dashcam. Before removing the memory card, make sure you have switched off the Dashcam. 2. Insert the memory card into a SD card adapter or card reader connected to your PC. 3. Open VIOFO Player, add videos from the DCIM folder for playback. 15"
+  },
+  {
+    "id": "p10-1",
+    "page": 10,
+    "text": "Download VIOFO Player from our official website: https://www.viofo.com/pages/viofo-app Note: For your PC with a microSD slot, you can directly insert the memory card into it. Video File Storage Location Recording Mode Behavior Loop Recording DCIM / Movie ( Including Motion Detection ) Emergency Recording DCIM / Movie / RO ( Locked Video ) Parking recording ( Auto Event Detection / Time-lapse Recording DCIM / Parking / Low Bitrate Recording ) Parking Recording DCIM / Parking / RO ( Locked Video ) Snapshot DCIM / Photo 16"
+  },
+  {
+    "id": "p10-2",
+    "page": 10,
+    "text": "Review and Control on Smartphone Connect to Smartphone The VIOFO app allows you to control your camera remotely by using a smartphone. Features include full camera control, live preview, playback and video recording. Android Device Android users can download the app from Google Play, or download the APK directly from our official website: https://viofo.com/en/content/13-app/ IOS Device IOS users can download the app from the App store. Download on the GET IT ON App Store Google Play Connect VIOFO APP Turn on the Wi-Fi in the menu or long press the [ ] button. When the Wi-Fi is on, a Wi-Fi status icon, Wi-Fi name (SSID) and the password appear on the camera LCD screen. • Step 1: Use the phone to connect A119 Mini 2 Wi-Fi. When the phone is connected with the dashcam, the LED light on the camera shows solid blue. • Step 2: Open the VIOFO app. Tap \"Connect New Device\" and select the dashcam model you want to connect to your phone for control. • Step 3: Now you can see the live view of both cameras. You can change the settings and check the files on the app. 17"
+  },
+  {
+    "id": "p11-1",
+    "page": 11,
+    "text": "APP Layout Overview Tap \"Connect New Device\" to pair the dashcam to your phone for control. 1 2 3 4 13.21V VIOFO A149 10-12-2025 15:14:42 2560x1440 P30 8 2 1 3 5 6 7 Home Live View ① Device Connection & Setup ① Grid (On/Off) ② Gallery ② Switch Camera View ③ App Information & Settings ③ Voice Recording On/Off ④ App & Device Settings ⑤ View Gallery ⑥ Start/Stop Recording ⑦ Snap a Photo ⑧ Toggle Landscape View 18"
+  },
+  {
+    "id": "p11-2",
+    "page": 11,
+    "text": "3 4 1 2 5 Gallery ① SD Card File (On Camera) ② Local File (On Phone) ③ All Video Clips ④ File Selection ⑤ Date Filter 19"
+  },
+  {
+    "id": "p12-1",
+    "page": 12,
+    "text": "Install Optional Accessories Install CPL The CPL (Circular Polarizing Lens) can be used to reduce reflections and glare from the window glass and road surfaces that can otherwise damage image quality, this works in the same way as polarized sunglasses, getting more saturated and beautiful video. When installing the CPL, you can randomly choose one slot and keep it upward, and then put the CPL on the lens. 20"
+  },
+  {
+    "id": "p12-2",
+    "page": 12,
+    "text": "Install Bluetooth Remote Control With the Bluetooth remote control (optional) mounted in a convenient location on your dashboard, you can safely protect important videos from being overwritten, without needing to take your eyes off the road. When you press the Bluetooth remote, the camera will lock the current video file and take a video snapshot. Pairing with dash camera • Power on the camera. • Press and hold the video lock button on remote control for 3 seconds to pair with camera. • If get paired successfully, the LED indicator of the remote turns blue. 21"
+  },
+  {
+    "id": "p13-1",
+    "page": 13,
+    "text": "System Settings Press the Menu button during video mode to access the settings. (recording need to be stopped) Resolution: Set the video resolution of footage recorded 2592 x 1944P 30fps, 2560 x 1600P 30fps, 2560 x 1440P 30fps, 2560 x 1440P 60fps, 2560 x 1080P 60fps, 2560 x 1080P 30fps, 2304 x 1296P 30fps, 1920 x 1080P 60fps, 1920 x 1080P 30fps, are available for selection. Note: The front cam 60fps is not available while HDR is enabled. With HDR enabled, the frame rate will automatically switch to 30fps. Bitrate: Low / Medium / High. You can set the bitrate for video. High bitrate may improve the quality and smoothness of the video, especially when recording fast motion or high contrast scenes. Using high bitrate mode may decrease the amount of recording time available on your memory card. Using a low bitrate will save space and record for longer time. Loop Recording: off / 1 / 2 / 3 / 5 / 10 minutes. Recording will begin automatically after powering on with a microSD card in the device. Each recorded file is up to three minutes long, with old footage being replaced when microSD card storage is full. Exposure: Adjust the value of the EV (Exposure Value) to obtain better recording results under different light sources. The range is from -2.0 to + 2.0. The default is set at 0.0. HDR (High Dynamic Range): Off/On/HDR Timer. The default setting is Off. The multi-exposure HDR technique helps automatically balance the lighting in over bright and over dark areas to avoid over exposure issues. 22"
+  },
+  {
+    "id": "p13-2",
+    "page": 13,
+    "text": "Parking Mode: There are 3 options under parking mode: ① Auto Event Detection The camera will automatically record a video sequence while a moving object is detected during parking. It will stop recording without new movements. ② Time Lapse recording Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded. ③ Low Bitrate Recording This mode uses low bitrate to record video and audio, and uses small file sizes for continuous recording. Note: 1. We recommend buying VIOFO HK4 ACC hardwire kit cable for parking mode recording. 2. In case you park the car outside in hot summer, we highly recommend time lapse recording mode. If the temperature inside the car goes above 60°C, we advise turning off the dashcam to avoid recording errors or even irreversible damages. Enter Parking Mode Timer: Set the timer for entering parking mode. (Only for hardwire cable, if you use external battery, this function will not work.) \"Off\" means the camera will enter parking mode right away when the engine is off. \"90s\" means the camera will enter parking mode 90 seconds after engine is off. Parking Recording Timer: \"Off\" means the camera will keep recording until the hardwire kits cut the power supply. \"1 hour\" means the camera will shut down after it gets into parking mode for 1 hour. 23"
+  },
+  {
+    "id": "p14-1",
+    "page": 14,
+    "text": "Parking G-sensor: The G-sensor detects significant or sudden movement (such as an impact or collision), it will trigger an event recording. We suggest setting it to High sensitivity in parking mode recording. Parking Motion Detection: Adjust the sensitivity of the motion detection so minor motion caused by wind or rain doesn't trigger a recording while in parking mode. Time-lapse Recording: Off / 1 / 2 / 3 / 5 / 10 fps. Record video from frames captured at specific time intervals to conserve memory and reduce the time it takes to review video. The default is off. Motion Detection: When this feature is activated, a recording will begin if there is movement in front of the camera. Once the camera does not detect movement for 60 seconds, the recording will be stopped and the device will switch to detect mode. The device will record again if it will detect a new movement in front of the camera. GPS: Turn on / off GPS logger. A GPS module is used to include the location data in the recorded videos. If disabled, your camera will no longer measure your speed and position; nor synchronize the time / date. (Only available when connecting with GPS signal) Please use “VIOFO Player” to play back videos and to visualize your position and speed on your computer. Disable GPS in Parking Mode: Off/On, you can disable GPS in parking mode. Speed Unit: Set the speed unit, kilometer per hour (KPH) or miles per hour (MPH). G-sensor: The G-sensor measures g-shock forces. The setting from 'Low’ to' High’ determines the amount of force needed to lock the file from being overwritten by loop-recording. We recommend leaving it set to 'Low’. 24"
+  },
+  {
+    "id": "p14-2",
+    "page": 14,
+    "text": "WiFi: Set it On / Off. Press the [ ] button for 3 or 5 seconds to enable Wi-Fi quickly. We recommend choosing 5GHz Wi-Fi mode. if you mobile phone support 5GHz Wi-Fi. Date Stamp: Imprint the time and date on the recorded video. GPS Info Stamp: Imprint the GPS information on the recorded video. Camera Model Stamp: Imprint the camera model on the recorded video. Record Audio: Turn the microphone ON / OFF. This can be also activated by pressing the [ ] button while the camera is recording. Screen Saver: Turn the screen OFF after a set time. Boot Delay: The camera will boot seconds later when powered on. The settings are Off / 5s / 10s. LED: Turn the LED light ON / OFF. Date / Time: System date / time setting. Time Zone: Set the current time zone for GPS time and date calibration. Note: the time zone must be manually adjusted for daylight savings. Language: Display language setting (English, Traditional Chinese, French, etc.). Voice Notification: Turn on / off the voice notification. 25"
+  },
+  {
+    "id": "p15-1",
+    "page": 15,
+    "text": "Voice Control: Turn off / on the voice control. When Voice Control is turned on, you can control the camera with spoken commands, using your voice to take photos, turn on/off WiFi, start recording, and more. Note: Voice command language should be consistent with dashcam system language in following six options: English, Chinese, Russian, Japanese, Vietnamese, and Thai. For all other dashcam language systems, English is the only language to trigger voice control function. Voice Command: Voice recognition commands. You can issue different voice commands to remote control the camera, including: - Take Photo - Turn On Screen - Video Start - Turn Off Screen - Video Stop - Lock the Video - Turn On Audio - Turn On WiFi - Turn Off Audio - Turn Off WiFi Beep Sound: Turn all notification sounds ON/OFF. Frequency: Frequency adjustment setting to minimize flickering and banding in recorded video. Image Rotation: Turn the screen upside down. Image Mirror: Reverse the image from left to right. Format: The operation will delete all data on the Micro SD card. Note: Once you format the Micro SD card, all information will be deleted and cannot be restored. Make sure you back up all important files before proceeding. 26"
+  },
+  {
+    "id": "p15-2",
+    "page": 15,
+    "text": "Format Warning: Set the number of days between format warnings. Default Setting: Restore camera to factory defaults. Car Number: Imprint a customized set of 11 digits to the recorded video. Useful to add license plates or identifying features. Custom Text Stamp: Imprint the customize text on the recorded video. Firmware Version: Current firmware version check. 27"
+  },
+  {
+    "id": "p16-1",
+    "page": 16,
+    "text": "Firmware Upgrade Follow the instructions on this website to upgrade the firmware: (https://viofo.com/content/42-help-and-support/) Note: • Before using a microSD card to upgrade the firmware, formatting the card in the camera is necessary to ensure stable read and write operation. • Do not unplug or power off the camera during a firmware upgrade, it may cause the camera to subsequently fail to boot. Notice FCC Statement This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses and can radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures: 28"
+  },
+  {
+    "id": "p16-2",
+    "page": 16,
+    "text": "• Reorient or relocate the receiving antenna. • Increase the separation between the equipment and receiver. • Connect the equipment into an outlet on a circuit different from that to which the receiver is connected. • Consult the dealer or an experienced radio / TV technician for help. Caution: Any changes or modifications to this device not explicitly approved by the manufacturer could void your authority to operate this equipment. This device complies with part 15 of the FCC Rules. Operation subjects to the following two conditions: (1) This device may not cause harmful interference. (2) This device must accept any interference received, including interference that may cause undesired operation. Shenzhen VIOFO Technology Co., Ltd, declares that this Radio Frequency peripheral is in compliance with the essential requirements and other relevant provisions of Directive 1999/5/EC. This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20cm between the radiator & your body. 29"
+  },
+  {
+    "id": "p17-1",
+    "page": 17,
+    "text": "Customer Service Thanks for choosing VIOFO! From the date of purchase on, all products are warranted for 18 months and all accessories are warranted for 12 months. VIOFO offers lifetime technical support for all our users. We are committed to making sure that you are 100% satisfied with our products and services. Product Registration Program VIOFO also have Product Registration Program to help customers extend warranty by 6 months. Visit www.viofo.com and register your new product to extend the warranty from 18 months to 24 months. Scan the QR code to activate 6-month extended warranty now 30"
+  },
+  {
+    "id": "p17-2",
+    "page": 17,
+    "text": "Video Sharing Share videos caught on VIOFO camera with us. Let’s enjoy your new found together! Gain a chance to get a mysterious gift at share@viofo.com. How to Contact Us ? Submit a ticket at support.viofo.com Live chat box at www.viofo.com support@viofo.com www.facebook.com/viofo +1 323 505 9898 (USA) +1 323 609 9898 (Global) Mon-Fri 9am-6pm Scan the QR code to submit a ticket 31"
+  }
+]
