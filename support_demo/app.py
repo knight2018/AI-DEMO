@@ -12,6 +12,7 @@ from pydantic import BaseModel, Field, field_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from support_demo import ai, streaming
+from support_demo.handoff import handoff_summary
 from support_demo.domain import (ROOT, MODEL, QUESTIONS, Advice, Chunk, Identification, Issue, Question, Session,
                                  canonical_model, chunks_for, next_question, validate_advice, validate_image)
 from support_demo.store import ConflictError, Store
@@ -63,6 +64,7 @@ class IntakeView(BaseModel):
 class View(BaseModel):
     session: Session
     question: Question | None
+    handoff_summary: str | None = None
 
 class KnowledgeView(BaseModel):
     manifest: KnowledgeManifest
@@ -70,7 +72,8 @@ class KnowledgeView(BaseModel):
 
 def view(session: Session) -> View:
     question = next_question(session) if session.status == 'collecting' else None
-    return View(session=session, question=question)
+    return View(session=session, question=question,
+                handoff_summary=handoff_summary(session) if session.status == 'handoff' else None)
 
 def create_app(db: Path | None = None,
                advisor: Callable[[Session, list[Chunk]], Awaitable[Advice]] = ai.advise,
@@ -278,6 +281,14 @@ def create_app(db: Path | None = None,
     @app.post('/api/sessions/{session_id}/advise/stream')
     async def advice_stream(session_id: str, payload: VersionRequest) -> Response:
         return streaming.response(lambda: chat_turn(lambda: advise(session_id, payload)))
+
+    @app.get('/api/sessions/{session_id}/handoff')
+    async def download_handoff(session_id: str) -> Response:
+        session = get_current(session_id)
+        if session.status != 'handoff':
+            raise HTTPException(409, '尚未生成转人工交接信息。')
+        return Response(handoff_summary(session), media_type='text/plain; charset=utf-8',
+                        headers={'Content-Disposition': f'attachment; filename="handoff-{session.id}.txt"'})
 
     @app.get('/api/sessions/{session_id}/export')
     async def export(session_id: str) -> Response:

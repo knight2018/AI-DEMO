@@ -736,6 +736,23 @@
           "result": "型号弹层、连续聊天、操作反馈、来源展示、刷新恢复及390×844窄屏通过；控制台无错误。初始未选问题导出字段边界测试通过。"
         }
       ]
+    },
+    {
+      "id": "SPEC-012",
+      "title": "自动人工交接摘要",
+      "status": "completed",
+      "status_label": "完结",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-012-自动人工交接摘要.md",
+      "test_cases_file": "completed/SPEC-012-自动人工交接摘要.md",
+      "implementation_started": true,
+      "test_execution_status": "all_passed",
+      "execution_records": [
+        {
+          "date": "2026-10-23",
+          "result": "28项JavaScript与101项Python通过，真实聊天转人工展示验收通过。"
+        }
+      ]
     }
   ],
   "directory_by_status": {

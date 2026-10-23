@@ -203,7 +203,17 @@ function render(view) {
     const body=bubble('assistant','你可以直接告诉我检查结果，或选择上方具体检查后反馈。问题是否已解决？');
     const choices=element('div','','choices');for(const [label,outcome] of [['已解决','resolved'],['仍未解决，转人工','handoff']])option(label,()=>run(async()=>render(await request(`/api/sessions/${s.id}/outcome`,{version:s.version,outcome}))),choices);body.append(choices);
   }
-  if(['resolved','handoff'].includes(s.status))bubble('assistant',s.status==='resolved'?'已记录问题解决。需要时可下载本次摘要，其他问题可以开始新对话。':'请下载摘要交给人工客服。本工具尚未向任何人发送消息。');
+  if(s.status==='resolved')bubble('assistant','已记录问题解决。需要时可下载本次摘要，其他问题可以开始新对话。');
+  if(s.status==='handoff'){
+    const body=bubble('assistant','已自动整理好给人工客服的简要信息，无需重新填写。');
+    body.append(element('p',view.handoff_summary || '','handoff-summary'));
+    option('复制交接信息',async()=>{
+      try{await navigator.clipboard.writeText(view.handoff_summary);message('交接信息已复制，可直接交给人工客服。');}
+      catch{message('复制失败，请使用下载简要信息。');}
+    },body);
+    const link=element('a','下载简要信息','option');link.href=`/api/sessions/${s.id}/handoff`;body.append(link);
+    body.append(element('p','交接信息已准备好；当前尚未接入人工客服渠道，未向任何人发送。','muted'));
+  }
   setTarget(null,'');controls();scrollChat();
 }
 async function submitChat(value) {
