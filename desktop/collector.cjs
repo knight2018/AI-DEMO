@@ -22,23 +22,38 @@ function inspectPage(action = 'read') {
   const variant = [...document.querySelectorAll('#twister .selection')].map(x => x.textContent.trim()).join(' / ') || null;
   const source = { url: location.href, site: location.hostname.replace(/^www\./, ''), asin, title, variant };
   if (!asin || !title) return { ...source, error: 'product_unrecognized' };
-  const section = document.querySelector('#reviewsMedley, #customerReviews');
+  // 容器 ID 随页面布局变化；明确的评论条目也能证明评论区域存在。
+  const section = [...document.querySelectorAll('#reviewsMedley, #customerReviews, #customer-reviews_feature_div, #cr-top-reviews, #cm-cr-dp-review-list')].find(visible);
+  const nodes = [...document.querySelectorAll('[data-hook="review"]')].filter(visible);
   if (action === 'scroll') {
-    if (section) {
-      // 第一次定位评论区，随后继续向下滚动，让评论正文的懒加载区域真正进入视口。
-      const bounds=section.getBoundingClientRect();
-      if(bounds.top>innerHeight || bounds.bottom<0) section.scrollIntoView({behavior:'instant',block:'start'});
-      else window.scrollBy(0,Math.max(innerHeight*.7,400));
+    if (nodes.length) {
+      // 定位实际末条正文末端，触发后续懒加载，不依赖页面长度或累计滚动距离。
+      const last = nodes.at(-1);
+      const body = last.querySelector('[data-hook="reviewRichContentContainer"], [data-hook="review-body"]');
+      (body || last).scrollIntoView({behavior:'instant',block:'end'});
+    } else if (section) {
+      section.scrollIntoView({behavior:'instant',block:'start'});
+    } else {
+      // 仅使用页面已有的同页评论锚点，不点击全部评论或外部导航链接。
+      const link = document.querySelector('#acrCustomerReviewLink');
+      if (link && visible(link)) {
+        const targetURL = new URL(link.href, location.href);
+        if (targetURL.origin === location.origin && targetURL.pathname === location.pathname && targetURL.search === location.search && targetURL.hash) {
+          const target = document.getElementById(targetURL.hash.slice(1));
+          if (visible(target)) target.scrollIntoView({behavior:'instant',block:'start'});
+        }
+      }
     }
-    else window.scrollBy(0, Math.max(innerHeight * 0.8, 500));
     return source;
   }
-  const nodes = [...document.querySelectorAll('[data-hook="review"]')];
   if (action === 'expand') {
     let clicked = 0;
     for (const node of nodes) {
       const button = collapsedButton(node);
-      if (button) { button.click(); clicked++; }
+      if (button) {
+        button.scrollIntoView({behavior:'instant',block:'center'});
+        button.click(); clicked++;
+      }
     }
     return { ...source, clicked };
   }
@@ -67,7 +82,8 @@ function inspectPage(action = 'read') {
       expanded, captured_at: new Date().toISOString(),
     };
   });
-  const noReviews = !!document.querySelector('[data-hook="no-reviews-message"]');
-  return { ...source, reviews, recognized: !!section, noReviews, complete: !!section && (reviews.length > 0 || noReviews) && reviews.every(x => x.expanded), captured_at: new Date().toISOString() };
+  const noReviews = [...document.querySelectorAll('[data-hook="no-reviews-message"]')].some(visible);
+  const recognized = !!section || nodes.length > 0;
+  return { ...source, reviews, recognized, noReviews, complete: recognized && (reviews.length > 0 || noReviews) && reviews.every(x => x.expanded && x.body.length > 0), captured_at: new Date().toISOString() };
 }
 module.exports = { inspectPage };

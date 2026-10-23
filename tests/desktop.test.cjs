@@ -37,6 +37,7 @@ test('TC01 地址白名单与商品身份', () => {
 });
 function page(html) {
   const dom = new JSDOM(`<input id="ASIN" value="B0C5J4FXXH"><h1 id="productTitle">测试商品</h1><div id="reviewsMedley">${html}</div>`, { url:'https://www.amazon.de/dp/B0C5J4FXXH',runScripts:'outside-only' });
+  dom.window.HTMLElement.prototype.scrollIntoView = function () {};
   return dom;
 }
 test('TC04/07 新结构评论正文，不混入AI摘要；站点和地区分开', () => {

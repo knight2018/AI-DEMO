@@ -679,6 +679,35 @@
         }
       ],
       "blockers": []
+    },
+    {
+      "id": "SPEC-010",
+      "title": "评论元素定位",
+      "status": "completed",
+      "status_label": "完成",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-010-评论元素定位.md",
+      "test_cases_file": "completed/SPEC-010-评论元素定位.md",
+      "implementation_started": true,
+      "test_execution_status": "passed",
+      "execution_records": [
+        {
+          "date": "2026-10-23",
+          "stage": "tdd_red",
+          "result": "新增评论采集模块的 6 项测试在旧实现全部失败，覆盖新布局、元素定位、空正文、隐藏模板及原工作流。"
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "automated_regression",
+          "result": "23 项 JavaScript + 93 项 Python 全绿，共116项；保留7条第三方弃用警告。"
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "desktop_collection_validation",
+          "result": "美国站用户商品原文采集8条有效评论、0重复、0排除，自动进入分析；修复前相同页面已读8条却因旧容器缺失判未识别。翻译页面保护保留。德国站本轮未现场复测。",
+          "batch_id": "73f0f333845f4b1e842d27a7e7c90513"
+        }
+      ]
     }
   ],
   "directory_by_status": {
