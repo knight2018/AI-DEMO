@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
-from support_demo import ai
+from support_demo import ai, streaming
 from support_demo.domain import (ROOT, MODEL, QUESTIONS, Advice, Chunk, Identification, Issue, Question, Session,
                                  canonical_model, chunks_for, next_question, validate_advice, validate_image)
 from support_demo.store import ConflictError, Store
@@ -249,6 +249,35 @@ def create_app(db: Path | None = None,
         if session.workflow_version==3:
             append_turn(session,'user','记录处理结果：'+('已解决' if payload.outcome=='resolved' else '仍未解决，转人工'))
         return view(store.save(session, payload.version))
+
+    async def chat_turn(operation: Callable[[], Awaitable[View | IntakeView]]) -> None:
+        result = await operation()
+        current = result.view if isinstance(result, IntakeView) else result
+        if current is None:
+            await streaming.publish('reply', {'text': result.reply})
+            return
+        # 每次已保存状态立即通知客户端；建议失败时用户原话仍可恢复。
+        await streaming.publish('state', current.model_dump(mode='json'))
+        session = current.session
+        if session.status == 'ready' and not (session.memory and session.memory.clarification):
+            current = await advise(session.id, VersionRequest(version=session.version))
+            await streaming.publish('state', current.model_dump(mode='json'))
+
+    @app.post('/api/intake/stream')
+    async def intake_stream(payload: IntakeRequest) -> Response:
+        return streaming.response(lambda: chat_turn(lambda: intake(payload)))
+
+    @app.post('/api/sessions/{session_id}/message/stream')
+    async def message_stream(session_id: str, payload: MessageRequest) -> Response:
+        return streaming.response(lambda: chat_turn(lambda: message(session_id, payload)))
+
+    @app.post('/api/sessions/{session_id}/answer/stream')
+    async def answer_stream(session_id: str, payload: AnswerRequest) -> Response:
+        return streaming.response(lambda: chat_turn(lambda: answer(session_id, payload)))
+
+    @app.post('/api/sessions/{session_id}/advise/stream')
+    async def advice_stream(session_id: str, payload: VersionRequest) -> Response:
+        return streaming.response(lambda: chat_turn(lambda: advise(session_id, payload)))
 
     @app.get('/api/sessions/{session_id}/export')
     async def export(session_id: str) -> Response:

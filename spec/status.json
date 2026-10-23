@@ -708,6 +708,34 @@
           "batch_id": "73f0f333845f4b1e842d27a7e7c90513"
         }
       ]
+    },
+    {
+      "id": "SPEC-011",
+      "title": "客服聊天与流式回复",
+      "status": "completed",
+      "status_label": "完结",
+      "approval_status": "approved",
+      "spec_file": "completed/SPEC-011-客服聊天与流式回复.md",
+      "test_cases_file": "completed/SPEC-011-客服聊天与流式回复.md",
+      "implementation_started": true,
+      "test_execution_status": "all_passed",
+      "execution_records": [
+        {
+          "date": "2026-10-23",
+          "stage": "automated_regression",
+          "result": "27项JavaScript与99项Python通过；真实分块读取、断流取消、失败恢复、并发版本与原功能回归通过。"
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "live_stream",
+          "result": "真实模型记录在 support_demo/data/qa/spec011/live-stream.json；一次回答1.195秒；需重新检索的一轮12.667秒首段草稿、13.527秒完成。该次耗时非固定承诺。"
+        },
+        {
+          "date": "2026-10-23",
+          "stage": "browser_validation",
+          "result": "型号弹层、连续聊天、操作反馈、来源展示、刷新恢复及390×844窄屏通过；控制台无错误。初始未选问题导出字段边界测试通过。"
+        }
+      ]
     }
   ],
   "directory_by_status": {

@@ -10,7 +10,7 @@ from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 
-from support_demo import ai
+from support_demo import ai, streaming
 from support_demo.catalog import CATALOG
 from support_demo.domain import ROOT, Advice, Chunk, Issue, Question, Session
 from support_demo.retrieval import HybridIndex, embed, query_variants
@@ -107,6 +107,7 @@ class SupportPipeline:
         return self._index
 
     async def retrieve(self, session: Session, intent: IntentResult) -> RetrievalTrace:
+        await streaming.status('正在查找说明书中与你的问题相关的内容。')
         query = factual_query(session)
         expansion = await self.expander(query)
         vectors = await embed(query_variants(query, expansion, session.description))

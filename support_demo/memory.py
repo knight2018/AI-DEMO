@@ -116,7 +116,8 @@ def validate_patch(session: Session, text: str, patch: MemoryPatch, action_id: s
             raise ValueError('wrong_action_target')
 
 def apply_patch(session: Session, text: str, patch: MemoryPatch,
-                question: Question | None = None, action_id: str | None = None) -> None:
+                question: Question | None = None, action_id: str | None = None,
+                *, update_progress: bool = True) -> None:
     validate_patch(session,text,patch,action_id)
     memory=get_memory(session)
     turn=append_turn(session,'user',text,question.key if question else None,action_id)
@@ -168,7 +169,8 @@ def apply_patch(session: Session, text: str, patch: MemoryPatch,
         if fact:session.answers[q.key]=fact.value if fact.status=='known' else '不确定' if fact.status=='unknown' else '已撤回，待确认'
     memory.notice='已更新本次记忆；后续建议会结合最新事实和已执行检查。'
     append_turn(session,'assistant',memory.notice)
-    sync_progress(session)
+    if update_progress:
+        sync_progress(session)
 
 async def extract_patch(session: Session, text: str, question: Question | None = None,
                         action_id: str | None = None) -> MemoryPatch:

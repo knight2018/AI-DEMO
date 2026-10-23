@@ -7,9 +7,11 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain_core.utils.json import parse_json_markdown
 
 from support_demo.domain import Advice, Chunk, Identification, Session, validate_advice
 from support_demo.catalog import CATALOG, Selection, build_advice
+from support_demo import streaming
 
 TEXT_MODEL = 'deepseek-flash'
 VISION_MODEL = 'deepseek-flash'
@@ -39,6 +41,7 @@ async def advise(session: Session, chunks: list[Chunk], allowed_ids: list[str] |
          '不得创造或改写操作，不能跨问题类别选择步骤。已经完成的检查不要重复。'
          'summary总结已知事实与尚待验证的原因，禁止确诊硬件故障。不得编造密码、按钮图标、参数、保修条款。'
          'summary仅概括已知现象、尚待核实的原因和优先检查方向，不在summary或handoff编写额外操作步骤。'
+         '采用客服聊天口吻，summary用1至2句、尽量不超过120个汉字，不逐项复述用户所有事实；handoff尽量不超过80个汉字。'
          '保留说明书中的前提，例如5GHz需要手机支持；熄屏不等于停止录像。'
          '禁止提供格式化、刷机、恢复出厂、拆机、删除数据或电路接线操作；这类需求只在handoff说明须备份并转人工。'
          '凡是涉及取出或插入存储卡的步骤，必须在同一步明确先关机并拔掉电源线；不得只说熄火或关机。'
@@ -64,12 +67,33 @@ async def advise(session: Session, chunks: list[Chunk], allowed_ids: list[str] |
         catalog = {key: catalog[key] for key in allowed_ids}
         if not catalog:
             raise ValueError('no_grounded_actions')
-    result = await asyncio.wait_for((prompt | client(TEXT_MODEL) | parser).ainvoke({
+    inputs = {
         'format': parser.get_format_instructions(),
         'session': json.dumps(payload, ensure_ascii=False),
         'chunks': json.dumps(chunks, ensure_ascii=False),
         'catalog': json.dumps({key: step.model_dump() for key, step in catalog.items()}, ensure_ascii=False)
-    }), timeout=75)
+    }
+    chain = prompt | client(TEXT_MODEL)
+    if streaming.active():
+        # 只流出模型正在生成的概要；操作与引用仍需完整校验后才能发布。
+        raw = ''
+        previous = ''
+        async with asyncio.timeout(75):
+            async for chunk in chain.astream(inputs):
+                if not isinstance(chunk.content, str):
+                    raise ValueError('unexpected_stream_content')
+                raw += chunk.content
+                try:
+                    partial = parse_json_markdown(raw)
+                except (ValueError, TypeError):
+                    continue
+                summary = partial.get('summary') if isinstance(partial, dict) else None
+                if isinstance(summary, str) and summary != previous:
+                    previous = summary
+                    await streaming.publish('draft', {'text': summary[:1000]})
+            result = parser.parse(raw)
+    else:
+        result = await asyncio.wait_for((chain | parser).ainvoke(inputs), timeout=75)
     if any(identity not in catalog for identity in result.step_ids):
         raise ValueError('action_not_retrieved')
     advice = build_advice(result, session.issue)
