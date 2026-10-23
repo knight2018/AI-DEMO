@@ -1,0 +1,4344 @@
+[
+  {
+    "search_questions": [],
+    "followups": [],
+    "chunk_id": "p1-1-s01",
+    "page": 1,
+    "text": "The user manual is available on https://viofo.com/en/content/42-help-and-support/ V25.12.18",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p1-1",
+    "chapter_path": [
+      "A119 MINI 2"
+    ],
+    "start": 0,
+    "end": 91
+  },
+  {
+    "search_questions": [],
+    "followups": [],
+    "chunk_id": "p1-2-s01",
+    "page": 1,
+    "text": "USER MANUAL Copyright C 2025 VIOFO Ltd. All Rights Reserved.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p1-2",
+    "chapter_path": [
+      "USER MANUAL"
+    ],
+    "start": 0,
+    "end": 60
+  },
+  {
+    "search_questions": [],
+    "followups": [],
+    "chunk_id": "p2-1-s01",
+    "page": 2,
+    "text": "Table of Contents 1. Product Overview 1 Standard Items Optional Accessories (Sold Separately) Product Diagram LED Indicators Buttons and Icons Display Overview 2. Installation 7 Insert / Remove the Memory Card Install the Dashcam Install the Static Sticker Remove the Dashcam 3. Dash Cam Recording Operation 13 Power On / Off Loop Recording Emergency Recording Disable / Enable Audio Recording Parking Mode 4. Video Playback and Management 15 Video Playback on Dashcam Video Playback on VIOFO APP Video Playback on PC Video File Storage Location 5. Review and Control on Smartphone 17 Connect to Smartphone APP Layout Overview 6. Install Optional Accessories 20 Install CPL Install Remote Control 7. System Settings 22 8. Firmware Upgrade 28 9. Notice 28 10. Customer Service 30",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p2-1",
+    "chapter_path": [
+      "Table of Contents"
+    ],
+    "start": 0,
+    "end": 778
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "包装清单里包含哪些物品？",
+        "english": "What items are included in the package?",
+        "quote": "Standard Items Dashcam Car Charger Type-C + GPS Mount Adapter Data Cable Trim Removal Spare Mount Windshield Static Tool Sticky Pad Sticker x2"
+      },
+      {
+        "chinese": "USB数据线可以给相机充电吗？",
+        "english": "Can the USB data cable be used to charge the camera?",
+        "quote": "The USB data cable is only for connecting the camera with computer to transfer video files or upgrade firmware, not for charging the camera."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_source",
+        "text": "你当前用什么方式给行车记录仪供电？",
+        "reason": "确认供电方式，判断是否因使用数据线连接电脑而无法充电。",
+        "options": [
+          "车载充电器",
+          "电脑USB口",
+          "移动电源",
+          "其他",
+          "不确定"
+        ],
+        "quote": "The USB data cable is only for connecting the camera with computer to transfer video files or upgrade firmware, not for charging the camera."
+      },
+      {
+        "intent": "general",
+        "field": "missing_item",
+        "text": "如果配件缺失，具体是哪一件？",
+        "reason": "确认缺失配件，便于对照包装清单判断问题。",
+        "options": [
+          "车载充电器",
+          "Type-C数据线",
+          "GPS支架",
+          "其他",
+          "不确定"
+        ],
+        "quote": "Standard Items Dashcam Car Charger Type-C + GPS Mount Adapter Data Cable Trim Removal Spare Mount Windshield Static Tool Sticky Pad Sticker x2"
+      }
+    ],
+    "chunk_id": "p2-2-s01",
+    "page": 2,
+    "text": "Standard Items Dashcam Car Charger Type-C + GPS Mount Adapter Data Cable Trim Removal Spare Mount Windshield Static Tool Sticky Pad Sticker x2 * Note: The USB data cable is only for connecting the camera with computer to transfer video files or upgrade firmware, not for charging the camera.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p2-2",
+    "chapter_path": [
+      "Product Overview",
+      "Standard Items"
+    ],
+    "start": 17,
+    "end": 308
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "这款行车记录仪有哪些可选配件是单独销售的？",
+        "english": "Which optional accessories for this dash cam are sold separately?",
+        "quote": "Optional Accessories (Sold Separately) CameraDashCarforKitHardwireVIOFOINPU:TREDMax5V2AOutput:24V;/12Input:—POWREBLACK—GNDYELLOW—ACC CPL Bluetooth Hardwire Kit HK4 MicroSD Card Remote Control 1"
+      },
+      {
+        "chinese": "可选配件中是否包含遥控器、MicroSD卡和CPL？",
+        "english": "Do the optional accessories include a remote control, MicroSD card, and CPL?",
+        "quote": "CPL Bluetooth Hardwire Kit HK4 MicroSD Card Remote Control 1"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_source",
+        "text": "您准备用哪种方式给记录仪供电？",
+        "reason": "硬线套件与普通供电方式不同，需要先确认当前供电方式以排查供电问题。",
+        "options": [
+          "点烟器供电",
+          "保险盒硬线供电",
+          "其他供电方式",
+          "不确定"
+        ],
+        "quote": "Hardwire Kit HK4"
+      },
+      {
+        "intent": "power",
+        "field": "power_voltage",
+        "text": "车辆或插座的供电电压是 12V 还是 24V？",
+        "reason": "硬线套件标注涉及 12V/24V 输入，需确认实际供电电压以判断是否匹配。",
+        "options": [
+          "12V",
+          "24V",
+          "其他电压",
+          "不确定"
+        ],
+        "quote": "24V;/12Input:—"
+      }
+    ],
+    "chunk_id": "p2-2-s02",
+    "page": 2,
+    "text": "Optional Accessories (Sold Separately) CameraDashCarforKitHardwireVIOFOINPU:TREDMax5V2AOutput:24V;/12Input:—POWREBLACK—GNDYELLOW—ACC CPL Bluetooth Hardwire Kit HK4 MicroSD Card Remote Control 1",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p2-2",
+    "chapter_path": [
+      "Product Overview",
+      "Optional Accessories (Sold Separately)"
+    ],
+    "start": 309,
+    "end": 502
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何开关机？",
+        "english": "How do I turn the camera on or off?",
+        "quote": "1. Menu / Power On|Off"
+      },
+      {
+        "chinese": "如何开始或停止录像？",
+        "english": "How do I start or stop recording?",
+        "quote": "2. Menu Up / Recording Start / 6 Stop"
+      },
+      {
+        "chinese": "如何开启或关闭相机的Wi-Fi？",
+        "english": "How do I turn the camera's Wi-Fi on or off?",
+        "quote": "5. Wi-Fi On|Off"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_state",
+        "text": "设备当前是否已开机，电源状态指示灯是否点亮？",
+        "reason": "排查按键无响应或无法操作时，需要先确认设备是否处于开机状态。",
+        "options": [
+          "已开机且指示灯亮",
+          "已关机或指示灯灭",
+          "不确定"
+        ],
+        "quote": "9. Power Status Indicator"
+      },
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "相机存储卡槽中当前是否已插入存储卡？",
+        "reason": "排查录像或回放异常时，需要确认存储卡是否已插入。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "7. Memory Card Slot"
+      }
+    ],
+    "chunk_id": "p3-1-s01",
+    "page": 3,
+    "text": "Product Diagram 1. Menu / Power On|Off 2. Menu Up / Recording Start / 6 Stop 3. Menu Confirm / Video Protect 7 / Playback 1 4. Menu Down / Microphone 2 Enable / Disable 3 5. Wi-Fi On|Off 6. Power in / MicroSD Card 4 Reader Mode 5 7. Memory Card Slot 8 8. Reset Button 9 10 11 12 9. Power Status Indicator 10. Recording Status Indicator 11. Microphone Status Indicator 12. Wi-Fi Status Indicator 2",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p3-1",
+    "chapter_path": [
+      "Product Overview",
+      "Product Diagram"
+    ],
+    "start": 0,
+    "end": 396
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "图中13号USB电源口是什么？",
+        "english": "What is the USB Power Port labeled 13 in the diagram?",
+        "quote": "13. USB Power Port"
+      },
+      {
+        "chinese": "图中14号GPS模块安装座是什么？",
+        "english": "What is the Mount (GPS Module) labeled 14 in the diagram?",
+        "quote": "14. Mount (GPS Module)"
+      }
+    ],
+    "followups": [],
+    "chunk_id": "p3-2-s01",
+    "page": 3,
+    "text": "13 14 13. USB Power Port 15 14. Mount (GPS Module) 15. Lens",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p3-2",
+    "chapter_path": [
+      "Product Overview",
+      "Product Diagram"
+    ],
+    "start": 0,
+    "end": 59
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "PWR指示灯红色闪烁代表什么？",
+        "english": "What does a flashing red PWR LED indicate?",
+        "quote": "Flashing Red Updating Firmware PWR Solid Red Power On Off Power Off"
+      },
+      {
+        "chinese": "REC指示灯红色常亮是什么意思？",
+        "english": "What does a solid red REC LED mean?",
+        "quote": "Flashing Red Not Recording REC Solid Red Recording"
+      },
+      {
+        "chinese": "Wi-Fi指示灯蓝色闪烁时相机在做什么？",
+        "english": "What does a flashing blue Wi-Fi LED indicate?",
+        "quote": "Flashing Blue Wi-Fi Enabled and waiting connecting Wi-Fi Solid Blue Wi-Fi Connected Off Wi-Fi Disabled"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "wifi_led_status",
+        "text": "当前Wi-Fi指示灯是什么状态？",
+        "reason": "需要根据Wi-Fi指示灯状态判断无线连接进度。",
+        "options": [
+          "蓝色常亮",
+          "蓝色闪烁",
+          "熄灭",
+          "不确定"
+        ],
+        "quote": "Flashing Blue Wi-Fi Enabled and waiting connecting Wi-Fi Solid Blue Wi-Fi Connected Off Wi-Fi Disabled"
+      },
+      {
+        "intent": "recording",
+        "field": "rec_led_status",
+        "text": "当前REC指示灯是什么状态？",
+        "reason": "需要确认REC指示灯状态以判断是否正在录制。",
+        "options": [
+          "红色常亮",
+          "红色闪烁",
+          "熄灭",
+          "不确定"
+        ],
+        "quote": "Flashing Red Not Recording REC Solid Red Recording"
+      }
+    ],
+    "chunk_id": "p3-2-s02",
+    "page": 3,
+    "text": "LED Indicators LED LED Status Behavior Flashing Red Updating Firmware PWR Solid Red Power On Off Power Off Flashing Red Not Recording REC Solid Red Recording Solid Blue Microphone Enabled MIC Off Microphone Disabled Flashing Blue Wi-Fi Enabled and waiting connecting Wi-Fi Solid Blue Wi-Fi Connected Off Wi-Fi Disabled 3",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p3-2",
+    "chapter_path": [
+      "Product Overview",
+      "LED Indicators"
+    ],
+    "start": 60,
+    "end": 380
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "在录像模式下，按一次模式按钮会锁定正在录制的文件吗？",
+        "english": "In Recording Mode, does pressing the Mode button once lock the file being recorded?",
+        "quote": "Click once to lock the file being Mode recorded"
+      },
+      {
+        "chinese": "待机模式下按一次模式按钮会进入播放列表吗？",
+        "english": "In Standby Mode, does pressing the Mode button once enter the playlist?",
+        "quote": "Standby Mode (Not Recording) Click once to enter playlist"
+      },
+      {
+        "chinese": "长按Wi-Fi模式按钮可以开启或关闭Wi-Fi吗？",
+        "english": "Does long-pressing the Wi-Fi Mode button enable or disable Wi-Fi?",
+        "quote": "Long press to enable / disable the Wi-Fi"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "device_operation_mode",
+        "text": "相机当前处于录像模式还是待机（未录像）模式？",
+        "reason": "按键在录像模式和待机模式下的功能不同，需确认当前模式以判断对应行为。",
+        "options": [
+          "录像模式",
+          "待机模式（未录像）",
+          "不确定"
+        ],
+        "quote": "Recording Click once to lock the file being Mode recorded"
+      },
+      {
+        "intent": "wifi",
+        "field": "wifi_state",
+        "text": "相机当前Wi-Fi是已开启还是已关闭？",
+        "reason": "长按Wi-Fi模式按钮用于开启或关闭Wi-Fi，需确认当前状态以排查连接问题。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Long press to enable / disable the Wi-Fi"
+      }
+    ],
+    "chunk_id": "p4-1-s01",
+    "page": 4,
+    "text": "Buttons and Icons Mode Buttons Behavior Long press to power off Click once to take a photo Click once to stop recording Recording Click once to lock the file being Mode recorded Click once to enable / disable audio recording Long press to enable / disable the Wi-Fi Mode Buttons Behavior Click once to enter menu Click once to start recording Long press to format the memory card Standby Mode (Not Recording) Click once to enter playlist Click once to enable / disable audio recording Long press to enable / disable the Wi-Fi 4",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p4-1",
+    "chapter_path": [
+      "Product Overview",
+      "Buttons and Icons"
+    ],
+    "start": 0,
+    "end": 527
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何返回上一级菜单或退出播放列表？",
+        "english": "How do I return to the previous menu or exit the playlist?",
+        "quote": "Return to previous menu / Exit playlist"
+      },
+      {
+        "chinese": "在设置菜单中如何进入或确认设置选项？",
+        "english": "How do I enter or confirm setting options in the setting menu?",
+        "quote": "Enter / Confirm setting options"
+      },
+      {
+        "chinese": "在播放列表中如何选择、播放、暂停或锁定当前视频？",
+        "english": "How do I select, play, pause, or lock the current video in the playlist?",
+        "quote": "Playlist Select the current video / Play / Mode Pause Menu down / Change playback speed / Lock current / Unlock current video N/A"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "current_menu_mode",
+        "text": "请确认当前相机处于哪种菜单模式？",
+        "reason": "不同模式下的按键功能不同，需先确认当前模式才能对应排查按键无响应或误操作问题。",
+        "options": [
+          "播放列表模式",
+          "设置菜单模式",
+          "不确定"
+        ],
+        "quote": "Playlist Select the current video / Play / Mode Pause Menu down / Change playback speed / Lock current / Unlock current video N/A Mode Buttons Behavior Exit setting menu / Return to previous menu Menu up Setting Menu Enter / Confirm setting options Mode Menu down N / A 5"
+      },
+      {
+        "intent": "general",
+        "field": "current_video_lock_state",
+        "text": "当前视频是否处于锁定状态？",
+        "reason": "按键涉及锁定或解锁当前视频，需确认当前锁定状态，避免把视频状态误判为按键故障。",
+        "options": [
+          "已锁定",
+          "未锁定",
+          "不确定"
+        ],
+        "quote": "Lock current / Unlock current video"
+      }
+    ],
+    "chunk_id": "p4-2-s01",
+    "page": 4,
+    "text": "Mode Buttons Behavior Return to previous menu / Exit playlist Menu up / Change playback speed / Delete the video Playlist Select the current video / Play / Mode Pause Menu down / Change playback speed / Lock current / Unlock current video N/A Mode Buttons Behavior Exit setting menu / Return to previous menu Menu up Setting Menu Enter / Confirm setting options Mode Menu down N / A 5",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p4-2",
+    "chapter_path": [
+      "Product Overview",
+      "Buttons and Icons"
+    ],
+    "start": 0,
+    "end": 384
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "相机显示界面在录像模式下会显示哪些状态信息？",
+        "english": "What status information does the camera display show in recording mode?",
+        "quote": "Display Overview 1440P30 04-06-2023 10:05:00 Recording Mode Recording Status Emergency Lock Microphone Wi-Fi Status 00:00:00 Recording Time 1440P30 Video Resolution GPS Status SD Card 6"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "wifi_status_shown",
+        "text": "当前相机屏幕上是否能看到 Wi-Fi 状态标识？",
+        "reason": "确认 Wi-Fi 状态是否显示，有助于排查状态未出现或界面显示异常的问题。",
+        "options": [
+          "能看到",
+          "看不到",
+          "不确定"
+        ],
+        "quote": "Microphone Wi-Fi Status 00:00:00"
+      },
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "相机当前是否已插入 SD 卡？",
+        "reason": "录像模式涉及 SD 卡状态，确认是否插卡可排查无法录制或容量识别问题。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "GPS Status SD Card 6"
+      }
+    ],
+    "chunk_id": "p5-1-s01",
+    "page": 5,
+    "text": "Display Overview 1440P30 04-06-2023 10:05:00 Recording Mode Recording Status Emergency Lock Microphone Wi-Fi Status 00:00:00 Recording Time 1440P30 Video Resolution GPS Status SD Card 6",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p5-1",
+    "chapter_path": [
+      "Product Overview",
+      "Display Overview"
+    ],
+    "start": 0,
+    "end": 185
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "存储卡应该怎么插入相机？",
+        "english": "How do I insert the memory card into the camera?",
+        "quote": "Ensure the camera is turned off. Hold the memory card in the orientation shown, slide it into the card slot until you hear a click."
+      },
+      {
+        "chinese": "插入存储卡前需要关闭相机吗？",
+        "english": "Do I need to turn off the camera before inserting the memory card?",
+        "quote": "Ensure the camera is turned off."
+      },
+      {
+        "chinese": "存储卡插入后怎样确认已经到位？",
+        "english": "How can I confirm the memory card is fully inserted?",
+        "quote": "Hold the memory card in the orientation shown, slide it into the card slot until you hear a click."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "请确认存储卡当前是否已插入相机卡槽。",
+        "reason": "说明书要求将存储卡插入卡槽直至听到咔哒声，需要确认当前插卡状态以判断问题。",
+        "options": [
+          "已插入并听到咔哒声",
+          "已插入但未听到咔哒声",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "Hold the memory card in the orientation shown, slide it into the card slot until you hear a click."
+      },
+      {
+        "intent": "power",
+        "field": "camera_power_state",
+        "text": "插入存储卡前，相机当前是否已关机？",
+        "reason": "说明书要求插卡前确保相机已关闭，需要确认相机当前电源状态。",
+        "options": [
+          "已关机",
+          "开机",
+          "不确定"
+        ],
+        "quote": "Ensure the camera is turned off."
+      }
+    ],
+    "chunk_id": "p5-2-s01",
+    "page": 5,
+    "text": "Insert the memory card Ensure the camera is turned off. Hold the memory card in the orientation shown, slide it into the card slot until you hear a click.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p5-2",
+    "chapter_path": [
+      "Installation",
+      "Insert the memory card"
+    ],
+    "start": 45,
+    "end": 199
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何取出相机的内存卡？",
+        "english": "How do I remove the memory card from the camera?",
+        "quote": "Ensure that the camera is turned off, and then push the edge of the memory card with your fingernail. The card will spring out far enough to be removed."
+      },
+      {
+        "chinese": "这款相机支持多大容量和什么速度等级的microSD卡？",
+        "english": "What capacity and speed rating microSD card does the camera support?",
+        "quote": "The microSD card must have a Class-10 or UHS-I rating and the capacity is up to 512GB."
+      },
+      {
+        "chinese": "内存卡首次使用前需要格式化吗？",
+        "english": "Does the memory card need to be formatted before first use?",
+        "quote": "Memory card must be formatted before first use. Please format the card on a computer or in the camera to the FAT32 file system."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "card_removal_safety",
+        "text": "在插入或取出microSD卡前，您是否已拔掉电源线？",
+        "reason": "确认取卡前是否已断电，以判断是否存在因带电操作损坏文件的风险。",
+        "options": [
+          "已拔掉电源线",
+          "未拔掉电源线",
+          "不确定"
+        ],
+        "quote": "Please unplug the power cable before inserting or removing the microSD card."
+      },
+      {
+        "intent": "recording",
+        "field": "card_specs",
+        "text": "请确认您使用的microSD卡容量和速度等级是否符合要求？",
+        "reason": "确认卡规格是否满足相机要求，以排除因容量或速度等级不匹配导致的问题。",
+        "options": [
+          "Class-10或UHS-I，且容量不超过512GB",
+          "非Class-10/UHS-I",
+          "容量超过512GB",
+          "不确定"
+        ],
+        "quote": "The microSD card must have a Class-10 or UHS-I rating and the capacity is up to 512GB."
+      }
+    ],
+    "chunk_id": "p5-2-s02",
+    "page": 5,
+    "text": "Remove the memory card Ensure that the camera is turned off, and then push the edge of the memory card with your fingernail. The card will spring out far enough to be removed. Note: • The microSD card is sold separately. The microSD card must have a Class-10 or UHS-I rating and the capacity is up to 512GB. • We recommend that you buy VIOFO industrial grade microSD card for extended endurance, excellent performance and reliability. • Memory card must be formatted before first use. Please format the card on a computer or in the camera to the FAT32 file system. • Please unplug the power cable before inserting or removing the microSD card. • Inserting or removing the microSD card while recording may destroy the files. 7",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p5-2",
+    "chapter_path": [
+      "Installation",
+      "Remove the memory card"
+    ],
+    "start": 200,
+    "end": 925
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "存储卡首次使用前需要格式化吗？",
+        "english": "Does the memory card need to be formatted before first use?",
+        "quote": "Format the memory card Memory card must be formatted before first use."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_formatted",
+        "text": "这张存储卡目前是否已经格式化？",
+        "reason": "说明书要求存储卡首次使用前先格式化，需要确认当前卡是否已完成格式化，以判断是否属于首次使用未格式化的情形。",
+        "options": [
+          "已格式化",
+          "未格式化",
+          "不确定"
+        ],
+        "quote": "Format the memory card Memory card must be formatted before first use."
+      }
+    ],
+    "chunk_id": "p6-1-s01",
+    "page": 6,
+    "text": "Format the memory card Memory card must be formatted before first use.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p6-1",
+    "chapter_path": [
+      "Installation",
+      "Format the memory card"
+    ],
+    "start": 0,
+    "end": 70
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何在相机内格式化内存卡？",
+        "english": "How can I format the memory card in the camera?",
+        "quote": "To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button."
+      },
+      {
+        "chinese": "可以用 VIOFO App 设置中的格式化选项来格式化内存卡吗？",
+        "english": "Can I use the format option in the VIOFO App Settings to format the memory card?",
+        "quote": "To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button."
+      },
+      {
+        "chinese": "长按相机上的按钮可以格式化内存卡吗？",
+        "english": "Can I long press the button on the camera to format the memory card?",
+        "quote": "To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "请确认内存卡当前是否已插入相机。",
+        "reason": "格式化内存卡需要卡在相机中；确认插入状态可排除未插卡导致无法操作。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button."
+      },
+      {
+        "intent": "recording",
+        "field": "card_formatted",
+        "text": "请确认这张内存卡当前是否已经格式化过。",
+        "reason": "确认卡当前格式化状态有助于判断是首次格式化还是重复操作问题。",
+        "options": [
+          "已格式化",
+          "未格式化",
+          "不确定"
+        ],
+        "quote": "To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button."
+      }
+    ],
+    "chunk_id": "p6-1-s02",
+    "page": 6,
+    "text": "Format the memory card in the camera To format the card in the camera, either use the VIOFO App and the format option in the Settings, or alternatively long press the [ ] button.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p6-1",
+    "chapter_path": [
+      "Installation",
+      "Format the memory card",
+      "Format the memory card in the camera"
+    ],
+    "start": 71,
+    "end": 249
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "存储卡需要定期格式化吗？",
+        "english": "Should the memory card be formatted periodically?",
+        "quote": "We suggest formatting the card periodically to ensure the best performance of the camera."
+      },
+      {
+        "chinese": "格式化存储卡会永久删除里面的数据吗？",
+        "english": "Will formatting the memory card permanently erase the data on it?",
+        "quote": "Formatting the card will erase all data permanently, please back up important data beforehand."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "data_backup_status",
+        "text": "存储卡中的重要数据是否已经备份？",
+        "reason": "格式化会永久删除数据，确认备份状态可避免排查过程中造成数据丢失。",
+        "options": [
+          "已备份",
+          "未备份",
+          "不确定"
+        ],
+        "quote": "Formatting the card will erase all data permanently, please back up important data beforehand."
+      },
+      {
+        "intent": "recording",
+        "field": "card_specs",
+        "text": "你当前使用的存储卡容量和速度等级是多少？",
+        "reason": "存储卡规格可能影响格式化与录制稳定性，需要确认容量和速度等级以排查问题。",
+        "options": [
+          "32GB Class10",
+          "64GB U1",
+          "128GB U3",
+          "256GB及以上 U3",
+          "不确定"
+        ],
+        "quote": "We suggest formatting the card periodically to ensure the best performance of the camera."
+      }
+    ],
+    "chunk_id": "p6-1-s03",
+    "page": 6,
+    "text": "Format the memory card using a computer To format the memory card on your computer, follow your computer’s user manual. For deep formatting of the memory card, you can also download the GUIFormat tool from our official website: https://viofo.com/download/guiformat.exe Note: We suggest formatting the card periodically to ensure the best performance of the camera. Formatting the card will erase all data permanently, please back up important data beforehand.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p6-1",
+    "chapter_path": [
+      "Installation",
+      "Format the memory card",
+      "Format the memory card using a computer"
+    ],
+    "start": 250,
+    "end": 709
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "行车记录仪应该安装在哪里？",
+        "english": "Where should the dashcam be mounted?",
+        "quote": "Select a location on the windshield behind the rear-view mirror where the camera will not obstruct the driver’s view while driving."
+      },
+      {
+        "chinese": "行车记录仪如何连接电源？",
+        "english": "How should the dashcam be connected to power?",
+        "quote": "Connect to car cigarette lighter socket"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_source",
+        "text": "您实际准备用哪种方式给行车记录仪供电？",
+        "reason": "说明书要求连接汽车点烟器插座，确认实际供电方式有助于排查供电与安装问题。",
+        "options": [
+          "汽车点烟器插座",
+          "USB接口",
+          "硬接线",
+          "不确定"
+        ],
+        "quote": "Connect to car cigarette lighter socket"
+      },
+      {
+        "intent": "general",
+        "field": "mount_view_clear",
+        "text": "您计划的挡风玻璃安装位置能否确保不遮挡驾驶员视线？",
+        "reason": "说明书要求安装在后视镜后方且不遮挡驾驶员视线，确认实际位置可判断安装是否合适。",
+        "options": [
+          "能确保不遮挡",
+          "可能遮挡视线",
+          "尚未确认",
+          "不确定"
+        ],
+        "quote": "Select a location on the windshield behind the rear-view mirror where the camera will not obstruct the driver’s view while driving."
+      }
+    ],
+    "chunk_id": "p6-1-s04",
+    "page": 6,
+    "text": "Install the Dashcam 1. Select a location on the windshield behind the rear-view mirror where the camera will not obstruct the driver’s view while driving. Best mounting location Connect to car cigarette lighter socket 8",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p6-1",
+    "chapter_path": [
+      "Installation",
+      "Install the Dashcam"
+    ],
+    "start": 710,
+    "end": 929
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "粘贴行车记录仪前，挡风玻璃安装面需要如何处理？",
+        "english": "What should I do to the windscreen installation surface before attaching the dashcam?",
+        "quote": "Wipe clean the installation surface of the windscreen with a dry cloth, it must be grease free for the sticky pad to stick firmly."
+      },
+      {
+        "chinese": "行车记录仪怎样安装到挡风玻璃上？",
+        "english": "How do I mount the dashcam on the windshield?",
+        "quote": "Mount the dashcam directly to the windshield with the sticky pad, or attach the static sticker to the selected location before installation"
+      },
+      {
+        "chinese": "安装后如何调整镜头角度？",
+        "english": "How do I adjust the lens angle after installation?",
+        "quote": "Adjust the Lens Angle - Look at the live view on the LCD. - Adjust the angle of the lens up / down if necessary."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "installation_surface_clean",
+        "text": "安装前，挡风玻璃安装面是否已用干布擦拭干净并确认无油污？",
+        "reason": "安装面的清洁和油污状态会影响粘胶垫的粘贴牢固度，需要先确认。",
+        "options": [
+          "已用干布擦拭且确认无油污",
+          "已用干布擦拭但未确认是否无油污",
+          "未处理安装面",
+          "不确定"
+        ],
+        "quote": "Wipe clean the installation surface of the windscreen with a dry cloth, it must be grease free for the sticky pad to stick firmly."
+      },
+      {
+        "intent": "general",
+        "field": "sticky_pad_film_removed",
+        "text": "粘胶垫的保护膜是否已经撕掉？",
+        "reason": "保护膜未撕会影响粘贴固定，需要确认当前状态以排查安装不牢的问题。",
+        "options": [
+          "已撕掉",
+          "未撕掉",
+          "不确定"
+        ],
+        "quote": "Peel the protection film off the sticky pad and camera lens."
+      }
+    ],
+    "chunk_id": "p6-2-s01",
+    "page": 6,
+    "text": "2. Wipe clean the installation surface of the windscreen with a dry cloth, it must be grease free for the sticky pad to stick firmly. 3. Mount the dashcam directly to the windshield with the sticky pad, or attach the static sticker to the selected location before installation (Refer to guide on pages 11-12). 4. Peel the protection film off the sticky pad and camera lens. 5. Fix the camera on the selected location. 6. Adjust the Lens Angle - Look at the live view on the LCD. - Adjust the angle of the lens up / down if necessary. 9",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p6-2",
+    "chapter_path": [
+      "Installation",
+      "Install the Dashcam"
+    ],
+    "start": 0,
+    "end": 535
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "行车记录仪如何连接车辆电源？",
+        "english": "How do I connect the dashcam to the vehicle power supply?",
+        "quote": "Insert the car charger USB cable’s male port into the camera mount's USB Type-C port. Plug the USB power adapter into your vehicle’s 12V / 24V female power socket."
+      },
+      {
+        "chinese": "行车记录仪安装在什么位置比较合适？",
+        "english": "Where should I install or mount the dashcam?",
+        "quote": "Tips: 1. Do not install / mount the camera in a location that interferes with the driver’s visibility and safety. 2. Install / mount the camera close to the rearview mirror so that both sides of the scene being recorded are equally covered by the camera’s FOV (field of view)."
+      },
+      {
+        "chinese": "雨天怎样保证记录画面清晰？",
+        "english": "How can I ensure a clear view on rainy days?",
+        "quote": "3. To ensure a clear view on rainy days, the lens should be positionwithin the windshield wiper’s sweeping range."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_voltage",
+        "text": "车辆用于给记录仪供电的电源插座电压是12V还是24V？",
+        "reason": "说明书要求插入车辆12V/24V电源插座，需确认实际电压以排查供电连接问题。",
+        "options": [
+          "12V",
+          "24V",
+          "不确定"
+        ],
+        "quote": "Plug the USB power adapter into your vehicle’s 12V / 24V female power socket."
+      },
+      {
+        "intent": "recording",
+        "field": "wiper_sweep_coverage",
+        "text": "镜头是否位于挡风玻璃雨刷的刮扫范围内？",
+        "reason": "雨天画面清晰度与镜头是否在雨刷刮扫范围内有关，需要确认实际安装位置。",
+        "options": [
+          "是",
+          "否",
+          "不确定"
+        ],
+        "quote": "3. To ensure a clear view on rainy days, the lens should be positionwithin the windshield wiper’s sweeping range."
+      }
+    ],
+    "chunk_id": "p7-1-s01",
+    "page": 7,
+    "text": "7. Connect to Power Insert the car charger USB cable’s male port into the camera mount's USB Type-C port. Plug the USB power adapter into your vehicle’s 12V / 24V female power socket. 2 1 Tips: 1. Do not install / mount the camera in a location that interferes with the driver’s visibility and safety. 2. Install / mount the camera close to the rearview mirror so that both sides of the scene being recorded are equally covered by the camera’s FOV (field of view). 3. To ensure a clear view on rainy days, the lens should be positionwithin the windshield wiper’s sweeping range. 4. Do not install / mount the camera on or near airbag panels. 5. Installation / mounting location should not be affected by sun control film (window tint). There should not be any other electronic equipment close to the camera for optimal performance. 10",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p7-1",
+    "chapter_path": [
+      "Installation",
+      "Install the Dashcam"
+    ],
+    "start": 0,
+    "end": 834
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "行车记录仪可以安装在安全气囊面板附近吗？",
+        "english": "Can the dashcam be installed near an airbag panel?",
+        "quote": "Note: Do not install / mount the camera or cables near an airbag panel or within the airbag’s working range."
+      },
+      {
+        "chinese": "把相机或线缆安装在安全气囊工作范围内有什么风险？",
+        "english": "What is the risk of installing the camera or cables within the airbag’s working range?",
+        "quote": "The manufacturer is not liable for any injury or death caused by deployment of the airbag."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "airbag_proximity",
+        "text": "请确认计划安装相机或线缆的位置是否在安全气囊面板附近或安全气囊工作范围内？",
+        "reason": "说明书明确禁止在安全气囊面板附近或工作范围内安装，需要确认实际安装位置是否属于该范围。",
+        "options": [
+          "是，在附近或范围内",
+          "否，不在附近或范围内",
+          "不确定"
+        ],
+        "quote": "Note: Do not install / mount the camera or cables near an airbag panel or within the airbag’s working range."
+      }
+    ],
+    "chunk_id": "p7-2-s01",
+    "page": 7,
+    "text": "Note: Do not install / mount the camera or cables near an airbag panel or within the airbag’s working range. The manufacturer is not liable for any injury or death caused by deployment of the airbag.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p7-2",
+    "chapter_path": [
+      "Installation",
+      "Install the Dashcam"
+    ],
+    "start": 0,
+    "end": 199
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何安装静电贴？",
+        "english": "How do I install the static sticker?",
+        "quote": "Install the Static Sticker (Optional) 1. Wipe clean the surface of the windscreen before installation. 2. Peel the red sign protective film off the static sticker, then attach the sticker to the windscreen."
+      },
+      {
+        "chinese": "安装前需要清洁挡风玻璃表面吗？",
+        "english": "Should I clean the surface of the windscreen before installation?",
+        "quote": "Wipe clean the surface of the windscreen before installation."
+      },
+      {
+        "chinese": "如何确保相机固定牢固？",
+        "english": "How can I make sure the camera is attached firmly?",
+        "quote": "Peel the protection film off the sticky pad on the mount, and attach it to the sticker. Press the camera hard for a few seconds, making sure it is attached firmly."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "windscreen_surface_cleanliness",
+        "text": "挡风玻璃安装表面目前是否清洁干燥？",
+        "reason": "确认安装表面状态，以排查灰尘、油污或潮湿是否影响静电贴和相机固定。",
+        "options": [
+          "清洁干燥",
+          "有灰尘或油污",
+          "潮湿",
+          "不确定"
+        ],
+        "quote": "Wipe clean the surface of the windscreen before installation."
+      },
+      {
+        "intent": "general",
+        "field": "sticker_bubble_state",
+        "text": "静电贴与挡风玻璃之间目前是否有气泡？",
+        "reason": "确认是否存在气泡，以判断气泡是否影响静电贴贴合和相机固定。",
+        "options": [
+          "没有气泡",
+          "有少量气泡",
+          "有明显气泡",
+          "不确定"
+        ],
+        "quote": "Press it for a few seconds, making sure no bubbles are left."
+      }
+    ],
+    "chunk_id": "p7-2-s02",
+    "page": 7,
+    "text": "Install the Static Sticker (Optional) 1. Wipe clean the surface of the windscreen before installation. 2. Peel the red sign protective film off the static sticker, then attach the sticker to the windscreen. Press it for a few seconds, making sure no bubbles are left. 3. Peel the green sign protective film off the static sticker. 4. Peel the protection film off the sticky pad on the mount, and attach it to the sticker. Press the camera hard for a few seconds, making sure it is attached firmly. 11",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p7-2",
+    "chapter_path": [
+      "Installation",
+      "Install the Static Sticker (Optional)"
+    ],
+    "start": 200,
+    "end": 700
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何将行车记录仪从支架上取下？",
+        "english": "How do I remove the dashcam from its bracket?",
+        "quote": "To remove the camera from its bracket, slide the camera to the right and pull the camera out of the mounting bracket."
+      },
+      {
+        "chinese": "插拔相机电源前需要先关机吗？",
+        "english": "Should I turn off the camera before plugging or unplugging it?",
+        "quote": "Note: When you want to plug in and unplug the camera, please turn it off first."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_state",
+        "text": "相机当前是否已关机？",
+        "reason": "说明要求插拔电源前先关机，需要确认当前电源状态以判断操作前提是否满足。",
+        "options": [
+          "已关机",
+          "未关机",
+          "不确定"
+        ],
+        "quote": "Note: When you want to plug in and unplug the camera, please turn it off first."
+      },
+      {
+        "intent": "general",
+        "field": "mount_state",
+        "text": "相机目前是否仍固定在支架上？",
+        "reason": "需要确认相机与支架的连接状态，以便判断是取下操作还是插拔电源相关问题。",
+        "options": [
+          "仍固定在支架上",
+          "已从支架取下",
+          "不确定"
+        ],
+        "quote": "To remove the camera from its bracket, slide the camera to the right and pull the camera out of the mounting bracket."
+      }
+    ],
+    "chunk_id": "p8-1-s01",
+    "page": 8,
+    "text": "Remove the Dashcam To remove the camera from its bracket, slide the camera to the right and pull the camera out of the mounting bracket. Note: When you want to plug in and unplug the camera, please turn it off first. 12",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p8-1",
+    "chapter_path": [
+      "Installation",
+      "Remove the Dashcam"
+    ],
+    "start": 19,
+    "end": 238
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "启动发动机后，记录仪会自动开机并开始录像吗？",
+        "english": "Will the dash cam turn on and start recording automatically when the engine starts?",
+        "quote": "When you start the engine, the camera will turn on and begin recording automatically."
+      },
+      {
+        "chinese": "关闭发动机或拔掉电源适配器上的充电线后，记录仪会停止录像并关机吗？",
+        "english": "Will the dash cam stop recording and power off when the engine is turned off or the charging cable is unplugged from the power adapter?",
+        "quote": "When you turn off the engine or unplug the charging cable from the power adapter, the camera will stop recording and turn off."
+      },
+      {
+        "chinese": "如何手动开机或关机记录仪？",
+        "english": "How do I manually power the dash cam on or off?",
+        "quote": "Long press [ ] button to power on or off the camera."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "engine_state",
+        "text": "当前车辆发动机是否处于启动状态？",
+        "reason": "用于判断记录仪是否应因发动机启动而自动开机并录像。",
+        "options": [
+          "启动",
+          "关闭",
+          "不确定"
+        ],
+        "quote": "When you start the engine, the camera will turn on and begin recording automatically."
+      },
+      {
+        "intent": "power",
+        "field": "charger_connected",
+        "text": "当前充电线是否仍连接在电源适配器上？",
+        "reason": "用于判断记录仪是否因充电线被拔出而停止录像并关机。",
+        "options": [
+          "已连接",
+          "未连接",
+          "不确定"
+        ],
+        "quote": "When you turn off the engine or unplug the charging cable from the power adapter, the camera will stop recording and turn off."
+      }
+    ],
+    "chunk_id": "p8-2-s01",
+    "page": 8,
+    "text": "Power On / Off 1. When you start the engine, the camera will turn on and begin recording automatically. 2. When you turn off the engine or unplug the charging cable from the power adapter, the camera will stop recording and turn off. 3. Long press [ ] button to power on or off the camera.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p8-2",
+    "chapter_path": [
+      "Dash Cam Recording Operation",
+      "Power On / Off"
+    ],
+    "start": 29,
+    "end": 318
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "插入microSD卡并检测到供电后，循环录像会自动开始吗？",
+        "english": "Will loop recording start automatically after a microSD card is inserted and the camera detects power?",
+        "quote": "1. Insert a microSD card into the camera’s card slot and automatic loop recording will begin once the camera detects power."
+      },
+      {
+        "chinese": "循环录像每段视频文件的时长可以设置成几分钟？",
+        "english": "What time frame options are available for each loop recording video file?",
+        "quote": "2. Time frame for each video file is 1 / 2 / 3 / 5 / 10 minutes."
+      },
+      {
+        "chinese": "microSD卡空间不足时，循环录像会如何处理旧文件？",
+        "english": "When microSD card space is insufficient, how does loop recording handle the oldest files?",
+        "quote": "3. When there is insufficient space on the microSD car, loop recording.will automatically overwrite the oldest files (one by one)."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "请确认相机存储卡槽中是否已插入microSD卡？",
+        "reason": "循环录像需要先插入microSD卡，确认插卡状态有助于判断为何未开始录像。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "Insert a microSD card into the camera’s card slot"
+      },
+      {
+        "intent": "power",
+        "field": "camera_power_connected",
+        "text": "相机当前是否已连接电源并处于通电状态？",
+        "reason": "相机检测到供电后才会自动开始循环录像，需要确认当前供电状态。",
+        "options": [
+          "已通电",
+          "未通电",
+          "不确定"
+        ],
+        "quote": "automatic loop recording will begin once the camera detects power."
+      }
+    ],
+    "chunk_id": "p8-2-s02",
+    "page": 8,
+    "text": "Loop Recording 1. Insert a microSD card into the camera’s card slot and automatic loop recording will begin once the camera detects power. 2. Time frame for each video file is 1 / 2 / 3 / 5 / 10 minutes. 3. When there is insufficient space on the microSD car, loop recording.will automatically overwrite the oldest files (one by one). 4. Loop recording files are saved to SD card: \\DCIM\\Movie.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p8-2",
+    "chapter_path": [
+      "Dash Cam Recording Operation",
+      "Loop Recording"
+    ],
+    "start": 319,
+    "end": 712
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "发生碰撞时，行车记录仪会自动锁定当前录像吗？",
+        "english": "Will the dash cam automatically lock the current footage when a collision occurs?",
+        "quote": "When the G-sensor is activated by a collision, the current footage will be locked automatically to avoid being overwritten by loop recording."
+      },
+      {
+        "chinese": "录制中按下紧急录制按钮会发生什么？",
+        "english": "What happens if I press the emergency recording button during recording?",
+        "quote": "Pressing the [ ] button during a recording will lock the current file being recorded."
+      },
+      {
+        "chinese": "被锁定的紧急录像会被循环录像覆盖吗？",
+        "english": "Will locked emergency files be overwritten by loop recording?",
+        "quote": "Once locked, the file will not be overwritten by the loop recording feature."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "g_sensor_sensitivity",
+        "text": "设备的碰撞感应（G-sensor）灵敏度当前设置为多少？",
+        "reason": "碰撞感应灵敏度会影响自动紧急录制是否能被碰撞触发。",
+        "options": [
+          "低",
+          "中",
+          "高",
+          "不确定"
+        ],
+        "quote": "When the G-sensor is activated by a collision, the current footage will be locked automatically to avoid being overwritten by loop recording."
+      },
+      {
+        "intent": "recording",
+        "field": "recording_active",
+        "text": "按下紧急录制按钮时，设备是否正处于录制状态？",
+        "reason": "手动紧急录制仅在录制过程中锁定当前文件。",
+        "options": [
+          "正在录制",
+          "未录制",
+          "不确定"
+        ],
+        "quote": "Pressing the [ ] button during a recording will lock the current file being recorded."
+      }
+    ],
+    "chunk_id": "p8-2-s03",
+    "page": 8,
+    "text": "Emergency Recording 1. Automatic emergency recording When the G-sensor is activated by a collision, the current footage will be locked automatically to avoid being overwritten by loop recording. 2. Manual emergency recording Pressing the [ ] button during a recording will lock the current file being recorded. Once locked, the file will not be overwritten by the loop recording feature. 13",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p8-2",
+    "chapter_path": [
+      "Dash Cam Recording Operation",
+      "Emergency Recording"
+    ],
+    "start": 713,
+    "end": 1103
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "碰撞检测灵敏度在哪里设置？",
+        "english": "Where can I adjust collision detection sensitivity?",
+        "quote": "Collision detection sensitivity can be adjusted in settings under the “G-sensor” option."
+      },
+      {
+        "chinese": "锁定文件保存在SD卡的哪个位置？",
+        "english": "Where are locked files saved on the SD card?",
+        "quote": "Locked files are saved to SD card: DCIM \\ Movie \\ RO"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "g_sensor_sensitivity_setting",
+        "text": "当前G-sensor（碰撞检测）灵敏度处于什么档位？",
+        "reason": "用于判断碰撞检测触发频率是否与灵敏度设置有关。",
+        "options": [
+          "低",
+          "中",
+          "高",
+          "不确定"
+        ],
+        "quote": "Collision detection sensitivity can be adjusted in settings under the “G-sensor” option."
+      },
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "相机内当前是否已插入SD卡？",
+        "reason": "锁定文件需要保存到SD卡，需确认存储卡是否在位。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "Locked files are saved to SD card: DCIM \\ Movie \\ RO"
+      }
+    ],
+    "chunk_id": "p9-1-s01",
+    "page": 9,
+    "text": "Note: Collision detection sensitivity can be adjusted in settings under the “G-sensor” option. Locked files are saved to SD card: DCIM \\ Movie \\ RO",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p9-1",
+    "chapter_path": [
+      "Dash Cam Recording Operation",
+      "Emergency Recording"
+    ],
+    "start": 0,
+    "end": 147
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何关闭或开启录音功能？",
+        "english": "How do I disable or enable audio recording?",
+        "quote": "Pressing the [ ] button once to turn off / on audio recording"
+      },
+      {
+        "chinese": "关闭或开启录音时，LED指示灯会有什么变化？",
+        "english": "What happens to the LED indicator when audio recording is turned off or on?",
+        "quote": "audio recording, [ ] LED light will be off / solid Blue."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "audio_recording_state",
+        "text": "当前录音功能处于开启还是关闭状态？",
+        "reason": "不同录音状态对应的排查步骤不同，需要先确认当前状态。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Pressing the [ ] button once to turn off / on audio recording"
+      },
+      {
+        "intent": "recording",
+        "field": "audio_recording_led_state",
+        "text": "当前录音功能的LED指示灯是熄灭还是常亮蓝色？",
+        "reason": "需要根据指示灯状态判断录音功能是否按预期切换。",
+        "options": [
+          "熄灭",
+          "常亮蓝色",
+          "不确定"
+        ],
+        "quote": "audio recording, [ ] LED light will be off / solid Blue."
+      }
+    ],
+    "chunk_id": "p9-1-s02",
+    "page": 9,
+    "text": "Disable / Enable Audio Recording Pressing the [ ] button once to turn off / on audio recording, [ ] LED light will be off / solid Blue.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p9-1",
+    "chapter_path": [
+      "Dash Cam Recording Operation",
+      "Disable / Enable Audio Recording"
+    ],
+    "start": 148,
+    "end": 283
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "停车模式包含哪些录像选项？",
+        "english": "What recording options are available in parking mode?",
+        "quote": "There are three options for parking mode. 1. Auto Event Detection The camera will automatically record a video sequence while a moving object is being detected during parking mode. It will stop recording when no new movement is detected. 2. Time Lapse Recording Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded. Note: Audio cannot be recorded in time-lapse mode. 3. Low Bitrate Recording This mode uses low bitrate to record video and audio, and uses small file sizes for continuous recording."
+      },
+      {
+        "chinese": "停车模式中的延时录像会录音吗？",
+        "english": "Does time-lapse recording in parking mode capture audio?",
+        "quote": "Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded. Note: Audio cannot be recorded in time-lapse mode."
+      },
+      {
+        "chinese": "停车监控在发动机关闭时如何获得持续供电？",
+        "english": "How does parking mode get continuous power when the engine is off?",
+        "quote": "Note: Parking mode provides surveillance of your parked vehicle only when the engine is off and the USB Type-C Hardwire Kit is used to provide continuous power. The Hardwire Kit also protects your car battery from being drained. We recommend buying the VIOFO HK4 ACC hardwire kit cable for parking mode recording."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "parking_recording_mode",
+        "text": "您当前或计划使用哪种停车模式录像方式？",
+        "reason": "不同停车模式在触发方式、录音和文件大小上不同，需要先确认您的选择以排查录像问题。",
+        "options": [
+          "自动事件检测",
+          "延时录像",
+          "低码流录像",
+          "不确定"
+        ],
+        "quote": "There are three options for parking mode."
+      },
+      {
+        "intent": "power",
+        "field": "hardwire_kit_installed",
+        "text": "您的相机是否已通过 USB Type-C Hardwire Kit 获取持续供电？",
+        "reason": "停车模式仅在发动机关闭且使用 USB Type-C Hardwire Kit 持续供电时提供监控，需确认供电条件。",
+        "options": [
+          "已安装并持续供电",
+          "未安装",
+          "不确定"
+        ],
+        "quote": "Parking mode provides surveillance of your parked vehicle only when the engine is off and the USB Type-C Hardwire Kit is used to provide continuous power."
+      }
+    ],
+    "chunk_id": "p9-1-s03",
+    "page": 9,
+    "text": "Parking Mode There are three options for parking mode. 1. Auto Event Detection The camera will automatically record a video sequence while a moving object is being detected during parking mode. It will stop recording when no new movement is detected. 2. Time Lapse Recording Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded. Note: Audio cannot be recorded in time-lapse mode. 3. Low Bitrate Recording This mode uses low bitrate to record video and audio, and uses small file sizes for continuous recording. Note: Parking mode provides surveillance of your parked vehicle only when the engine is off and the USB Type-C Hardwire Kit is used to provide continuous power. The Hardwire Kit also protects your car battery from being drained. We recommend buying the VIOFO HK4 ACC hardwire kit cable for parking mode recording. 14",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p9-1",
+    "chapter_path": [
+      "Dash Cam Recording Operation",
+      "Parking Mode"
+    ],
+    "start": 284,
+    "end": 1180
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何在行车记录仪上播放录制的视频？",
+        "english": "How do I play recorded videos on the dashcam?",
+        "quote": "Video Playback on Dashcam 1. Under standby mode (not recording), click once [ ] button to enter the playlist. 2. Use the arrow buttons [ ] to select the desired video and press the button [ ] to play. 3. Press the [ ] button to exit."
+      },
+      {
+        "chinese": "行车记录仪的默认视频分辨率是多少？",
+        "english": "What is the default video resolution of the dashcam?",
+        "quote": "Note: The default video resolution of the dashcam is 2560 x 1440P 30fps."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "device_recording_state",
+        "text": "相机当前是否处于待机且未录制状态？",
+        "reason": "进入播放列表前需要确认设备处于待机模式且没有在录制，否则可能无法按步骤进入播放。",
+        "options": [
+          "待机未录制",
+          "正在录制",
+          "不确定"
+        ],
+        "quote": "Under standby mode (not recording), click once [ ] button to enter the playlist."
+      },
+      {
+        "intent": "general",
+        "field": "playlist_video_visible",
+        "text": "播放列表中是否能看到要播放的视频文件？",
+        "reason": "需要先选中目标视频，若播放列表中看不到视频文件，就无法继续执行选择并播放的步骤。",
+        "options": [
+          "能看到",
+          "看不到",
+          "不确定"
+        ],
+        "quote": "Use the arrow buttons [ ] to select the desired video and press the button [ ] to play."
+      }
+    ],
+    "chunk_id": "p9-2-s01",
+    "page": 9,
+    "text": "Video Playback on Dashcam 1. Under standby mode (not recording), click once [ ] button to enter the playlist. 2. Use the arrow buttons [ ] to select the desired video and press the button [ ] to play. 3. Press the [ ] button to exit. Note: The default video resolution of the dashcam is 2560 x 1440P 30fps.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p9-2",
+    "chapter_path": [
+      "Video Playback and Management",
+      "Video Playback on Dashcam"
+    ],
+    "start": 30,
+    "end": 336
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "VIOFO APP如何连接相机进行视频回放？",
+        "english": "How do I connect the VIOFO APP to the camera for video playback?",
+        "quote": "Open VIOFO app and choose \"Connect your camera\" to use your phone to control the dashcam. You can play and manage files through the APP."
+      },
+      {
+        "chinese": "使用VIOFO APP前，如何让手机连接到记录仪？",
+        "english": "Before using the VIOFO APP, how do I connect my phone to the dashcam?",
+        "quote": "Long press the Wi-Fi button to enable Wi-Fi. Connect Wi-Fi on your phone first."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "phone_connection",
+        "text": "手机当前是否已连接相机的Wi-Fi？",
+        "reason": "若手机未连接相机Wi-Fi，App可能无法进入控制或回放界面。",
+        "options": [
+          "已连接",
+          "未连接",
+          "不确定"
+        ],
+        "quote": "Connect Wi-Fi on your phone first."
+      },
+      {
+        "intent": "general",
+        "field": "app_state",
+        "text": "VIOFO App当前是否已点击“Connect your camera”并显示连接相机界面？",
+        "reason": "需确认App操作进度，判断是否卡在连接相机步骤。",
+        "options": [
+          "已点击并显示连接相机",
+          "未点击或仍在首页",
+          "不确定"
+        ],
+        "quote": "Open VIOFO app and choose \"Connect your camera\" to use your phone to control the dashcam."
+      }
+    ],
+    "chunk_id": "p9-2-s02",
+    "page": 9,
+    "text": "Video Playback on VIOFO APP Long press the Wi-Fi button to enable Wi-Fi. Connect Wi-Fi on your phone first. Open VIOFO app and choose \"Connect your camera\" to use your phone to control the dashcam. You can play and manage files through the APP. You can check the app introduction refer to [Review and Control on Smartphone].",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p9-2",
+    "chapter_path": [
+      "Video Playback and Management",
+      "Video Playback on VIOFO APP"
+    ],
+    "start": 337,
+    "end": 661
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何在电脑上播放行车记录仪里的视频？",
+        "english": "How can I play videos from the dashcam on a PC?",
+        "quote": "Video Playback on PC 1. Remove memory card from dashcam. Before removing the memory card, make sure you have switched off the Dashcam. 2. Insert the memory card into a SD card adapter or card reader connected to your PC. 3. Open VIOFO Player, add videos from the DCIM folder for playback."
+      },
+      {
+        "chinese": "取出存储卡前需要先关闭行车记录仪吗？",
+        "english": "Do I need to turn off the dashcam before removing the memory card?",
+        "quote": "Before removing the memory card, make sure you have switched off the Dashcam."
+      },
+      {
+        "chinese": "把存储卡连接到电脑后，用什么软件播放视频？",
+        "english": "Which software should I use to play videos after connecting the memory card to my PC?",
+        "quote": "Open VIOFO Player, add videos from the DCIM folder for playback."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "card_reader_connection",
+        "text": "您是否已将存储卡从行车记录仪中取出，并通过读卡器或SD卡适配器连接到电脑？",
+        "reason": "确认存储卡是否已按要求连接到电脑，以排查无法播放视频的原因。",
+        "options": [
+          "已取出并连接电脑",
+          "已取出但未连接电脑",
+          "尚未取出存储卡",
+          "不确定"
+        ],
+        "quote": "Insert the memory card into a SD card adapter or card reader connected to your PC."
+      },
+      {
+        "intent": "general",
+        "field": "viofo_player_state",
+        "text": "您电脑上的VIOFO Player是否已安装并打开？",
+        "reason": "确认播放软件的状态，以排查无法打开或播放视频的原因。",
+        "options": [
+          "已安装并打开",
+          "已安装但未打开",
+          "未安装",
+          "不确定"
+        ],
+        "quote": "Open VIOFO Player, add videos from the DCIM folder for playback."
+      }
+    ],
+    "chunk_id": "p9-2-s03",
+    "page": 9,
+    "text": "Video Playback on PC 1. Remove memory card from dashcam. Before removing the memory card, make sure you have switched off the Dashcam. 2. Insert the memory card into a SD card adapter or card reader connected to your PC. 3. Open VIOFO Player, add videos from the DCIM folder for playback. 15",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p9-2",
+    "chapter_path": [
+      "Video Playback and Management",
+      "Video Playback on PC"
+    ],
+    "start": 662,
+    "end": 953
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "VIOFO Player 电脑版在哪里下载？",
+        "english": "Where can I download VIOFO Player for PC?",
+        "quote": "Download VIOFO Player from our official website: https://www.viofo.com/pages/viofo-app"
+      },
+      {
+        "chinese": "如果电脑带有 microSD 卡槽，如何读取存储卡中的视频？",
+        "english": "How can I read videos from the memory card if my PC has a microSD slot?",
+        "quote": "For your PC with a microSD slot, you can directly insert the memory card into it."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "pc_microsd_slot",
+        "text": "您的电脑是否带有 microSD 卡槽？",
+        "reason": "用于判断是否可以直接插卡读取，还是需要改用读卡器等方式。",
+        "options": [
+          "有",
+          "没有",
+          "不确定"
+        ],
+        "quote": "For your PC with a microSD slot"
+      },
+      {
+        "intent": "recording",
+        "field": "card_removed_from_camera",
+        "text": "您的行车记录仪存储卡当前是否已从相机中取出？",
+        "reason": "用于确认存储卡当前状态，判断是否具备插入电脑读取的条件。",
+        "options": [
+          "已取出",
+          "仍在相机中",
+          "不确定"
+        ],
+        "quote": "insert the memory card into it"
+      }
+    ],
+    "chunk_id": "p10-1-s01",
+    "page": 10,
+    "text": "Download VIOFO Player from our official website: https://www.viofo.com/pages/viofo-app Note: For your PC with a microSD slot, you can directly insert the memory card into it.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p10-1",
+    "chapter_path": [
+      "Video Playback and Management",
+      "Video Playback on PC"
+    ],
+    "start": 0,
+    "end": 174
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "循环录像的文件保存在哪个文件夹？",
+        "english": "Which folder are loop recording videos saved in?",
+        "quote": "Loop Recording DCIM / Movie ( Including Motion Detection )"
+      },
+      {
+        "chinese": "紧急录像和锁定视频保存在哪个文件夹？",
+        "english": "Where are emergency recordings and locked videos stored?",
+        "quote": "Emergency Recording DCIM / Movie / RO ( Locked Video )"
+      },
+      {
+        "chinese": "停车监控录像保存在哪个文件夹？",
+        "english": "Where are parking recording videos stored?",
+        "quote": "Parking recording ( Auto Event Detection / Time-lapse Recording DCIM / Parking / Low Bitrate Recording )"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "recording_mode",
+        "text": "请确认您当前要查找的是哪种录像类型？",
+        "reason": "不同录像模式对应的存储文件夹不同，需要先确认类型才能定位文件。",
+        "options": [
+          "循环录像",
+          "紧急录像",
+          "停车监控",
+          "快照",
+          "不确定"
+        ],
+        "quote": "Recording Mode Behavior Loop Recording DCIM / Movie ( Including Motion Detection ) Emergency Recording DCIM / Movie / RO ( Locked Video ) Parking recording ( Auto Event Detection / Time-lapse Recording DCIM / Parking / Low Bitrate Recording ) Parking Recording DCIM / Parking / RO ( Locked Video ) Snapshot DCIM / Photo"
+      }
+    ],
+    "chunk_id": "p10-1-s02",
+    "page": 10,
+    "text": "Video File Storage Location Recording Mode Behavior Loop Recording DCIM / Movie ( Including Motion Detection ) Emergency Recording DCIM / Movie / RO ( Locked Video ) Parking recording ( Auto Event Detection / Time-lapse Recording DCIM / Parking / Low Bitrate Recording ) Parking Recording DCIM / Parking / RO ( Locked Video ) Snapshot DCIM / Photo 16",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p10-1",
+    "chapter_path": [
+      "Video Playback and Management",
+      "Video File Storage Location"
+    ],
+    "start": 175,
+    "end": 525
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何通过智能手机使用VIOFO App远程控制相机？",
+        "english": "How can I use the VIOFO app to control the camera remotely with a smartphone?",
+        "quote": "The VIOFO app allows you to control your camera remotely by using a smartphone."
+      },
+      {
+        "chinese": "VIOFO App提供哪些功能？",
+        "english": "What features does the VIOFO app provide?",
+        "quote": "Features include full camera control, live preview, playback and video recording."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "phone_connection",
+        "text": "手机当前是否已连接到相机的Wi-Fi？",
+        "reason": "需要确认手机与相机的连接状态，才能判断App无法远程控制是否由未连接相机Wi-Fi导致。",
+        "options": [
+          "已连接",
+          "未连接",
+          "不确定"
+        ],
+        "quote": "The VIOFO app allows you to control your camera remotely by using a smartphone."
+      },
+      {
+        "intent": "general",
+        "field": "app_state",
+        "text": "VIOFO App当前界面显示到什么状态？",
+        "reason": "需要确认App是否已识别到相机，以排查连接或预览异常。",
+        "options": [
+          "已显示相机",
+          "正在搜索相机",
+          "未打开App",
+          "不确定"
+        ],
+        "quote": "The VIOFO app allows you to control your camera remotely by using a smartphone."
+      }
+    ],
+    "chunk_id": "p10-2-s01",
+    "page": 10,
+    "text": "Connect to Smartphone The VIOFO app allows you to control your camera remotely by using a smartphone. Features include full camera control, live preview, playback and video recording.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p10-2",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "Connect to Smartphone"
+    ],
+    "start": 33,
+    "end": 216
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "Android 手机从哪里下载 VIOFO 应用？可以直接从官网下载 APK 吗？",
+        "english": "Where can I download the VIOFO app on Android, and can I download the APK directly from the official website?",
+        "quote": "Android users can download the app from Google Play, or download the APK directly from our official website: https://viofo.com/en/content/13-app/"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "phone_os",
+        "text": "请确认您的手机系统是 Android 吗？",
+        "reason": "说明书仅说明 Android 设备的下载方式，需要确认手机系统以匹配正确的下载渠道。",
+        "options": [
+          "Android",
+          "iOS",
+          "不确定"
+        ],
+        "quote": "Android Device Android users can download the app from Google Play, or download the APK directly from our official website: https://viofo.com/en/content/13-app/"
+      },
+      {
+        "intent": "general",
+        "field": "app_install_state",
+        "text": "您是否已经完成 VIOFO App 的安装？",
+        "reason": "需要确认安装进度，才能判断下一步是继续下载还是进行后续连接操作。",
+        "options": [
+          "已安装",
+          "未安装",
+          "不确定"
+        ],
+        "quote": "Android users can download the app from Google Play, or download the APK directly from our official website: https://viofo.com/en/content/13-app/"
+      }
+    ],
+    "chunk_id": "p10-2-s02",
+    "page": 10,
+    "text": "Android Device Android users can download the app from Google Play, or download the APK directly from our official website: https://viofo.com/en/content/13-app/",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p10-2",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "Connect to Smartphone",
+      "Android Device"
+    ],
+    "start": 217,
+    "end": 377
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "iOS 用户如何下载应用程序？",
+        "english": "How do iOS users download the app?",
+        "quote": "IOS users can download the app from the App store."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "phone_os",
+        "text": "您当前使用的是 iOS 设备还是安卓设备？",
+        "reason": "需要确认手机系统，以判断应参考 App Store 还是 Google Play 的下载路径。",
+        "options": [
+          "iOS",
+          "Android",
+          "不确定"
+        ],
+        "quote": "IOS users can download the app from the App store."
+      },
+      {
+        "intent": "general",
+        "field": "app_store_listing_found",
+        "text": "您是否已在 App Store 中搜索到该应用？",
+        "reason": "确认当前下载进度，以便区分找不到应用与后续下载操作问题。",
+        "options": [
+          "已找到",
+          "未找到",
+          "不确定"
+        ],
+        "quote": "Download on the GET IT ON App Store Google Play"
+      }
+    ],
+    "chunk_id": "p10-2-s03",
+    "page": 10,
+    "text": "IOS Device IOS users can download the app from the App store. Download on the GET IT ON App Store Google Play",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p10-2",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "Connect to Smartphone",
+      "IOS Device"
+    ],
+    "start": 378,
+    "end": 487
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何将手机连接到 A119 Mini 2 的 Wi-Fi，并在 VIOFO App 中连接设备？",
+        "english": "How do I connect my phone to the A119 Mini 2 Wi-Fi and add the dashcam in the VIOFO app?",
+        "quote": "Step 1: Use the phone to connect A119 Mini 2 Wi-Fi. When the phone is connected with the dashcam, the LED light on the camera shows solid blue. • Step 2: Open the VIOFO app. Tap \"Connect New Device\" and select the dashcam model you want to connect to your phone for control."
+      },
+      {
+        "chinese": "相机开启 Wi-Fi 后，LCD 屏幕会显示什么？",
+        "english": "What appears on the camera LCD screen when Wi-Fi is turned on?",
+        "quote": "When the Wi-Fi is on, a Wi-Fi status icon, Wi-Fi name (SSID) and the password appear on the camera LCD screen."
+      },
+      {
+        "chinese": "A119 Mini 2 的 Wi-Fi 如何开启？",
+        "english": "How do I turn on Wi-Fi on the A119 Mini 2?",
+        "quote": "Turn on the Wi-Fi in the menu or long press the [ ] button."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "phone_connection",
+        "text": "手机当前是否已经连接到 A119 Mini 2 的 Wi-Fi？",
+        "reason": "用于确认手机是否已接入相机 Wi-Fi，便于判断连接问题发生在哪一步。",
+        "options": [
+          "已连接",
+          "未连接",
+          "不确定"
+        ],
+        "quote": "Step 1: Use the phone to connect A119 Mini 2 Wi-Fi."
+      },
+      {
+        "intent": "wifi",
+        "field": "app_state",
+        "text": "VIOFO App 当前是否已打开并进入实时画面或设备连接界面？",
+        "reason": "用于确认 App 操作进度，排查手机已连接相机但 App 未完成连接的情况。",
+        "options": [
+          "已进入实时画面",
+          "已打开但未进入实时画面",
+          "未打开应用",
+          "不确定"
+        ],
+        "quote": "Open the VIOFO app. Tap \"Connect New Device\" and select the dashcam model you want to connect to your phone for control."
+      }
+    ],
+    "chunk_id": "p10-2-s04",
+    "page": 10,
+    "text": "Connect VIOFO APP Turn on the Wi-Fi in the menu or long press the [ ] button. When the Wi-Fi is on, a Wi-Fi status icon, Wi-Fi name (SSID) and the password appear on the camera LCD screen. • Step 1: Use the phone to connect A119 Mini 2 Wi-Fi. When the phone is connected with the dashcam, the LED light on the camera shows solid blue. • Step 2: Open the VIOFO app. Tap \"Connect New Device\" and select the dashcam model you want to connect to your phone for control. • Step 3: Now you can see the live view of both cameras. You can change the settings and check the files on the app. 17",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p10-2",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "Connect to Smartphone",
+      "Connect VIOFO APP"
+    ],
+    "start": 488,
+    "end": 1073
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何通过App把行车记录仪与手机配对？",
+        "english": "How can I pair the dashcam with my phone through the app?",
+        "quote": "Tap \"Connect New Device\" to pair the dashcam to your phone for control."
+      },
+      {
+        "chinese": "App布局中的“Connect New Device”有什么作用？",
+        "english": "What is the function of \"Connect New Device\" in the app layout?",
+        "quote": "Tap \"Connect New Device\" to pair the dashcam to your phone for control."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "app_state",
+        "text": "您的手机App当前是否显示“Connect New Device”配对入口？",
+        "reason": "用于判断是否已进入配对入口，便于继续排查连接问题。",
+        "options": [
+          "显示",
+          "未显示",
+          "不确定"
+        ],
+        "quote": "Tap \"Connect New Device\" to pair the dashcam to your phone for control."
+      }
+    ],
+    "chunk_id": "p11-1-s01",
+    "page": 11,
+    "text": "APP Layout Overview Tap \"Connect New Device\" to pair the dashcam to your phone for control. 1 2 3 4 13.21V VIOFO A149 10-12-2025 15:14:42 2560x1440 P30 8 2 1 3 5 6 7",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p11-1",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "APP Layout Overview"
+    ],
+    "start": 0,
+    "end": 165
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "在App的Live View界面如何开始或停止录像？",
+        "english": "How do I start or stop recording in the app's Live View?",
+        "quote": "⑥ Start/Stop Recording"
+      },
+      {
+        "chinese": "在App中如何切换相机视图？",
+        "english": "How do I switch the camera view in the app?",
+        "quote": "② Switch Camera View"
+      },
+      {
+        "chinese": "如何开启或关闭App中的语音录制？",
+        "english": "How do I turn voice recording on or off in the app?",
+        "quote": "③ Voice Recording On/Off"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "app_state",
+        "text": "您当前是否在App的Live View界面？",
+        "reason": "需要确认当前所在App界面，才能判断可用的查看或录制入口。",
+        "options": [
+          "Live View界面",
+          "其他界面",
+          "不确定"
+        ],
+        "quote": "Live View ① Device Connection & Setup"
+      },
+      {
+        "intent": "recording",
+        "field": "recording_status",
+        "text": "相机当前是否正在录制？",
+        "reason": "需要确认当前录制状态，避免把未开始录制或已停止录制误判为异常。",
+        "options": [
+          "正在录制",
+          "未在录制",
+          "不确定"
+        ],
+        "quote": "⑥ Start/Stop Recording ⑦ Snap a Photo"
+      }
+    ],
+    "chunk_id": "p11-1-s02",
+    "page": 11,
+    "text": "Live View ① Device Connection & Setup ① Grid (On/Off) ② Gallery ② Switch Camera View ③ App Information & Settings ③ Voice Recording On/Off ④ App & Device Settings ⑤ View Gallery ⑥ Start/Stop Recording ⑦ Snap a Photo ⑧ Toggle Landscape View 18",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p11-1",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "APP Layout Overview",
+      "Live View"
+    ],
+    "start": 171,
+    "end": 413
+  },
+  {
+    "search_questions": [],
+    "followups": [],
+    "chunk_id": "p11-2-s01",
+    "page": 11,
+    "text": "3 4 1 2 5",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p11-2",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "APP Layout Overview",
+      "Live View"
+    ],
+    "start": 0,
+    "end": 9
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "相册里的“SD Card File (On Camera)”和“Local File (On Phone)”有什么区别？",
+        "english": "What is the difference between SD Card File (On Camera) and Local File (On Phone) in Gallery?",
+        "quote": "Gallery ① SD Card File (On Camera) ② Local File (On Phone) ③ All Video Clips ④ File Selection ⑤ Date Filter 19"
+      },
+      {
+        "chinese": "如何在相册中按日期筛选视频？",
+        "english": "How can I filter videos by date in Gallery?",
+        "quote": "Gallery ① SD Card File (On Camera) ② Local File (On Phone) ③ All Video Clips ④ File Selection ⑤ Date Filter 19"
+      },
+      {
+        "chinese": "相册中的“All Video Clips”和“File Selection”分别是什么意思？",
+        "english": "What do All Video Clips and File Selection mean in Gallery?",
+        "quote": "Gallery ① SD Card File (On Camera) ② Local File (On Phone) ③ All Video Clips ④ File Selection ⑤ Date Filter 19"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "相机当前是否已插入 SD 卡？",
+        "reason": "若无法查看或打开相机 SD 卡中的文件，需要先确认存储卡是否已插入。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "Gallery ① SD Card File (On Camera) ② Local File (On Phone) ③ All Video Clips ④ File Selection ⑤ Date Filter 19"
+      }
+    ],
+    "chunk_id": "p11-2-s02",
+    "page": 11,
+    "text": "Gallery ① SD Card File (On Camera) ② Local File (On Phone) ③ All Video Clips ④ File Selection ⑤ Date Filter 19",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p11-2",
+    "chapter_path": [
+      "Review and Control on Smartphone",
+      "APP Layout Overview",
+      "Gallery"
+    ],
+    "start": 10,
+    "end": 120
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "CPL滤镜有什么作用？",
+        "english": "What is the CPL lens used for?",
+        "quote": "The CPL (Circular Polarizing Lens) can be used to reduce reflections and glare from the window glass and road surfaces that can otherwise damage image quality, this works in the same way as polarized sunglasses, getting more saturated and beautiful video."
+      },
+      {
+        "chinese": "如何安装CPL？",
+        "english": "How do I install the CPL?",
+        "quote": "When installing the CPL, you can randomly choose one slot and keep it upward, and then put the CPL on the lens."
+      },
+      {
+        "chinese": "安装CPL时卡槽应朝哪个方向？",
+        "english": "Which direction should the CPL slot face during installation?",
+        "quote": "When installing the CPL, you can randomly choose one slot and keep it upward"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "cpl_slot_up",
+        "text": "您安装CPL时，是否已将任意一个卡槽朝上放置？",
+        "reason": "CPL需要任意一个卡槽朝上安装，确认该状态有助于判断安装方向是否正确。",
+        "options": [
+          "已朝上",
+          "未朝上",
+          "不确定"
+        ],
+        "quote": "When installing the CPL, you can randomly choose one slot and keep it upward, and then put the CPL on the lens."
+      }
+    ],
+    "chunk_id": "p12-1-s01",
+    "page": 12,
+    "text": "Install CPL The CPL (Circular Polarizing Lens) can be used to reduce reflections and glare from the window glass and road surfaces that can otherwise damage image quality, this works in the same way as polarized sunglasses, getting more saturated and beautiful video. When installing the CPL, you can randomly choose one slot and keep it upward, and then put the CPL on the lens. 20",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p12-1",
+    "chapter_path": [
+      "Install Optional Accessories",
+      "Install CPL"
+    ],
+    "start": 29,
+    "end": 411
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "按下蓝牙遥控器后，相机会对当前视频做什么？",
+        "english": "What does the camera do to the current video when the Bluetooth remote is pressed?",
+        "quote": "When you press the Bluetooth remote, the camera will lock the current video file and take a video snapshot."
+      },
+      {
+        "chinese": "如何使用蓝牙遥控器保护重要视频不被覆盖？",
+        "english": "How can I use the Bluetooth remote to protect important videos from being overwritten?",
+        "quote": "When you press the Bluetooth remote, the camera will lock the current video file and take a video snapshot."
+      },
+      {
+        "chinese": "蓝牙遥控器可以在不转移驾驶视线的情况下操作吗？",
+        "english": "Can the Bluetooth remote be used without taking your eyes off the road?",
+        "quote": "With the Bluetooth remote control (optional) mounted in a convenient location on your dashboard, you can safely protect important videos from being overwritten, without needing to take your eyes off the road."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "bluetooth_remote_connection",
+        "text": "蓝牙遥控器当前是否已与相机连接？",
+        "reason": "需要确认遥控器连接状态，以排查按键后无法锁定视频或拍照的问题。",
+        "options": [
+          "已连接",
+          "未连接",
+          "不确定"
+        ],
+        "quote": "With the Bluetooth remote control (optional) mounted in a convenient location on your dashboard"
+      },
+      {
+        "intent": "recording",
+        "field": "recording_status",
+        "text": "相机当前是否正在录制视频？",
+        "reason": "锁定当前视频文件需要存在正在录制的视频，需确认录制状态。",
+        "options": [
+          "正在录制",
+          "未录制",
+          "不确定"
+        ],
+        "quote": "the camera will lock the current video file and take a video snapshot."
+      }
+    ],
+    "chunk_id": "p12-2-s01",
+    "page": 12,
+    "text": "Install Bluetooth Remote Control With the Bluetooth remote control (optional) mounted in a convenient location on your dashboard, you can safely protect important videos from being overwritten, without needing to take your eyes off the road. When you press the Bluetooth remote, the camera will lock the current video file and take a video snapshot.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p12-2",
+    "chapter_path": [
+      "Install Optional Accessories",
+      "Install Bluetooth Remote Control"
+    ],
+    "start": 0,
+    "end": 349
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "行车记录仪蓝牙遥控器如何配对？",
+        "english": "How do I pair the Bluetooth remote control with the dash camera?",
+        "quote": "Press and hold the video lock button on remote control for 3 seconds to pair with camera."
+      },
+      {
+        "chinese": "遥控器配对成功后LED指示灯会变成什么颜色？",
+        "english": "What color does the remote control LED indicator turn after successful pairing?",
+        "quote": "If get paired successfully, the LED indicator of the remote turns blue."
+      },
+      {
+        "chinese": "配对遥控器前需要先打开相机吗？",
+        "english": "Do I need to power on the camera before pairing the remote control?",
+        "quote": "Power on the camera."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "camera_power_state",
+        "text": "相机当前是否已开机？",
+        "reason": "排查配对失败时需要确认相机是否已按说明开机。",
+        "options": [
+          "已开机",
+          "未开机",
+          "不确定"
+        ],
+        "quote": "Power on the camera."
+      },
+      {
+        "intent": "general",
+        "field": "remote_led_state",
+        "text": "遥控器上的LED指示灯当前是什么状态？",
+        "reason": "确认遥控器配对指示状态，以判断是否配对成功。",
+        "options": [
+          "蓝色",
+          "未亮",
+          "其他颜色",
+          "不确定"
+        ],
+        "quote": "If get paired successfully, the LED indicator of the remote turns blue."
+      }
+    ],
+    "chunk_id": "p12-2-s02",
+    "page": 12,
+    "text": "Pairing with dash camera • Power on the camera. • Press and hold the video lock button on remote control for 3 seconds to pair with camera. • If get paired successfully, the LED indicator of the remote turns blue. 21",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p12-2",
+    "chapter_path": [
+      "Install Optional Accessories",
+      "Install Bluetooth Remote Control",
+      "Pairing with dash camera"
+    ],
+    "start": 350,
+    "end": 566
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "在视频模式下如何进入系统设置？",
+        "english": "How do I access System Settings in video mode?",
+        "quote": "Press the Menu button during video mode to access the settings. (recording need to be stopped)"
+      },
+      {
+        "chinese": "录像时能进入系统设置吗？",
+        "english": "Can I access System Settings while recording?",
+        "quote": "Press the Menu button during video mode to access the settings. (recording need to be stopped)"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "recording_state",
+        "text": "相机当前是否正在录像？",
+        "reason": "说明书提示进入设置前需要停止录像，需确认当前录像状态。",
+        "options": [
+          "正在录像",
+          "未在录像",
+          "不确定"
+        ],
+        "quote": "(recording need to be stopped)"
+      },
+      {
+        "intent": "general",
+        "field": "camera_mode",
+        "text": "相机当前是否处于视频模式？",
+        "reason": "进入系统设置的操作是在视频模式下按 Menu 按钮，需确认当前模式。",
+        "options": [
+          "视频模式",
+          "非视频模式",
+          "不确定"
+        ],
+        "quote": "Press the Menu button during video mode to access the settings."
+      }
+    ],
+    "chunk_id": "p13-1-s01",
+    "page": 13,
+    "text": "System Settings Press the Menu button during video mode to access the settings. (recording need to be stopped)",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-1",
+    "chapter_path": [
+      "System Settings"
+    ],
+    "start": 0,
+    "end": 110
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "怎么设置录像的视频分辨率？",
+        "english": "How do I set the video resolution for recording?",
+        "quote": "Resolution: Set the video resolution of footage recorded 2592 x 1944P 30fps, 2560 x 1600P 30fps, 2560 x 1440P 30fps, 2560 x 1440P 60fps, 2560 x 1080P 60fps, 2560 x 1080P 30fps, 2304 x 1296P 30fps, 1920 x 1080P 60fps, 1920 x 1080P 30fps, are available for selection."
+      },
+      {
+        "chinese": "录像支持哪些视频分辨率选项？",
+        "english": "What video resolution options are available for recording?",
+        "quote": "2592 x 1944P 30fps, 2560 x 1600P 30fps, 2560 x 1440P 30fps, 2560 x 1440P 60fps, 2560 x 1080P 60fps, 2560 x 1080P 30fps, 2304 x 1296P 30fps, 1920 x 1080P 60fps, 1920 x 1080P 30fps, are available for selection."
+      },
+      {
+        "chinese": "为什么开启HDR后前摄不能选60fps？",
+        "english": "Why is 60fps not available for the front camera when HDR is enabled?",
+        "quote": "The front cam 60fps is not available while HDR is enabled. With HDR enabled, the frame rate will automatically switch to 30fps."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "hdr_enabled",
+        "text": "当前是否已开启HDR？",
+        "reason": "HDR开启会影响前摄60fps选项及自动帧率，需要确认当前状态。",
+        "options": [
+          "已开启",
+          "未开启",
+          "不确定"
+        ],
+        "quote": "The front cam 60fps is not available while HDR is enabled. With HDR enabled, the frame rate will automatically switch to 30fps."
+      },
+      {
+        "intent": "recording",
+        "field": "camera_lens",
+        "text": "当前使用的是前摄还是后摄？",
+        "reason": "前摄60fps在HDR开启时不可用，需要确认当前使用的镜头位置。",
+        "options": [
+          "前摄",
+          "后摄",
+          "不确定"
+        ],
+        "quote": "The front cam 60fps is not available while HDR is enabled."
+      }
+    ],
+    "chunk_id": "p13-1-s02",
+    "page": 13,
+    "text": "Resolution: Set the video resolution of footage recorded 2592 x 1944P 30fps, 2560 x 1600P 30fps, 2560 x 1440P 30fps, 2560 x 1440P 60fps, 2560 x 1080P 60fps, 2560 x 1080P 30fps, 2304 x 1296P 30fps, 1920 x 1080P 60fps, 1920 x 1080P 30fps, are available for selection. Note: The front cam 60fps is not available while HDR is enabled. With HDR enabled, the frame rate will automatically switch to 30fps.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-1",
+    "chapter_path": [
+      "System Settings",
+      "Resolution"
+    ],
+    "start": 111,
+    "end": 510
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "视频码率低、中、高设置分别有什么影响？",
+        "english": "What are the effects of the Low, Medium, and High video bitrate settings?",
+        "quote": "Bitrate: Low / Medium / High. You can set the bitrate for video. High bitrate may improve the quality and smoothness of the video, especially when recording fast motion or high contrast scenes. Using high bitrate mode may decrease the amount of recording time available on your memory card. Using a low bitrate will save space and record for longer time."
+      },
+      {
+        "chinese": "高码率会缩短存储卡可录制时间吗？",
+        "english": "Does high bitrate reduce the recording time available on the memory card?",
+        "quote": "Using high bitrate mode may decrease the amount of recording time available on your memory card."
+      },
+      {
+        "chinese": "低码率能节省存储空间并延长录制时间吗？",
+        "english": "Can low bitrate save space and allow longer recording time?",
+        "quote": "Using a low bitrate will save space and record for longer time."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "current_bitrate_setting",
+        "text": "相机当前设置的视频码率是低、中还是高？",
+        "reason": "码率档位会影响画质、流畅度以及存储卡可录制时长，需要先确认当前设置。",
+        "options": [
+          "低",
+          "中",
+          "高",
+          "不确定"
+        ],
+        "quote": "Bitrate: Low / Medium / High. You can set the bitrate for video."
+      },
+      {
+        "intent": "recording",
+        "field": "card_free_space",
+        "text": "存储卡当前剩余可用空间大约是多少？",
+        "reason": "高码率可能减少可录制时间，剩余空间不足也会影响可录时长，需要确认存储卡状态。",
+        "options": [
+          "不足1GB",
+          "1GB至8GB",
+          "8GB至32GB",
+          "32GB以上",
+          "不确定"
+        ],
+        "quote": "Using high bitrate mode may decrease the amount of recording time available on your memory card."
+      }
+    ],
+    "chunk_id": "p13-1-s03",
+    "page": 13,
+    "text": "Bitrate: Low / Medium / High. You can set the bitrate for video. High bitrate may improve the quality and smoothness of the video, especially when recording fast motion or high contrast scenes. Using high bitrate mode may decrease the amount of recording time available on your memory card. Using a low bitrate will save space and record for longer time.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-1",
+    "chapter_path": [
+      "System Settings",
+      "Bitrate"
+    ],
+    "start": 511,
+    "end": 865
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "循环录像可以设置哪些时长？",
+        "english": "What loop recording durations are available?",
+        "quote": "Loop Recording: off / 1 / 2 / 3 / 5 / 10 minutes."
+      },
+      {
+        "chinese": "microSD卡存储满了之后，旧录像会怎样处理？",
+        "english": "What happens to old footage when the microSD card storage is full?",
+        "quote": "Each recorded file is up to three minutes long, with old footage being replaced when microSD card storage is full."
+      },
+      {
+        "chinese": "如何调整曝光值来改善不同光源下的录像效果？",
+        "english": "How do I adjust the exposure value to improve recording results under different light sources?",
+        "quote": "Exposure: Adjust the value of the EV (Exposure Value) to obtain better recording results under different light sources. The range is from -2.0 to + 2.0. The default is set at 0.0."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "请确认相机中是否已插入microSD卡？",
+        "reason": "说明书说明插入microSD卡并开机后会自动开始录像，需确认当前卡是否在位以排查无法录像问题。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "Recording will begin automatically after powering on with a microSD card in the device."
+      },
+      {
+        "intent": "recording",
+        "field": "loop_recording_enabled",
+        "text": "当前循环录像功能是否已开启？",
+        "reason": "需确认循环录像是否开启，以判断录像是否按设定进行循环覆盖。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Loop Recording: off / 1 / 2 / 3 / 5 / 10 minutes."
+      }
+    ],
+    "chunk_id": "p13-1-s04",
+    "page": 13,
+    "text": "Loop Recording: off / 1 / 2 / 3 / 5 / 10 minutes. Recording will begin automatically after powering on with a microSD card in the device. Each recorded file is up to three minutes long, with old footage being replaced when microSD card storage is full. Exposure: Adjust the value of the EV (Exposure Value) to obtain better recording results under different light sources. The range is from -2.0 to + 2.0. The default is set at 0.0.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-1",
+    "chapter_path": [
+      "System Settings",
+      "Loop Recording"
+    ],
+    "start": 866,
+    "end": 1298
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "HDR的默认设置是什么？",
+        "english": "What is the default HDR setting?",
+        "quote": "HDR (High Dynamic Range): Off/On/HDR Timer. The default setting is Off."
+      },
+      {
+        "chinese": "HDR功能有什么作用？",
+        "english": "What does the HDR feature do?",
+        "quote": "The multi-exposure HDR technique helps automatically balance the lighting in over bright and over dark areas to avoid over exposure issues."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "hdr_setting",
+        "text": "请确认相机当前HDR设置是哪种模式？",
+        "reason": "不同HDR模式会影响高光和暗部的平衡，需要确认当前状态以排查过曝或明暗失衡问题。",
+        "options": [
+          "关闭",
+          "开启",
+          "HDR Timer",
+          "不确定"
+        ],
+        "quote": "HDR (High Dynamic Range): Off/On/HDR Timer. The default setting is Off."
+      }
+    ],
+    "chunk_id": "p13-1-s05",
+    "page": 13,
+    "text": "HDR (High Dynamic Range): Off/On/HDR Timer. The default setting is Off. The multi-exposure HDR technique helps automatically balance the lighting in over bright and over dark areas to avoid over exposure issues. 22",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-1",
+    "chapter_path": [
+      "System Settings",
+      "HDR (High Dynamic Range)"
+    ],
+    "start": 1299,
+    "end": 1513
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "停车模式下自动事件检测如何录像？",
+        "english": "How does Auto Event Detection recording work in parking mode?",
+        "quote": "① Auto Event Detection The camera will automatically record a video sequence while a moving object is detected during parking. It will stop recording without new movements."
+      },
+      {
+        "chinese": "停车模式的延时录像使用什么帧率，是否会录音？",
+        "english": "What frame rate does time lapse recording use in parking mode, and does it record audio?",
+        "quote": "② Time Lapse recording Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded."
+      },
+      {
+        "chinese": "停车模式低码流录像有什么特点？",
+        "english": "What are the features of Low Bitrate Recording in parking mode?",
+        "quote": "③ Low Bitrate Recording This mode uses low bitrate to record video and audio, and uses small file sizes for continuous recording."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_source",
+        "text": "您当前是如何给行车记录仪供电的？",
+        "reason": "停车模式录像通常与供电方式有关，需要确认是否使用推荐的硬线套件。",
+        "options": [
+          "VIOFO HK4 ACC硬线套件",
+          "车载点烟器或USB电源",
+          "其他供电方式",
+          "不确定"
+        ],
+        "quote": "We recommend buying VIOFO HK4 ACC hardwire kit cable for parking mode recording."
+      },
+      {
+        "intent": "recording",
+        "field": "parking_temperature_exposure",
+        "text": "您停车时车辆是否处于夏季暴晒、车内温度可能超过60°C的环境？",
+        "reason": "高温环境会影响停车录像模式选择及设备安全，需要确认停车环境温度风险。",
+        "options": [
+          "是",
+          "否",
+          "不确定"
+        ],
+        "quote": "In case you park the car outside in hot summer, we highly recommend time lapse recording mode. If the temperature inside the car goes above 60°C, we advise turning off the dashcam to avoid recording errors or even irreversible damages."
+      }
+    ],
+    "chunk_id": "p13-2-s01",
+    "page": 13,
+    "text": "Parking Mode: There are 3 options under parking mode: ① Auto Event Detection The camera will automatically record a video sequence while a moving object is detected during parking. It will stop recording without new movements. ② Time Lapse recording Time lapse record a video at low frames at 1 / 2 / 3 / 5 / 10 fps, it keeps recording continuously without audio recorded. ③ Low Bitrate Recording This mode uses low bitrate to record video and audio, and uses small file sizes for continuous recording. Note: 1. We recommend buying VIOFO HK4 ACC hardwire kit cable for parking mode recording. 2. In case you park the car outside in hot summer, we highly recommend time lapse recording mode. If the temperature inside the car goes above 60°C, we advise turning off the dashcam to avoid recording errors or even irreversible damages.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-2",
+    "chapter_path": [
+      "System Settings",
+      "Parking Mode"
+    ],
+    "start": 0,
+    "end": 831
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "行车记录仪如何设置进入停车监控模式的时间？",
+        "english": "How do I set the timer for entering parking mode?",
+        "quote": "Enter Parking Mode Timer: Set the timer for entering parking mode."
+      },
+      {
+        "chinese": "停车监控模式定时器用外接电池为什么不生效？",
+        "english": "Why doesn't the parking mode timer work with an external battery?",
+        "quote": "(Only for hardwire cable, if you use external battery, this function will not work.)"
+      },
+      {
+        "chinese": "停车监控定时器里的“Off”和“90s”分别是什么意思？",
+        "english": "What do \"Off\" and \"90s\" mean for the parking mode timer?",
+        "quote": "\"Off\" means the camera will enter parking mode right away when the engine is off. \"90s\" means the camera will enter parking mode 90 seconds after engine is off."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "power_source",
+        "text": "当前相机的供电方式是硬接线电缆还是外接电池？",
+        "reason": "该功能仅支持硬接线电缆，外接电池不生效，需要确认当前供电方式。",
+        "options": [
+          "硬接线电缆",
+          "外接电池",
+          "其他",
+          "不确定"
+        ],
+        "quote": "(Only for hardwire cable, if you use external battery, this function will not work.)"
+      },
+      {
+        "intent": "recording",
+        "field": "parking_mode_timer_setting",
+        "text": "当前“Enter Parking Mode Timer”设置为 Off 还是 90s？",
+        "reason": "需要确认当前定时器设置，以判断停车监控进入延迟是否符合预期。",
+        "options": [
+          "Off",
+          "90s",
+          "其他",
+          "不确定"
+        ],
+        "quote": "Enter Parking Mode Timer: Set the timer for entering parking mode."
+      }
+    ],
+    "chunk_id": "p13-2-s02",
+    "page": 13,
+    "text": "Enter Parking Mode Timer: Set the timer for entering parking mode. (Only for hardwire cable, if you use external battery, this function will not work.) \"Off\" means the camera will enter parking mode right away when the engine is off. \"90s\" means the camera will enter parking mode 90 seconds after engine is off.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-2",
+    "chapter_path": [
+      "System Settings",
+      "Enter Parking Mode Timer"
+    ],
+    "start": 832,
+    "end": 1144
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "停车监控录像计时器的“Off”是什么意思？",
+        "english": "What does \"Off\" mean for the Parking Recording Timer?",
+        "quote": "Parking Recording Timer: \"Off\" means the camera will keep recording until the hardwire kits cut the power supply."
+      },
+      {
+        "chinese": "停车监控录像计时器设为“1 hour”后会怎样？",
+        "english": "What happens when the Parking Recording Timer is set to \"1 hour\"?",
+        "quote": "\"1 hour\" means the camera will shut down after it gets into parking mode for 1 hour."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "parking_timer_setting",
+        "text": "当前停车监控录像计时器设置为哪个选项？",
+        "reason": "不同计时器设置会决定进入停车模式后的录像时长，需要确认当前选项以判断实际现象。",
+        "options": [
+          "Off",
+          "1 hour",
+          "不确定"
+        ],
+        "quote": "Parking Recording Timer: \"Off\" means the camera will keep recording until the hardwire kits cut the power supply."
+      },
+      {
+        "intent": "power",
+        "field": "power_source",
+        "text": "相机当前采用哪种供电方式？",
+        "reason": "文本提到硬线套件会切断供电；确认供电方式有助于判断停车监控的断电和持续录像行为。",
+        "options": [
+          "硬线套件",
+          "点烟器/车载电源",
+          "内置电池",
+          "不确定"
+        ],
+        "quote": "the camera will keep recording until the hardwire kits cut the power supply"
+      }
+    ],
+    "chunk_id": "p13-2-s03",
+    "page": 13,
+    "text": "Parking Recording Timer: \"Off\" means the camera will keep recording until the hardwire kits cut the power supply. \"1 hour\" means the camera will shut down after it gets into parking mode for 1 hour. 23",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p13-2",
+    "chapter_path": [
+      "System Settings",
+      "Parking Recording Timer"
+    ],
+    "start": 1145,
+    "end": 1346
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "停车模式下G-sensor灵敏度建议设置成什么？",
+        "english": "What sensitivity is recommended for the Parking G-sensor in parking mode recording?",
+        "quote": "We suggest setting it to High sensitivity in parking mode recording."
+      },
+      {
+        "chinese": "Parking G-sensor在什么情况下会触发事件录像？",
+        "english": "When will the Parking G-sensor trigger an event recording?",
+        "quote": "The G-sensor detects significant or sudden movement (such as an impact or collision), it will trigger an event recording."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "parking_g_sensor_sensitivity",
+        "text": "当前停车模式下的G-sensor灵敏度设置是多少？",
+        "reason": "需要确认当前灵敏度，才能判断是否与建议的高灵敏度设置一致。",
+        "options": [
+          "高",
+          "中",
+          "低",
+          "不确定"
+        ],
+        "quote": "We suggest setting it to High sensitivity in parking mode recording."
+      },
+      {
+        "intent": "recording",
+        "field": "parking_mode_state",
+        "text": "当前是否已开启停车模式录像？",
+        "reason": "该建议针对停车模式录像场景，需要确认停车模式是否处于开启状态。",
+        "options": [
+          "已开启",
+          "未开启",
+          "不确定"
+        ],
+        "quote": "in parking mode recording."
+      }
+    ],
+    "chunk_id": "p14-1-s01",
+    "page": 14,
+    "text": "Parking G-sensor: The G-sensor detects significant or sudden movement (such as an impact or collision), it will trigger an event recording. We suggest setting it to High sensitivity in parking mode recording.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "Parking G-sensor"
+    ],
+    "start": 0,
+    "end": 208
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何调整停车监控的运动检测灵敏度，避免风雨等轻微动作触发录像？",
+        "english": "How can I adjust the parking motion detection sensitivity so minor motion from wind or rain does not trigger recording?",
+        "quote": "Parking Motion Detection: Adjust the sensitivity of the motion detection so minor motion caused by wind or rain doesn't trigger a recording while in parking mode."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "parking_mode_enabled",
+        "text": "当前是否已开启停车监控模式？",
+        "reason": "停车监控仅在开启停车模式时才会涉及运动检测触发录像，需要确认该状态。",
+        "options": [
+          "已开启",
+          "未开启",
+          "不确定"
+        ],
+        "quote": "while in parking mode."
+      },
+      {
+        "intent": "recording",
+        "field": "parking_motion_sensitivity",
+        "text": "目前运动检测灵敏度设置大概是什么档位？",
+        "reason": "灵敏度高低会影响风雨等轻微动作是否触发录像，需确认当前设置以判断调整方向。",
+        "options": [
+          "低",
+          "中",
+          "高",
+          "不确定"
+        ],
+        "quote": "Adjust the sensitivity of the motion detection"
+      }
+    ],
+    "chunk_id": "p14-1-s02",
+    "page": 14,
+    "text": "Parking Motion Detection: Adjust the sensitivity of the motion detection so minor motion caused by wind or rain doesn't trigger a recording while in parking mode.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "Parking Motion Detection"
+    ],
+    "start": 209,
+    "end": 371
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "延时摄影的录制帧率有哪些选项？",
+        "english": "What frame rate options are available for time-lapse recording?",
+        "quote": "Time-lapse Recording: Off / 1 / 2 / 3 / 5 / 10 fps."
+      },
+      {
+        "chinese": "延时摄影默认是关闭的吗？",
+        "english": "Is time-lapse recording off by default?",
+        "quote": "The default is off."
+      },
+      {
+        "chinese": "延时摄影录制有什么用途？",
+        "english": "What is the purpose of time-lapse recording?",
+        "quote": "Record video from frames captured at specific time intervals to conserve memory and reduce the time it takes to review video."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "timelapse_enabled",
+        "text": "请确认延时摄影当前是开启还是关闭？",
+        "reason": "延时摄影关闭时不会按设定间隔拍摄，需要确认设备当前状态以排查未按预期录制的问题。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Time-lapse Recording: Off / 1 / 2 / 3 / 5 / 10 fps."
+      }
+    ],
+    "chunk_id": "p14-1-s03",
+    "page": 14,
+    "text": "Time-lapse Recording: Off / 1 / 2 / 3 / 5 / 10 fps. Record video from frames captured at specific time intervals to conserve memory and reduce the time it takes to review video. The default is off.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "Time-lapse Recording"
+    ],
+    "start": 372,
+    "end": 569
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "移动侦测开启后，摄像头如何触发录像？",
+        "english": "How does motion detection trigger recording after it is enabled?",
+        "quote": "Motion Detection: When this feature is activated, a recording will begin if there is movement in front of the camera."
+      },
+      {
+        "chinese": "为什么摄像头在60秒没有检测到移动后停止录像？",
+        "english": "Why does recording stop after 60 seconds without detected movement?",
+        "quote": "Once the camera does not detect movement for 60 seconds, the recording will be stopped and the device will switch to detect mode."
+      },
+      {
+        "chinese": "移动侦测模式下检测到新的移动会再次录像吗？",
+        "english": "Will the device record again if new movement is detected in motion detection mode?",
+        "quote": "The device will record again if it will detect a new movement in front of the camera."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "motion_detection_enabled",
+        "text": "设备当前是否已开启移动侦测功能？",
+        "reason": "用于判断不录像是否因为移动侦测未开启",
+        "options": [
+          "已开启",
+          "未开启",
+          "不确定"
+        ],
+        "quote": "Motion Detection: When this feature is activated, a recording will begin if there is movement in front of the camera."
+      },
+      {
+        "intent": "recording",
+        "field": "movement_in_front_of_camera",
+        "text": "摄像头前方当前是否有移动发生？",
+        "reason": "用于确认是否满足触发录像的移动条件",
+        "options": [
+          "有移动",
+          "无移动",
+          "不确定"
+        ],
+        "quote": "The device will record again if it will detect a new movement in front of the camera."
+      }
+    ],
+    "chunk_id": "p14-1-s04",
+    "page": 14,
+    "text": "Motion Detection: When this feature is activated, a recording will begin if there is movement in front of the camera. Once the camera does not detect movement for 60 seconds, the recording will be stopped and the device will switch to detect mode. The device will record again if it will detect a new movement in front of the camera.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "Motion Detection"
+    ],
+    "start": 570,
+    "end": 903
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "GPS记录器有什么作用？",
+        "english": "What is the GPS logger used for?",
+        "quote": "A GPS module is used to include the location data in the recorded videos."
+      },
+      {
+        "chinese": "如果关闭GPS记录器会怎样？",
+        "english": "What happens if I disable the GPS logger?",
+        "quote": "If disabled, your camera will no longer measure your speed and position; nor synchronize the time / date."
+      },
+      {
+        "chinese": "如何查看录像中的位置和速度？",
+        "english": "How can I view the position and speed from recorded videos?",
+        "quote": "Please use “VIOFO Player” to play back videos and to visualize your position and speed on your computer."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "gps_signal_state",
+        "text": "当前相机是否已连接GPS信号？",
+        "reason": "说明书说明GPS功能仅在连接GPS信号时可用，需要确认当前信号状态以排查位置、速度或时间同步问题。",
+        "options": [
+          "已连接GPS信号",
+          "未连接GPS信号",
+          "不确定"
+        ],
+        "quote": "(Only available when connecting with GPS signal)"
+      },
+      {
+        "intent": "general",
+        "field": "gps_logger_enabled",
+        "text": "当前GPS记录器开关处于什么状态？",
+        "reason": "GPS记录器关闭会导致相机不再记录速度、位置，也不同步时间/日期，需要确认开关状态。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "GPS: Turn on / off GPS logger."
+      }
+    ],
+    "chunk_id": "p14-1-s05",
+    "page": 14,
+    "text": "GPS: Turn on / off GPS logger. A GPS module is used to include the location data in the recorded videos. If disabled, your camera will no longer measure your speed and position; nor synchronize the time / date. (Only available when connecting with GPS signal) Please use “VIOFO Player” to play back videos and to visualize your position and speed on your computer.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "GPS"
+    ],
+    "start": 904,
+    "end": 1268
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何在停车模式下关闭GPS？",
+        "english": "How do I disable GPS in parking mode?",
+        "quote": "Disable GPS in Parking Mode: Off/On, you can disable GPS in parking mode."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "parking_mode_state",
+        "text": "相机当前是否已开启停车模式？",
+        "reason": "确认停车模式状态，以判断GPS设置是否会在当前录制场景中生效。",
+        "options": [
+          "已开启",
+          "未开启",
+          "不确定"
+        ],
+        "quote": "Disable GPS in Parking Mode: Off/On, you can disable GPS in parking mode."
+      },
+      {
+        "intent": "general",
+        "field": "gps_parking_setting_state",
+        "text": "“Disable GPS in Parking Mode”当前设置为开启还是关闭？",
+        "reason": "确认该选项当前状态，排查GPS是否仍会在停车模式下工作。",
+        "options": [
+          "开启",
+          "关闭",
+          "不确定"
+        ],
+        "quote": "Disable GPS in Parking Mode: Off/On, you can disable GPS in parking mode."
+      }
+    ],
+    "chunk_id": "p14-1-s06",
+    "page": 14,
+    "text": "Disable GPS in Parking Mode: Off/On, you can disable GPS in parking mode.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "Disable GPS in Parking Mode"
+    ],
+    "start": 1269,
+    "end": 1342
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何将速度单位设置为公里/小时（KPH）或英里/小时（MPH）？",
+        "english": "How do I set the speed unit to KPH or MPH?",
+        "quote": "Speed Unit: Set the speed unit, kilometer per hour (KPH) or miles per hour (MPH)."
+      },
+      {
+        "chinese": "设备支持哪些速度单位？",
+        "english": "What speed units are available on the device?",
+        "quote": "Speed Unit: Set the speed unit, kilometer per hour (KPH) or miles per hour (MPH)."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "speed_unit_setting",
+        "text": "您当前设备的速度单位设置是 KPH 还是 MPH？",
+        "reason": "确认当前速度单位设置，以判断显示不符是否由设置导致。",
+        "options": [
+          "KPH",
+          "MPH",
+          "不确定"
+        ],
+        "quote": "Speed Unit: Set the speed unit, kilometer per hour (KPH) or miles per hour (MPH)."
+      }
+    ],
+    "chunk_id": "p14-1-s07",
+    "page": 14,
+    "text": "Speed Unit: Set the speed unit, kilometer per hour (KPH) or miles per hour (MPH).",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "Speed Unit"
+    ],
+    "start": 1343,
+    "end": 1424
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "G-sensor有什么作用？",
+        "english": "What does the G-sensor do?",
+        "quote": "The G-sensor measures g-shock forces."
+      },
+      {
+        "chinese": "G-sensor灵敏度设置会影响什么？",
+        "english": "What does the G-sensor sensitivity setting affect?",
+        "quote": "The setting from 'Low’ to' High’ determines the amount of force needed to lock the file from being overwritten by loop-recording."
+      },
+      {
+        "chinese": "G-sensor建议设置为哪个档位？",
+        "english": "What level is recommended for the G-sensor?",
+        "quote": "We recommend leaving it set to 'Low’."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "g_sensor_low_setting",
+        "text": "您当前是否已将重力感应器设置为低档？",
+        "reason": "确认当前重力感应器档位是否与推荐设置一致，以便判断锁定触发是否受该设置影响。",
+        "options": [
+          "是",
+          "否",
+          "不确定"
+        ],
+        "quote": "We recommend leaving it set to 'Low’."
+      },
+      {
+        "intent": "recording",
+        "field": "file_lock_behavior",
+        "text": "您遇到的情况是碰撞后文件没有被锁定，还是文件被过于频繁地锁定？",
+        "reason": "区分未锁定和误锁定的现象，结合重力感应器灵敏度排查循环录制覆盖问题。",
+        "options": [
+          "碰撞后文件未锁定",
+          "文件被过于频繁地锁定",
+          "两者都没有",
+          "不确定"
+        ],
+        "quote": "The setting from 'Low’ to' High’ determines the amount of force needed to lock the file from being overwritten by loop-recording."
+      }
+    ],
+    "chunk_id": "p14-1-s08",
+    "page": 14,
+    "text": "G-sensor: The G-sensor measures g-shock forces. The setting from 'Low’ to' High’ determines the amount of force needed to lock the file from being overwritten by loop-recording. We recommend leaving it set to 'Low’. 24",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-1",
+    "chapter_path": [
+      "System Settings",
+      "G-sensor"
+    ],
+    "start": 1425,
+    "end": 1643
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何快速开启Wi-Fi？",
+        "english": "How can I quickly enable Wi-Fi?",
+        "quote": "Press the [ ] button for 3 or 5 seconds to enable Wi-Fi quickly."
+      },
+      {
+        "chinese": "推荐选择哪种Wi-Fi模式？",
+        "english": "Which Wi-Fi mode is recommended?",
+        "quote": "We recommend choosing 5GHz Wi-Fi mode. if you mobile phone support 5GHz Wi-Fi."
+      },
+      {
+        "chinese": "如何设置Wi-Fi的开启或关闭？",
+        "english": "How do I turn Wi-Fi on or off?",
+        "quote": "WiFi: Set it On / Off."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "wifi",
+        "field": "phone_5ghz",
+        "text": "您的手机是否支持5GHz Wi-Fi？",
+        "reason": "说明书建议在手机支持5GHz时选择5GHz模式，需要确认手机规格以判断该建议是否适用。",
+        "options": [
+          "支持",
+          "不支持",
+          "不确定"
+        ],
+        "quote": "We recommend choosing 5GHz Wi-Fi mode. if you mobile phone support 5GHz Wi-Fi."
+      },
+      {
+        "intent": "wifi",
+        "field": "wifi_enabled",
+        "text": "相机当前的Wi-Fi处于开启还是关闭状态？",
+        "reason": "需要确认当前Wi-Fi状态，才能判断是否需要快速开启或关闭Wi-Fi。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "WiFi: Set it On / Off. Press the [ ] button for 3 or 5 seconds to enable Wi-Fi quickly."
+      }
+    ],
+    "chunk_id": "p14-2-s01",
+    "page": 14,
+    "text": "WiFi: Set it On / Off. Press the [ ] button for 3 or 5 seconds to enable Wi-Fi quickly. We recommend choosing 5GHz Wi-Fi mode. if you mobile phone support 5GHz Wi-Fi.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "WiFi"
+    ],
+    "start": 0,
+    "end": 166
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何将时间和日期印在录制的视频上？",
+        "english": "How do I imprint the time and date on recorded videos?",
+        "quote": "Date Stamp: Imprint the time and date on the recorded video."
+      },
+      {
+        "chinese": "Date Stamp（日期戳）功能有什么作用？",
+        "english": "What does the Date Stamp feature do?",
+        "quote": "Date Stamp: Imprint the time and date on the recorded video."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "date_stamp_enabled",
+        "text": "相机中的Date Stamp（日期戳）功能当前是开启还是关闭？",
+        "reason": "用于判断录制视频未显示时间日期是否由日期戳功能未开启导致。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Date Stamp: Imprint the time and date on the recorded video."
+      },
+      {
+        "intent": "recording",
+        "field": "date_stamp_visible",
+        "text": "录制的视频画面上目前是否能看到时间和日期？",
+        "reason": "用于确认实际现象，区分设置未开启与已开启但画面仍无时间日期的情况。",
+        "options": [
+          "能看到",
+          "看不到",
+          "不确定"
+        ],
+        "quote": "Date Stamp: Imprint the time and date on the recorded video."
+      }
+    ],
+    "chunk_id": "p14-2-s02",
+    "page": 14,
+    "text": "Date Stamp: Imprint the time and date on the recorded video.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Date Stamp"
+    ],
+    "start": 167,
+    "end": 227
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何将GPS信息叠加到录制的视频上？",
+        "english": "How do I imprint GPS information on recorded video?",
+        "quote": "GPS Info Stamp: Imprint the GPS information on the recorded video."
+      },
+      {
+        "chinese": "GPS信息标记功能有什么作用？",
+        "english": "What is the GPS Info Stamp feature for?",
+        "quote": "GPS Info Stamp: Imprint the GPS information on the recorded video."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "gps_info_stamp_state",
+        "text": "请确认相机中的“GPS信息标记（GPS Info Stamp）”当前是开启还是关闭？",
+        "reason": "需要确认该功能是否已启用，才能判断录制视频中为何没有GPS信息。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "GPS Info Stamp: Imprint the GPS information on the recorded video."
+      }
+    ],
+    "chunk_id": "p14-2-s03",
+    "page": 14,
+    "text": "GPS Info Stamp: Imprint the GPS information on the recorded video.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "GPS Info Stamp"
+    ],
+    "start": 228,
+    "end": 294
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何将相机型号印在录制的视频上？",
+        "english": "How can I imprint the camera model on the recorded video?",
+        "quote": "Camera Model Stamp: Imprint the camera model on the recorded video."
+      },
+      {
+        "chinese": "Camera Model Stamp 功能有什么作用？",
+        "english": "What does the Camera Model Stamp feature do?",
+        "quote": "Camera Model Stamp: Imprint the camera model on the recorded video."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "camera_model_stamp_enabled",
+        "text": "您相机里的“相机型号印记”目前是开启还是关闭？",
+        "reason": "需要确认该功能当前是否已开启，才能判断为什么录制的视频中没有出现相机型号。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Camera Model Stamp: Imprint the camera model on the recorded video."
+      }
+    ],
+    "chunk_id": "p14-2-s04",
+    "page": 14,
+    "text": "Camera Model Stamp: Imprint the camera model on the recorded video.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Camera Model Stamp"
+    ],
+    "start": 295,
+    "end": 362
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何开启或关闭相机的录音麦克风？",
+        "english": "How do I turn the camera's recording microphone on or off?",
+        "quote": "Record Audio: Turn the microphone ON / OFF. This can be also activated by pressing the [ ] button while the camera is recording."
+      },
+      {
+        "chinese": "录制视频时可以通过按键开启或关闭录音吗？",
+        "english": "Can I turn audio recording on or off with a button while recording video?",
+        "quote": "Record Audio: Turn the microphone ON / OFF. This can be also activated by pressing the [ ] button while the camera is recording."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "record_audio_state",
+        "text": "相机当前的录音麦克风是开启还是关闭？",
+        "reason": "说明书只说明如何切换麦克风，需确认当前开关状态以排查录音问题。",
+        "options": [
+          "开启",
+          "关闭",
+          "不确定"
+        ],
+        "quote": "Record Audio: Turn the microphone ON / OFF. This can be also activated by pressing the [ ] button while the camera is recording."
+      },
+      {
+        "intent": "recording",
+        "field": "record_audio_button_timing",
+        "text": "您按麦克风按键时，相机是否正在录制？",
+        "reason": "按键切换录音的操作与录制状态有关，需确认操作时机。",
+        "options": [
+          "正在录制",
+          "未在录制",
+          "不确定"
+        ],
+        "quote": "Record Audio: Turn the microphone ON / OFF. This can be also activated by pressing the [ ] button while the camera is recording."
+      }
+    ],
+    "chunk_id": "p14-2-s05",
+    "page": 14,
+    "text": "Record Audio: Turn the microphone ON / OFF. This can be also activated by pressing the [ ] button while the camera is recording.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Record Audio"
+    ],
+    "start": 363,
+    "end": 491
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "屏幕保护怎么设置成一段时间后关闭屏幕？",
+        "english": "How do I set the screen saver to turn the screen off after a set time?",
+        "quote": "Screen Saver: Turn the screen OFF after a set time."
+      },
+      {
+        "chinese": "屏幕保护会在设定时间后自动关闭屏幕吗？",
+        "english": "Does the screen saver turn the screen off automatically after the set time?",
+        "quote": "Screen Saver: Turn the screen OFF after a set time."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "screen_saver_enabled",
+        "text": "当前屏幕保护功能是否已经开启？",
+        "reason": "确认屏幕保护是否处于开启状态，以便判断屏幕按设定时间关闭是否由该功能触发。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Screen Saver: Turn the screen OFF after a set time."
+      },
+      {
+        "intent": "power",
+        "field": "screen_power_state",
+        "text": "设备屏幕现在是否已经熄灭？",
+        "reason": "确认当前屏幕状态，判断是否已经触发屏幕保护。",
+        "options": [
+          "屏幕亮着",
+          "屏幕已熄灭",
+          "不确定"
+        ],
+        "quote": "Screen Saver: Turn the screen OFF after a set time."
+      }
+    ],
+    "chunk_id": "p14-2-s06",
+    "page": 14,
+    "text": "Screen Saver: Turn the screen OFF after a set time.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Screen Saver"
+    ],
+    "start": 492,
+    "end": 543
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "Boot Delay 是什么？有哪些设置选项？",
+        "english": "What is Boot Delay and what settings are available?",
+        "quote": "Boot Delay: The camera will boot seconds later when powered on. The settings are Off / 5s / 10s."
+      },
+      {
+        "chinese": "相机开机后延迟启动的时间可以设置为多少秒？",
+        "english": "How many seconds can the camera's boot delay be set to?",
+        "quote": "The settings are Off / 5s / 10s."
+      },
+      {
+        "chinese": "如何关闭相机的开机延迟启动？",
+        "english": "How do I turn off the camera's boot delay?",
+        "quote": "The settings are Off / 5s / 10s."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "power",
+        "field": "boot_delay_setting",
+        "text": "请确认相机当前的 Boot Delay 设置是哪一项？",
+        "reason": "用于判断开机延迟是否已按预期配置。",
+        "options": [
+          "Off",
+          "5s",
+          "10s",
+          "不确定"
+        ],
+        "quote": "Boot Delay: The camera will boot seconds later when powered on. The settings are Off / 5s / 10s."
+      }
+    ],
+    "chunk_id": "p14-2-s07",
+    "page": 14,
+    "text": "Boot Delay: The camera will boot seconds later when powered on. The settings are Off / 5s / 10s.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Boot Delay"
+    ],
+    "start": 544,
+    "end": 640
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何打开或关闭LED灯？",
+        "english": "How do I turn the LED light on or off?",
+        "quote": "LED: Turn the LED light ON / OFF."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "led_state",
+        "text": "LED灯当前是开启还是关闭？",
+        "reason": "确认LED灯当前状态，以判断开关设置是否已生效。",
+        "options": [
+          "开启",
+          "关闭",
+          "不确定"
+        ],
+        "quote": "LED: Turn the LED light ON / OFF."
+      }
+    ],
+    "chunk_id": "p14-2-s08",
+    "page": 14,
+    "text": "LED: Turn the LED light ON / OFF.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "LED"
+    ],
+    "start": 641,
+    "end": 674
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "系统日期和时间在哪里设置？",
+        "english": "Where can I set the system date and time?",
+        "quote": "Date / Time: System date / time setting."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "settings_menu_state",
+        "text": "当前是否已进入系统设置菜单？",
+        "reason": "用于判断能否在系统设置中找到日期和时间选项。",
+        "options": [
+          "已进入",
+          "未进入",
+          "不确定"
+        ],
+        "quote": "Date / Time: System date / time setting."
+      }
+    ],
+    "chunk_id": "p14-2-s09",
+    "page": 14,
+    "text": "Date / Time: System date / time setting.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Date / Time"
+    ],
+    "start": 675,
+    "end": 715
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何设置相机的时区以校准GPS时间和日期？",
+        "english": "How do I set the camera's time zone to calibrate GPS time and date?",
+        "quote": "Time Zone: Set the current time zone for GPS time and date calibration."
+      },
+      {
+        "chinese": "夏令时期间需要手动调整时区吗？",
+        "english": "Do I need to manually adjust the time zone for daylight savings?",
+        "quote": "Note: the time zone must be manually adjusted for daylight savings."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "daylight_saving_state",
+        "text": "当前是否处于夏令时期间？",
+        "reason": "说明书提示夏令时需手动调整时区，需确认以判断时区偏差原因。",
+        "options": [
+          "是",
+          "否",
+          "不确定"
+        ],
+        "quote": "Note: the time zone must be manually adjusted for daylight savings."
+      },
+      {
+        "intent": "general",
+        "field": "timezone_setting_state",
+        "text": "设备当前时区是否已按所在地设置？",
+        "reason": "需确认时区设置状态，以排查GPS时间或日期不准。",
+        "options": [
+          "已设置",
+          "未设置",
+          "不确定"
+        ],
+        "quote": "Time Zone: Set the current time zone for GPS time and date calibration."
+      }
+    ],
+    "chunk_id": "p14-2-s10",
+    "page": 14,
+    "text": "Time Zone: Set the current time zone for GPS time and date calibration. Note: the time zone must be manually adjusted for daylight savings.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Time Zone"
+    ],
+    "start": 716,
+    "end": 855
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何设置显示语言？",
+        "english": "How do I set the display language?",
+        "quote": "Language: Display language setting (English, Traditional Chinese, French, etc.)."
+      },
+      {
+        "chinese": "显示语言支持哪些语言？",
+        "english": "Which languages are available for the display language?",
+        "quote": "Language: Display language setting (English, Traditional Chinese, French, etc.)."
+      }
+    ],
+    "followups": [],
+    "chunk_id": "p14-2-s11",
+    "page": 14,
+    "text": "Language: Display language setting (English, Traditional Chinese, French, etc.).",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Language"
+    ],
+    "start": 856,
+    "end": 936
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何开启或关闭语音通知？",
+        "english": "How do I turn the voice notification on or off?",
+        "quote": "Voice Notification: Turn on / off the voice notification."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "voice_notification_state",
+        "text": "设备当前语音通知处于开启还是关闭状态？",
+        "reason": "需要确认当前状态，才能判断应执行开启还是关闭操作。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Voice Notification: Turn on / off the voice notification."
+      }
+    ],
+    "chunk_id": "p14-2-s12",
+    "page": 14,
+    "text": "Voice Notification: Turn on / off the voice notification. 25",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p14-2",
+    "chapter_path": [
+      "System Settings",
+      "Voice Notification"
+    ],
+    "start": 937,
+    "end": 997
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何开启语音控制并用语音拍照、开关Wi-Fi或开始录像？",
+        "english": "How do I turn on Voice Control and use voice commands to take photos, turn Wi-Fi on or off, or start recording?",
+        "quote": "When Voice Control is turned on, you can control the camera with spoken commands, using your voice to take photos, turn on/off WiFi, start recording, and more."
+      },
+      {
+        "chinese": "语音控制支持哪些语言？",
+        "english": "Which languages are supported for voice control commands?",
+        "quote": "Voice command language should be consistent with dashcam system language in following six options: English, Chinese, Russian, Japanese, Vietnamese, and Thai."
+      },
+      {
+        "chinese": "行车记录仪系统语言不在支持列表时，语音控制需要用哪种语言？",
+        "english": "If the dashcam system language is not one of the supported options, which language should be used for voice control?",
+        "quote": "For all other dashcam language systems, English is the only language to trigger voice control function."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "voice_control_state",
+        "text": "当前行车记录仪的语音控制开关处于什么状态？",
+        "reason": "需要确认语音控制是否已开启，才能判断语音指令是否可用。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Voice Control: Turn off / on the voice control."
+      },
+      {
+        "intent": "general",
+        "field": "system_language_supported",
+        "text": "当前行车记录仪的系统语言是否属于英语、中文、俄语、日语、越南语或泰语之一？",
+        "reason": "语音指令语言需要与系统语言一致；若系统语言不在六种支持语言内，需确认是否只能使用英语触发。",
+        "options": [
+          "是（六种支持语言之一）",
+          "否（其他语言）",
+          "不确定"
+        ],
+        "quote": "Voice command language should be consistent with dashcam system language in following six options: English, Chinese, Russian, Japanese, Vietnamese, and Thai."
+      }
+    ],
+    "chunk_id": "p15-1-s01",
+    "page": 15,
+    "text": "Voice Control: Turn off / on the voice control. When Voice Control is turned on, you can control the camera with spoken commands, using your voice to take photos, turn on/off WiFi, start recording, and more. Note: Voice command language should be consistent with dashcam system language in following six options: English, Chinese, Russian, Japanese, Vietnamese, and Thai. For all other dashcam language systems, English is the only language to trigger voice control function.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Voice Control"
+    ],
+    "start": 0,
+    "end": 475
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "我可以用哪些语音命令遥控相机？",
+        "english": "What voice commands can I use to remotely control the camera?",
+        "quote": "Voice Command: Voice recognition commands. You can issue different voice commands to remote control the camera, including:"
+      },
+      {
+        "chinese": "语音命令能开启或关闭Wi-Fi吗？",
+        "english": "Can voice commands turn Wi-Fi on or off?",
+        "quote": "Turn On WiFi - Turn Off Audio - Turn Off WiFi"
+      },
+      {
+        "chinese": "如何通过语音命令开始、停止或锁定录像？",
+        "english": "How do I start, stop, or lock video recording using voice commands?",
+        "quote": "Video Start - Turn Off Screen - Video Stop - Lock the Video"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "voice_command_type",
+        "text": "您尝试的是哪一类语音命令？",
+        "reason": "不同命令对应拍照、屏幕、录像、音频或Wi-Fi控制，确认尝试类别有助于定位具体是哪项语音控制未生效。",
+        "options": [
+          "拍照或录像",
+          "屏幕开关",
+          "Wi-Fi开关",
+          "音频开关",
+          "不确定"
+        ],
+        "quote": "You can issue different voice commands to remote control the camera, including:"
+      },
+      {
+        "intent": "wifi",
+        "field": "wifi_power_state",
+        "text": "相机当前Wi-Fi是开启还是关闭状态？",
+        "reason": "语音命令列表包含开启和关闭Wi-Fi，确认当前Wi-Fi状态有助于判断语音命令是否已执行或需要切换。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Turn On WiFi - Turn Off Audio - Turn Off WiFi"
+      }
+    ],
+    "chunk_id": "p15-1-s02",
+    "page": 15,
+    "text": "Voice Command: Voice recognition commands. You can issue different voice commands to remote control the camera, including: - Take Photo - Turn On Screen - Video Start - Turn Off Screen - Video Stop - Lock the Video - Turn On Audio - Turn On WiFi - Turn Off Audio - Turn Off WiFi",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Voice Command"
+    ],
+    "start": 476,
+    "end": 754
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何关闭相机的提示音？",
+        "english": "How do I turn off notification sounds on the camera?",
+        "quote": "Beep Sound: Turn all notification sounds ON/OFF."
+      },
+      {
+        "chinese": "Beep Sound 设置是控制什么声音的？",
+        "english": "What does the Beep Sound setting control?",
+        "quote": "Beep Sound: Turn all notification sounds ON/OFF."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "notification_sound_state",
+        "text": "您当前相机的提示音是开启还是关闭状态？",
+        "reason": "确认当前提示音状态，以便判断是否已经达到您想要的静音或开启效果。",
+        "options": [
+          "开启",
+          "关闭",
+          "不确定"
+        ],
+        "quote": "Beep Sound: Turn all notification sounds ON/OFF."
+      }
+    ],
+    "chunk_id": "p15-1-s03",
+    "page": 15,
+    "text": "Beep Sound: Turn all notification sounds ON/OFF.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Beep Sound"
+    ],
+    "start": 755,
+    "end": 803
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "Frequency 设置如何帮助减少录制视频中的闪烁和条纹？",
+        "english": "How does the Frequency setting help reduce flickering and banding in recorded video?",
+        "quote": "Frequency: Frequency adjustment setting to minimize flickering and banding in recorded video."
+      },
+      {
+        "chinese": "拍摄视频时出现闪烁和条纹，应调整哪个设置？",
+        "english": "Which setting should I adjust when recorded videos show flickering and banding?",
+        "quote": "Frequency: Frequency adjustment setting to minimize flickering and banding in recorded video."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "light_source_type",
+        "text": "您拍摄环境的主要光源类型是什么？",
+        "reason": "不同光源的闪烁频率不同，确认光源类型有助于判断应选择的 Frequency 设置。",
+        "options": [
+          "白炽灯/卤素灯",
+          "LED灯",
+          "荧光灯",
+          "不确定"
+        ],
+        "quote": "Frequency: Frequency adjustment setting to minimize flickering and banding in recorded video."
+      },
+      {
+        "intent": "recording",
+        "field": "mains_frequency",
+        "text": "您所在地区的交流电频率是 50 Hz 还是 60 Hz？",
+        "reason": "录制视频的闪烁通常与当地电网频率有关，确认该频率有助于选择合适的 Frequency 设置。",
+        "options": [
+          "50 Hz",
+          "60 Hz",
+          "不确定"
+        ],
+        "quote": "Frequency: Frequency adjustment setting to minimize flickering and banding in recorded video."
+      }
+    ],
+    "chunk_id": "p15-1-s04",
+    "page": 15,
+    "text": "Frequency: Frequency adjustment setting to minimize flickering and banding in recorded video.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Frequency"
+    ],
+    "start": 804,
+    "end": 897
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何旋转图像，把屏幕画面上下颠倒？",
+        "english": "How do I rotate the image by turning the screen upside down?",
+        "quote": "Image Rotation: Turn the screen upside down."
+      },
+      {
+        "chinese": "图像旋转功能应该怎样操作？",
+        "english": "How should I use the Image Rotation function?",
+        "quote": "Image Rotation: Turn the screen upside down."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "display_orientation_state",
+        "text": "相机屏幕画面当前是否上下颠倒？",
+        "reason": "确认当前画面方向，以判断是否需要执行图像旋转设置。",
+        "options": [
+          "是，上下颠倒",
+          "否，方向正常",
+          "不确定"
+        ],
+        "quote": "Image Rotation: Turn the screen upside down."
+      }
+    ],
+    "chunk_id": "p15-1-s05",
+    "page": 15,
+    "text": "Image Rotation: Turn the screen upside down.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Image Rotation"
+    ],
+    "start": 898,
+    "end": 942
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "图像镜像功能有什么作用？",
+        "english": "What does the Image Mirror function do?",
+        "quote": "Image Mirror: Reverse the image from left to right."
+      },
+      {
+        "chinese": "图像镜像会按哪个方向反转图像？",
+        "english": "In which direction does Image Mirror reverse the image?",
+        "quote": "Image Mirror: Reverse the image from left to right."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "image_mirror_state",
+        "text": "相机当前的“图像镜像”功能是开启还是关闭？",
+        "reason": "确认当前功能状态，以判断画面左右方向是否符合设置预期。",
+        "options": [
+          "已开启",
+          "已关闭",
+          "不确定"
+        ],
+        "quote": "Image Mirror: Reverse the image from left to right."
+      }
+    ],
+    "chunk_id": "p15-1-s06",
+    "page": 15,
+    "text": "Image Mirror: Reverse the image from left to right.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Image Mirror"
+    ],
+    "start": 943,
+    "end": 994
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "格式化Micro SD卡会删除卡上的所有数据吗？",
+        "english": "Will formatting the Micro SD card delete all data on the card?",
+        "quote": "Format: The operation will delete all data on the Micro SD card."
+      },
+      {
+        "chinese": "格式化Micro SD卡前需要备份重要文件吗？",
+        "english": "Do I need to back up important files before formatting the Micro SD card?",
+        "quote": "Make sure you back up all important files before proceeding."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "card_present",
+        "text": "相机当前是否已插入Micro SD卡？",
+        "reason": "需要确认存储卡是否在位，以判断格式化相关提示是否适用于当前设备状态。",
+        "options": [
+          "已插入",
+          "未插入",
+          "不确定"
+        ],
+        "quote": "Format: The operation will delete all data on the Micro SD card."
+      },
+      {
+        "intent": "recording",
+        "field": "backup_status",
+        "text": "卡内重要文件目前是否已备份？",
+        "reason": "说明书提示格式化前需备份重要文件，需确认当前备份状态以评估数据风险。",
+        "options": [
+          "已备份",
+          "未备份",
+          "不确定"
+        ],
+        "quote": "Make sure you back up all important files before proceeding."
+      }
+    ],
+    "chunk_id": "p15-1-s07",
+    "page": 15,
+    "text": "Format: The operation will delete all data on the Micro SD card. Note: Once you format the Micro SD card, all information will be deleted and cannot be restored. Make sure you back up all important files before proceeding. 26",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-1",
+    "chapter_path": [
+      "System Settings",
+      "Format"
+    ],
+    "start": 995,
+    "end": 1220
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何设置格式化警告之间的天数？",
+        "english": "How do I set the number of days between format warnings?",
+        "quote": "Format Warning: Set the number of days between format warnings."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "format_warning_menu_found",
+        "text": "您当前是否已在系统设置中找到“Format Warning”选项？",
+        "reason": "用于确认您是否已进入正确的设置项，以便判断是菜单路径问题还是操作问题。",
+        "options": [
+          "已找到",
+          "未找到",
+          "不确定"
+        ],
+        "quote": "Format Warning: Set the number of days between format warnings."
+      }
+    ],
+    "chunk_id": "p15-2-s01",
+    "page": 15,
+    "text": "Format Warning: Set the number of days between format warnings.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-2",
+    "chapter_path": [
+      "System Settings",
+      "Format Warning"
+    ],
+    "start": 0,
+    "end": 63
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "相机里的 Default Setting 有什么作用？",
+        "english": "What does Default Setting do on the camera?",
+        "quote": "Default Setting: Restore camera to factory defaults."
+      }
+    ],
+    "followups": [],
+    "chunk_id": "p15-2-s02",
+    "page": 15,
+    "text": "Default Setting: Restore camera to factory defaults.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-2",
+    "chapter_path": [
+      "System Settings",
+      "Default Setting"
+    ],
+    "start": 64,
+    "end": 116
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何把车牌号或标识信息添加到录制的视频中？",
+        "english": "How can I add a license plate or identifying information to recorded video?",
+        "quote": "Car Number: Imprint a customized set of 11 digits to the recorded video. Useful to add license plates or identifying features."
+      },
+      {
+        "chinese": "Car Number 设置有什么作用？",
+        "english": "What does the Car Number setting do?",
+        "quote": "Car Number: Imprint a customized set of 11 digits to the recorded video. Useful to add license plates or identifying features."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "car_number_digit_count",
+        "text": "您要录入的车牌或标识数字目前是多少位？",
+        "reason": "Car Number 仅支持自定义 11 位数字，需要确认您的标识位数是否符合该规格。",
+        "options": [
+          "11位",
+          "不足11位",
+          "超过11位",
+          "不确定"
+        ],
+        "quote": "Car Number: Imprint a customized set of 11 digits to the recorded video. Useful to add license plates or identifying features."
+      },
+      {
+        "intent": "recording",
+        "field": "car_number_set_before_recording",
+        "text": "您是否在开始录制当前视频前已经设置好 Car Number？",
+        "reason": "若视频是在设置 Car Number 之前录制，画面中不会包含该信息，需要确认设置与录制先后顺序。",
+        "options": [
+          "已设置后再录制",
+          "录制后才设置",
+          "尚未设置",
+          "不确定"
+        ],
+        "quote": "Car Number: Imprint a customized set of 11 digits to the recorded video. Useful to add license plates or identifying features."
+      }
+    ],
+    "chunk_id": "p15-2-s03",
+    "page": 15,
+    "text": "Car Number: Imprint a customized set of 11 digits to the recorded video. Useful to add license plates or identifying features.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-2",
+    "chapter_path": [
+      "System Settings",
+      "Car Number"
+    ],
+    "start": 117,
+    "end": 243
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何为录制的视频添加自定义文字印章？",
+        "english": "How do I add a custom text stamp to a recorded video?",
+        "quote": "Custom Text Stamp: Imprint the customize text on the recorded video."
+      },
+      {
+        "chinese": "自定义文字印章会印在录制的视频上吗？",
+        "english": "Does the Custom Text Stamp imprint customized text on the recorded video?",
+        "quote": "Custom Text Stamp: Imprint the customize text on the recorded video."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "recording",
+        "field": "custom_text_stamp_state",
+        "text": "您是否已在系统设置中开启“自定义文字印章”功能？",
+        "reason": "用于确认录制的视频未叠加文字是否因该功能未开启。",
+        "options": [
+          "已开启",
+          "未开启",
+          "不确定"
+        ],
+        "quote": "Custom Text Stamp: Imprint the customize text on the recorded video."
+      },
+      {
+        "intent": "recording",
+        "field": "capture_mode",
+        "text": "您当前是要在视频录制还是拍照中叠加文字？",
+        "reason": "该功能说明仅提到录制视频，需要确认当前拍摄模式以判断是否符合功能适用范围。",
+        "options": [
+          "视频录制",
+          "拍照",
+          "不确定"
+        ],
+        "quote": "Custom Text Stamp: Imprint the customize text on the recorded video."
+      }
+    ],
+    "chunk_id": "p15-2-s04",
+    "page": 15,
+    "text": "Custom Text Stamp: Imprint the customize text on the recorded video.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-2",
+    "chapter_path": [
+      "System Settings",
+      "Custom Text Stamp"
+    ],
+    "start": 244,
+    "end": 312
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何查看相机当前的固件版本？",
+        "english": "How can I check the camera's current firmware version?",
+        "quote": "Firmware Version: Current firmware version check. 27"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "menu_item_visibility",
+        "text": "您目前能在菜单中看到“固件版本”这一项吗？",
+        "reason": "确认菜单项是否可见，才能判断是未找到入口还是设备状态导致无法查看固件版本。",
+        "options": [
+          "能看到",
+          "看不到",
+          "不确定"
+        ],
+        "quote": "Firmware Version: Current firmware version check. 27"
+      },
+      {
+        "intent": "general",
+        "field": "firmware_check_channel",
+        "text": "您是在相机菜单中查看固件版本，还是在手机 App 中查看？",
+        "reason": "不同查看入口的操作路径不同，确认后可给出对应的查看方式。",
+        "options": [
+          "相机菜单",
+          "手机 App",
+          "不确定"
+        ],
+        "quote": "Current firmware version check. 27"
+      }
+    ],
+    "chunk_id": "p15-2-s05",
+    "page": 15,
+    "text": "Firmware Version: Current firmware version check. 27",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p15-2",
+    "chapter_path": [
+      "System Settings",
+      "Firmware Version"
+    ],
+    "start": 313,
+    "end": 365
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何升级相机的固件？",
+        "english": "How do I upgrade the camera firmware?",
+        "quote": "Follow the instructions on this website to upgrade the firmware: (https://viofo.com/content/42-help-and-support/)"
+      },
+      {
+        "chinese": "固件升级过程中可以拔掉电源或关机吗？",
+        "english": "Can I unplug or power off the camera during a firmware upgrade?",
+        "quote": "Do not unplug or power off the camera during a firmware upgrade, it may cause the camera to subsequently fail to boot."
+      },
+      {
+        "chinese": "使用microSD卡升级固件前需要在相机里格式化卡吗？",
+        "english": "Do I need to format the microSD card in the camera before upgrading firmware?",
+        "quote": "Before using a microSD card to upgrade the firmware, formatting the card in the camera is necessary to ensure stable read and write operation."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "card_formatted",
+        "text": "升级用的microSD卡是否已在相机内完成格式化？",
+        "reason": "说明书指出使用microSD卡升级固件前需在相机内格式化，确认该状态有助于排查升级读写出错的问题。",
+        "options": [
+          "已在相机内格式化",
+          "未在相机内格式化",
+          "不确定"
+        ],
+        "quote": "Before using a microSD card to upgrade the firmware, formatting the card in the camera is necessary to ensure stable read and write operation."
+      },
+      {
+        "intent": "power",
+        "field": "power_supply_stable",
+        "text": "设备当前是否已开机并保持稳定供电？",
+        "reason": "升级过程中断电或拔电可能导致相机无法启动，确认供电状态可用于排查升级中断问题。",
+        "options": [
+          "已开机且供电稳定",
+          "未开机或供电不稳定",
+          "不确定"
+        ],
+        "quote": "Do not unplug or power off the camera during a firmware upgrade, it may cause the camera to subsequently fail to boot."
+      }
+    ],
+    "chunk_id": "p16-1-s01",
+    "page": 16,
+    "text": "Firmware Upgrade Follow the instructions on this website to upgrade the firmware: (https://viofo.com/content/42-help-and-support/) Note: • Before using a microSD card to upgrade the firmware, formatting the card in the camera is necessary to ensure stable read and write operation. • Do not unplug or power off the camera during a firmware upgrade, it may cause the camera to subsequently fail to boot.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p16-1",
+    "chapter_path": [
+      "Firmware Upgrade"
+    ],
+    "start": 0,
+    "end": 402
+  },
+  {
+    "search_questions": [],
+    "followups": [],
+    "chunk_id": "p16-1-s02",
+    "page": 16,
+    "text": "Notice FCC Statement This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses and can radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures: 28",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p16-1",
+    "chapter_path": [
+      "Notice"
+    ],
+    "start": 403,
+    "end": 1213
+  },
+  {
+    "search_questions": [],
+    "followups": [],
+    "chunk_id": "p16-2-s01",
+    "page": 16,
+    "text": "• Reorient or relocate the receiving antenna. • Increase the separation between the equipment and receiver. • Connect the equipment into an outlet on a circuit different from that to which the receiver is connected. • Consult the dealer or an experienced radio / TV technician for help. Caution: Any changes or modifications to this device not explicitly approved by the manufacturer could void your authority to operate this equipment. This device complies with part 15 of the FCC Rules. Operation subjects to the following two conditions: (1) This device may not cause harmful interference. (2) This device must accept any interference received, including interference that may cause undesired operation. Shenzhen VIOFO Technology Co., Ltd, declares that this Radio Frequency peripheral is in compliance with the essential requirements and other relevant provisions of Directive 1999/5/EC. This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20cm between the radiator & your body. 29",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p16-2",
+    "chapter_path": [
+      "Notice"
+    ],
+    "start": 0,
+    "end": 1105
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "VIOFO产品主机的保修期是多久？",
+        "english": "How long is the warranty for VIOFO products?",
+        "quote": "all products are warranted for 18 months"
+      },
+      {
+        "chinese": "VIOFO配件的保修期是多久？",
+        "english": "How long is the warranty for VIOFO accessories?",
+        "quote": "all accessories are warranted for 12 months."
+      },
+      {
+        "chinese": "VIOFO是否提供终身技术支持？",
+        "english": "Does VIOFO offer lifetime technical support?",
+        "quote": "VIOFO offers lifetime technical support for all our users."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "warranty_item_type",
+        "text": "您需要咨询保修的是主机还是配件？",
+        "reason": "主机与配件的保修期不同，需确认保修对象以判断适用期限。",
+        "options": [
+          "主机",
+          "配件",
+          "不确定"
+        ],
+        "quote": "all products are warranted for 18 months and all accessories are warranted for 12 months."
+      },
+      {
+        "intent": "general",
+        "field": "purchase_age_bucket",
+        "text": "您的购买时间距今大约多久？",
+        "reason": "保修从购买日起算，需确认购买时长以判断是否仍在对应保修期内。",
+        "options": [
+          "12个月内",
+          "12至18个月",
+          "超过18个月",
+          "不确定"
+        ],
+        "quote": "From the date of purchase on, all products are warranted for 18 months and all accessories are warranted for 12 months."
+      }
+    ],
+    "chunk_id": "p17-1-s01",
+    "page": 17,
+    "text": "Customer Service Thanks for choosing VIOFO! From the date of purchase on, all products are warranted for 18 months and all accessories are warranted for 12 months. VIOFO offers lifetime technical support for all our users. We are committed to making sure that you are 100% satisfied with our products and services.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p17-1",
+    "chapter_path": [
+      "Customer Service"
+    ],
+    "start": 0,
+    "end": 314
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何注册VIOFO产品来延长保修期？",
+        "english": "How do I register my VIOFO product to extend the warranty?",
+        "quote": "Product Registration Program VIOFO also have Product Registration Program to help customers extend warranty by 6 months. Visit www.viofo.com and register your new product to extend the warranty from 18 months to 24 months."
+      },
+      {
+        "chinese": "产品注册后保修期可以延长多久？",
+        "english": "How much longer does the warranty become after product registration?",
+        "quote": "VIOFO also have Product Registration Program to help customers extend warranty by 6 months. Visit www.viofo.com and register your new product to extend the warranty from 18 months to 24 months."
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "registration_status",
+        "text": "您是否已经通过VIOFO官网完成产品注册？",
+        "reason": "产品注册状态决定当前可享受的保修期限，需要确认是否已完成注册。",
+        "options": [
+          "已完成",
+          "未完成",
+          "不确定"
+        ],
+        "quote": "Visit www.viofo.com and register your new product to extend the warranty from 18 months to 24 months."
+      }
+    ],
+    "chunk_id": "p17-1-s02",
+    "page": 17,
+    "text": "Product Registration Program VIOFO also have Product Registration Program to help customers extend warranty by 6 months. Visit www.viofo.com and register your new product to extend the warranty from 18 months to 24 months. Scan the QR code to activate 6-month extended warranty now 30",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p17-1",
+    "chapter_path": [
+      "Customer Service",
+      "Product Registration Program"
+    ],
+    "start": 315,
+    "end": 599
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何把VIOFO相机拍摄的视频分享给VIOFO？",
+        "english": "How can I share videos captured by my VIOFO camera with VIOFO?",
+        "quote": "Video Sharing Share videos caught on VIOFO camera with us. Let’s enjoy your new found together! Gain a chance to get a mysterious gift at share@viofo.com."
+      }
+    ],
+    "followups": [],
+    "chunk_id": "p17-2-s01",
+    "page": 17,
+    "text": "Video Sharing Share videos caught on VIOFO camera with us. Let’s enjoy your new found together! Gain a chance to get a mysterious gift at share@viofo.com.",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p17-2",
+    "chapter_path": [
+      "Customer Service",
+      "Video Sharing"
+    ],
+    "start": 0,
+    "end": 154
+  },
+  {
+    "search_questions": [
+      {
+        "chinese": "如何联系VIOFO客服？有哪些联系方式？",
+        "english": "How can I contact VIOFO customer support and what contact methods are available?",
+        "quote": "Submit a ticket at support.viofo.com Live chat box at www.viofo.com support@viofo.com"
+      },
+      {
+        "chinese": "VIOFO客服电话是多少？服务时间是几点到几点？",
+        "english": "What is the VIOFO support phone number and what are the service hours?",
+        "quote": "+1 323 505 9898 (USA) +1 323 609 9898 (Global) Mon-Fri 9am-6pm"
+      }
+    ],
+    "followups": [
+      {
+        "intent": "general",
+        "field": "user_region",
+        "text": "请问您目前所在的国家或地区是？",
+        "reason": "不同地区对应的支持电话可能不同，需要确认后才能建议拨打哪个号码。",
+        "options": [
+          "美国",
+          "全球其他地区",
+          "不确定"
+        ],
+        "quote": "+1 323 505 9898 (USA) +1 323 609 9898 (Global)"
+      },
+      {
+        "intent": "general",
+        "field": "ticket_submitted",
+        "text": "您是否已经在 support.viofo.com 提交过支持工单？",
+        "reason": "确认是否已有工单，可判断应继续跟进工单还是通过其他渠道联系。",
+        "options": [
+          "已提交",
+          "未提交",
+          "不确定"
+        ],
+        "quote": "Submit a ticket at support.viofo.com"
+      }
+    ],
+    "chunk_id": "p17-2-s02",
+    "page": 17,
+    "text": "How to Contact Us ? Submit a ticket at support.viofo.com Live chat box at www.viofo.com support@viofo.com www.facebook.com/viofo +1 323 505 9898 (USA) +1 323 609 9898 (Global) Mon-Fri 9am-6pm Scan the QR code to submit a ticket 31",
+    "model": "A119 MINI 2",
+    "version": "V25.12.18",
+    "source_id": "p17-2",
+    "chapter_path": [
+      "Customer Service",
+      "How to Contact Us ?"
+    ],
+    "start": 155,
+    "end": 385
+  }
+]
